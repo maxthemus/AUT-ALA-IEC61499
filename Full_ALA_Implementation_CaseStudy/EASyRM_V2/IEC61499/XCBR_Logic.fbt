@@ -7,50 +7,50 @@
     <EventInputs>
       <Event Name="INIT" Comment="Initialization Request" />
       <Event Name="REQ" Comment="Normal Execution Request" />
-      <Event Name="OPOPN">
-        <With Var="OpOpn" />
+      <Event Name="OPEN">
+        <With Var="in_open" />
       </Event>
-      <Event Name="OPCLS">
-        <With Var="OpCls" />
+      <Event Name="CLOSE">
+        <With Var="in_close" />
       </Event>
     </EventInputs>
     <EventOutputs>
       <Event Name="INITO" Comment="Initialization Confirm" />
       <Event Name="CNF" Comment="Execution Confirmation" />
-      <Event Name="LOC">
-        <With Var="Loc" />
+      <Event Name="CONTROL">
+        <With Var="out_control" />
       </Event>
       <Event Name="OPCNT">
         <With Var="OpCnt" />
       </Event>
       <Event Name="POS">
-        <With Var="Pos" />
+        <With Var="out_switch" />
       </Event>
       <Event Name="BLKOPN">
-        <With Var="BlkOpn" />
+        <With Var="out_blk_open" />
       </Event>
       <Event Name="BLKCLS">
-        <With Var="BlkCls" />
+        <With Var="out_blk_close" />
       </Event>
       <Event Name="OPERATE_CB">
-        <With Var="openCB" />
+        <With Var="out_open" />
       </Event>
       <Event Name="DEBUG">
-        <With Var="debug_Pos_stVal" />
+        <With Var="out_status" />
       </Event>
     </EventOutputs>
     <InputVars>
-      <VarDeclaration Name="OpOpn" Type="BOOL" Comment="Input event qualifier" />
-      <VarDeclaration Name="OpCls" Type="BOOL" />
+      <VarDeclaration Name="in_open" Type="BOOL" Comment="Input event qualifier" />
+      <VarDeclaration Name="in_close" Type="BOOL" />
     </InputVars>
     <OutputVars>
-      <VarDeclaration Name="Loc" Type="SPS" Namespace="Main" />
+      <VarDeclaration Name="out_control" Type="SPS" Namespace="Main" />
       <VarDeclaration Name="OpCnt" Type="INS" Namespace="Main" />
-      <VarDeclaration Name="Pos" Type="DPC" Namespace="Main" />
-      <VarDeclaration Name="BlkOpn" Type="SPC" Namespace="Main" />
-      <VarDeclaration Name="BlkCls" Type="SPC" Namespace="Main" />
-      <VarDeclaration Name="openCB" Type="BOOL" />
-      <VarDeclaration Name="debug_Pos_stVal" Type="DINT" />
+      <VarDeclaration Name="out_switch" Type="DPC" Namespace="Main" />
+      <VarDeclaration Name="out_blk_open" Type="SPC" Namespace="Main" />
+      <VarDeclaration Name="out_blk_close" Type="SPC" Namespace="Main" />
+      <VarDeclaration Name="out_open" Type="BOOL" />
+      <VarDeclaration Name="out_status" Type="DINT" />
     </OutputVars>
   </InterfaceList>
   <BasicFB>
@@ -91,16 +91,16 @@
       </ECTransition>
     </ECC>
     <Algorithm Name="INIT" Comment="Initialization algorithm&#xD;&#xA;&#xD;&#xA;Setting the initial position of the CB to the &quot;Closed&quot; state&#xD;&#xA;&#xD;&#xA;stVal is a coded Enum: &quot;1:intermediate-state 2:off 3:on 4:bad-state&quot;&#xD;&#xA;">
-      <ST Text=";&#xD;&#xA;&#xD;&#xA;Pos.stVal := Main.stVal#item3;&#xD;&#xA;&#xD;&#xA;" />
+      <ST Text=";&#xD;&#xA;&#xD;&#xA;out_switch.stVal := Main.stVal#item3;&#xD;&#xA;&#xD;&#xA;" />
     </Algorithm>
     <Algorithm Name="REQ" Comment="Normally executed algorithm">
       <ST Text=";" />
     </Algorithm>
     <Algorithm Name="openCB" Comment="&#xD;&#xA;To open the CB, set Pos_stVal to false&#xD;&#xA;&#xD;&#xA;Setting the initial position of the CB to the &quot;opened&quot; state&#xD;&#xA;&#xD;&#xA;stVal is a coded Enum: &quot;1:intermediate-state 2:off 3:on 4:bad-state&quot;&#xD;&#xA;">
-      <ST Text=";&#xD;&#xA;&#xD;&#xA;Pos.stVal := Main.stVal#item2;&#xD;&#xA;&#xD;&#xA;// Open the CB in our plant model&#xD;&#xA;openCB := TRUE;&#xD;&#xA;" />
+      <ST Text=";&#xD;&#xA;&#xD;&#xA;out_switch.stVal := Main.stVal#item2;&#xD;&#xA;&#xD;&#xA;// Open the CB in our plant model&#xD;&#xA;out_open := TRUE;&#xD;&#xA;" />
     </Algorithm>
     <Algorithm Name="closeCB" Comment="&#xD;&#xA;To close the CB, set Pos_stVal to true&#xD;&#xA;&#xD;&#xA;Setting the initial position of the CB to the &quot;Closed&quot; state&#xD;&#xA;&#xD;&#xA;stVal is a coded Enum: &quot;1:intermediate-state 2:off 3:on 4:bad-state&quot;&#xD;&#xA;">
-      <ST Text=";&#xD;&#xA;&#xD;&#xA;Pos.stVal := Main.stVal#item3;&#xD;&#xA;&#xD;&#xA;// Close the CB in our plant model&#xD;&#xA;openCB := FALSE;&#xD;&#xA;" />
+      <ST Text=";&#xD;&#xA;&#xD;&#xA;out_switch.stVal := Main.stVal#item3;&#xD;&#xA;&#xD;&#xA;// Close the CB in our plant model&#xD;&#xA;out_open := FALSE;&#xD;&#xA;" />
     </Algorithm>
     <Algorithm Name="debugOpenCB">
       <ST Text=";&#xD;&#xA;&#xD;&#xA;debug_Pos_stVal := 2;&#xD;&#xA;" />

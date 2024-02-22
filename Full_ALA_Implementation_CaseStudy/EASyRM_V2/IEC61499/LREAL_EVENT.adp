@@ -5,12 +5,12 @@
   <VersionInfo Organization="Schneider Electric" Version="0.0" Author="Cheyan" Date="12/12/2023" />
   <InterfaceList>
     <EventOutputs>
-      <Event Name="SAMPLE" Comment="Confirmation from Plug">
-        <With Var="currentMeasurement" />
+      <Event Name="EVENT" Comment="Confirmation from Plug">
+        <With Var="value" />
       </Event>
     </EventOutputs>
     <OutputVars>
-      <VarDeclaration Name="currentMeasurement" Type="LREAL" Comment="Confirmation Data from Plug" />
+      <VarDeclaration Name="value" Type="LREAL" Comment="Confirmation Data from Plug" />
     </OutputVars>
   </InterfaceList>
   <Service RightInterface="PLUG" LeftInterface="SOCKET">
@@ -20,8 +20,8 @@
         <OutputPrimitive Interface="PLUG" Event="REQ" Parameters="REQD" />
       </ServiceTransaction>
       <ServiceTransaction>
-        <InputPrimitive Interface="PLUG" Event="SAMPLE" Parameters="currentMeasurement" />
-        <OutputPrimitive Interface="SOCKET" Event="SAMPLE" Parameters="currentMeasurement" />
+        <InputPrimitive Interface="PLUG" Event="EVENT" Parameters="value" />
+        <OutputPrimitive Interface="SOCKET" Event="EVENT" Parameters="value" />
       </ServiceTransaction>
     </ServiceSequence>
     <ServiceSequence Name="indication_response">

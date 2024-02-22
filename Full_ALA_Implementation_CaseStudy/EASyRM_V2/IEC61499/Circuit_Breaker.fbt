@@ -8,57 +8,57 @@
     <EventInputs>
       <Event Name="INIT" Comment="Initialization Request" />
       <Event Name="REQ" Comment="Normal Execution Request" />
-      <Event Name="OPOPN">
-        <With Var="OpOpn" />
+      <Event Name="OPEN">
+        <With Var="open_circuit_breaker" />
       </Event>
-      <Event Name="OPCLS">
-        <With Var="OpCls" />
+      <Event Name="CLOSE">
+        <With Var="close_circuit_breaker" />
       </Event>
     </EventInputs>
     <EventOutputs>
       <Event Name="INITO" Comment="Initialization Confirm" />
       <Event Name="DEBUG">
-        <With Var="debug_Pos_stVal" />
+        <With Var="status_DEBUG" />
       </Event>
     </EventOutputs>
     <InputVars>
-      <VarDeclaration Name="OpOpn" Type="BOOL" Comment="Input event qualifier" />
-      <VarDeclaration Name="OpCls" Type="BOOL" />
+      <VarDeclaration Name="open_circuit_breaker" Type="BOOL" Comment="Input event qualifier" />
+      <VarDeclaration Name="close_circuit_breaker" Type="BOOL" />
     </InputVars>
     <OutputVars>
-      <VarDeclaration Name="debug_Pos_stVal" Type="DINT" />
+      <VarDeclaration Name="status_DEBUG" Type="DINT" />
     </OutputVars>
     <Plugs>
-      <AdapterDeclaration Name="GOOSE" Type="BOOL_EVENT" Namespace="Main" x="3320" y="1560" />
+      <AdapterDeclaration Name="circuit_breaker_status" Type="BOOL_EVENT" Namespace="Main" x="3320" y="1560" />
     </Plugs>
   </InterfaceList>
   <FBNetwork>
     <FB ID="9" UID="1" Name="FB1" Type="XCBR_Logic" x="1780" y="1000" Namespace="Main" />
     <Input Name="INIT" x="1360" y="1012" Type="Event" />
     <Input Name="REQ" x="1360" y="1072" Type="Event" />
-    <Input Name="OPOPN" x="1298.948" y="1132" Type="Event" />
-    <Input Name="OPCLS" x="1303.677" y="1192" Type="Event" />
-    <Input Name="OpOpn" x="1160.667" y="1692" Type="Data" />
-    <Input Name="OpCls" x="1150.052" y="1752" Type="Data" />
+    <Input Name="OPEN" x="1298.948" y="1132" Type="Event" />
+    <Input Name="CLOSE" x="1303.677" y="1192" Type="Event" />
+    <Input Name="open_circuit_breaker" x="1160.667" y="1692" Type="Data" />
+    <Input Name="close_circuit_breaker" x="1150.052" y="1752" Type="Data" />
     <Output Name="DEBUG" x="2580" y="1492" Type="Event" />
-    <Output Name="debug_Pos_stVal" x="2640" y="2052" Type="Data" />
+    <Output Name="status_DEBUG" x="2640" y="2052" Type="Data" />
     <Output Name="INITO" x="2900" y="1012" Type="Event" />
     <EventConnections>
       <Connection Source="INIT" Destination="FB1.INIT" />
       <Connection Source="REQ" Destination="FB1.REQ" />
       <Connection Source="FB1.INITO" Destination="INITO" />
-      <Connection Source="FB1.OPERATE_CB" Destination="GOOSE.ACTUATE" dx1="41.54175" />
+      <Connection Source="FB1.OPERATE_CB" Destination="circuit_breaker_status.EVENT" dx1="41.54175" />
       <Connection Source="FB1.DEBUG" Destination="DEBUG" />
-      <Connection Source="OPOPN" Destination="FB1.OPOPN" />
-      <Connection Source="OPCLS" Destination="FB1.OPCLS" />
+      <Connection Source="OPEN" Destination="FB1.OPEN" />
+      <Connection Source="CLOSE" Destination="FB1.CLOSE" />
     </EventConnections>
     <DataConnections>
-      <Connection Source="FB1.openCB" Destination="GOOSE.openSwitch" dx1="711.5417">
+      <Connection Source="FB1.out_open" Destination="circuit_breaker_status.value" dx1="711.5417">
         <AvoidsNodes>false</AvoidsNodes>
       </Connection>
-      <Connection Source="FB1.debug_Pos_stVal" Destination="debug_Pos_stVal" />
-      <Connection Source="OpOpn" Destination="FB1.OpOpn" />
-      <Connection Source="OpCls" Destination="FB1.OpCls" />
+      <Connection Source="FB1.out_status" Destination="status_DEBUG" />
+      <Connection Source="open_circuit_breaker" Destination="FB1.in_open" dx1="580.9998" dx2="630" dy="450" />
+      <Connection Source="close_circuit_breaker" Destination="FB1.in_close" dx1="586.6772" dx2="630" dy="390" />
     </DataConnections>
   </FBNetwork>
 </FBType>

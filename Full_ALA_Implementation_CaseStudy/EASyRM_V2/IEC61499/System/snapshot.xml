@@ -165,7 +165,9 @@
         <DeviceItem ID="9AE5C21C-1485-4AC3-A0DD-896934350A5B" Hash="14D07C80ED5C22DD" />
       </FileGroup>
       <Device Name="EcoRT_0" ID="9AE5C21C-1485-4AC3-A0DD-896934350A5B" xmlns="http://tempuri.org/DeploySnapshot.xsd">
-        <FileItem Name="Basics/Main#Feeder.bin" />
+        <FileItem Name="Basics/Main#Feeder.bin">
+          <Changed>true</Changed>
+        </FileItem>
         <FileItem Name="Adapters/Main#GOOSE.bin" />
         <FileItem Name="Adapters/Main#SV.bin" />
         <FileItem Name="Composites/Main#Physical_Plant_Simulation.bin">
@@ -177,12 +179,18 @@
         <FileItem Name="DataTypes/Main#source.bin" />
         <FileItem Name="DataTypes/Main#Quality.bin" />
         <FileItem Name="DataTypes/Main#SAV.bin" />
-        <FileItem Name="Basics/Main#TCTR_Logic.bin" />
+        <FileItem Name="Basics/Main#TCTR_Logic.bin">
+          <Changed>true</Changed>
+        </FileItem>
         <FileItem Name="Composites/Main#Current_Transformer.bin">
           <Changed>true</Changed>
         </FileItem>
-        <FileItem Name="Basics/Main#PIOC_Logic.bin" />
-        <FileItem Name="Composites/Main#Comparator.bin" />
+        <FileItem Name="Basics/Main#PIOC_Logic.bin">
+          <Changed>true</Changed>
+        </FileItem>
+        <FileItem Name="Composites/Main#Comparator.bin">
+          <Changed>true</Changed>
+        </FileItem>
         <FileItem Name="DataTypes/Main#TimeAccuracy.bin" />
         <FileItem Name="DataTypes/Main#TimeQuality.bin" />
         <FileItem Name="DataTypes/Main#TimeStamp.bin" />
@@ -192,7 +200,9 @@
         <FileItem Name="DataTypes/Main#CtlModels.bin" />
         <FileItem Name="DataTypes/Main#DPC.bin" />
         <FileItem Name="DataTypes/Main#SPC.bin" />
-        <FileItem Name="Basics/Main#XCBR_Logic.bin" />
+        <FileItem Name="Basics/Main#XCBR_Logic.bin">
+          <Changed>true</Changed>
+        </FileItem>
         <FileItem Name="Composites/Main#Circuit_Breaker.bin">
           <Changed>true</Changed>
         </FileItem>

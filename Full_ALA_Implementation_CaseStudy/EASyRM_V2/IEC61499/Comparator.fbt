@@ -7,38 +7,38 @@
   <InterfaceList>
     <EventInputs>
       <Event Name="INIT" Comment="Initialization Request">
-        <With Var="overcurrentThreshold" />
+        <With Var="overcurrent_threshold" />
       </Event>
       <Event Name="REQ" Comment="Normal Execution Request" />
       <Event Name="SAMPLE">
-        <With Var="AmpSV" />
+        <With Var="value_in" />
       </Event>
     </EventInputs>
     <EventOutputs>
       <Event Name="INITO" Comment="Initialization Confirm" />
       <Event Name="CNF" Comment="Execution Confirmation" />
       <Event Name="DEBUG">
-        <With Var="debug_Op_general" />
+        <With Var="out_DEBUG" />
       </Event>
-      <Event Name="OP">
-        <With Var="Op" />
+      <Event Name="OUTPUT">
+        <With Var="value_out" />
       </Event>
     </EventOutputs>
     <InputVars>
-      <VarDeclaration Name="overcurrentThreshold" Type="LREAL" />
-      <VarDeclaration Name="AmpSV" Type="SAV" Namespace="Main" Comment="Input event qualifier" />
+      <VarDeclaration Name="overcurrent_threshold" Type="LREAL" />
+      <VarDeclaration Name="value_in" Type="SAV" Namespace="Main" Comment="Input event qualifier" />
     </InputVars>
     <OutputVars>
-      <VarDeclaration Name="debug_Op_general" Type="BOOL" />
-      <VarDeclaration Name="Op" Type="BOOL" />
+      <VarDeclaration Name="out_DEBUG" Type="BOOL" />
+      <VarDeclaration Name="value_out" Type="BOOL" />
     </OutputVars>
   </InterfaceList>
   <FBNetwork>
     <FB ID="4" UID="2" Name="FB1" Type="PIOC_Logic" x="1700" y="620" Namespace="Main" />
     <Input Name="INIT" x="1160" y="512" Type="Event" />
     <Input Name="REQ" x="1160" y="572" Type="Event" />
-    <Input Name="overcurrentThreshold" x="760" y="1072" Type="Data" />
-    <Input Name="AmpSV" x="957.1042" y="1012" Type="Data" />
+    <Input Name="overcurrent_threshold" x="759.9999" y="1072" Type="Data" />
+    <Input Name="value_in" x="957.1042" y="1012" Type="Data" />
     <Input Name="SAMPLE" x="1089.448" y="752" Type="Event" />
     <Frame Name="COMMENT1" X="1820" Y="300" Width="609.0781" Height="600" IsComment="true">
       <Parameter Name="BackgroundColor" Value="LemonChiffon" />
@@ -49,10 +49,10 @@
       <Parameter Name="Text" Value="Comparator Comment&#xD;&#xA;" />
       <Parameter Name="NxtLayerIdentifier" Value="" />
     </Frame>
-    <Output Name="Op" x="2860" y="1012" Type="Data" />
-    <Output Name="OP" x="2905.177" y="752" Type="Event" />
+    <Output Name="value_out" x="2860" y="1012" Type="Data" />
+    <Output Name="OUTPUT" x="2905.177" y="752" Type="Event" />
     <Output Name="DEBUG" x="2940.135" y="812" Type="Event" />
-    <Output Name="debug_Op_general" x="2880" y="1072" Type="Data" />
+    <Output Name="out_DEBUG" x="2880" y="1072" Type="Data" />
     <Output Name="INITO" x="2960" y="632" Type="Event" />
     <Output Name="CNF" x="2980" y="692" Type="Event" />
     <EventConnections>
@@ -64,13 +64,13 @@
       <Connection Source="FB1.CNF" Destination="CNF" />
       <Connection Source="FB1.DEBUG" Destination="DEBUG" />
       <Connection Source="SAMPLE" Destination="FB1.SAMPLE" />
-      <Connection Source="FB1.OP" Destination="OP" />
+      <Connection Source="FB1.OUTPUT" Destination="OUTPUT" />
     </EventConnections>
     <DataConnections>
-      <Connection Source="overcurrentThreshold" Destination="FB1.overcurrentThreshold" />
-      <Connection Source="FB1.debug_Op_general" Destination="debug_Op_general" />
-      <Connection Source="AmpSV" Destination="FB1.AmpSV" />
-      <Connection Source="FB1.Op" Destination="Op" />
+      <Connection Source="overcurrent_threshold" Destination="FB1.overcurrent_threshold" />
+      <Connection Source="FB1.out_DEBUG" Destination="out_DEBUG" />
+      <Connection Source="value_in" Destination="FB1.in_value" />
+      <Connection Source="FB1.out_value" Destination="value_out" />
     </DataConnections>
   </FBNetwork>
 </FBType>

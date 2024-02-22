@@ -185,11 +185,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Maxth\\OneDrive\\Desktop\\ALA_Projects\\EASyRM_V2\\HMI\\HMI.csproj",
+      "projectUniqueName": "C:\\Users\\Maxth\\OneDrive\\Documents\\GitHub\\AUT-ALA-IEC61499\\Full_ALA_Implementation_CaseStudy\\EASyRM_V2\\HMI\\HMI.csproj",
       "projectName": "HMI",
-      "projectPath": "C:\\Users\\Maxth\\OneDrive\\Desktop\\ALA_Projects\\EASyRM_V2\\HMI\\HMI.csproj",
+      "projectPath": "C:\\Users\\Maxth\\OneDrive\\Documents\\GitHub\\AUT-ALA-IEC61499\\Full_ALA_Implementation_CaseStudy\\EASyRM_V2\\HMI\\HMI.csproj",
       "packagesPath": "C:\\Users\\Maxth\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Maxth\\OneDrive\\Desktop\\ALA_Projects\\EASyRM_V2\\HMI\\obj\\",
+      "outputPath": "C:\\Users\\Maxth\\OneDrive\\Documents\\GitHub\\AUT-ALA-IEC61499\\Full_ALA_Implementation_CaseStudy\\EASyRM_V2\\HMI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Maxth\\AppData\\Roaming\\NuGet\\NuGet.Config"

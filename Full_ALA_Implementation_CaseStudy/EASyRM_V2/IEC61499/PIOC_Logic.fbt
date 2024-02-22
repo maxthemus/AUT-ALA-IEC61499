@@ -6,36 +6,36 @@
   <InterfaceList>
     <EventInputs>
       <Event Name="INIT" Comment="Initialization Request">
-        <With Var="overcurrentThreshold" />
+        <With Var="overcurrent_threshold" />
       </Event>
       <Event Name="REQ" Comment="Normal Execution Request" />
       <Event Name="SAMPLE">
-        <With Var="AmpSV" />
+        <With Var="in_value" />
       </Event>
     </EventInputs>
     <EventOutputs>
       <Event Name="INITO" Comment="Initialization Confirm" />
       <Event Name="CNF" Comment="Execution Confirmation" />
-      <Event Name="OP">
-        <With Var="Op" />
+      <Event Name="OUTPUT">
+        <With Var="out_value" />
       </Event>
       <Event Name="DEBUG">
-        <With Var="debug_Op_general" />
+        <With Var="out_DEBUG" />
       </Event>
     </EventOutputs>
     <InputVars>
-      <VarDeclaration Name="AmpSV" Type="SAV" Namespace="Main" Comment="Input event qualifier" />
-      <VarDeclaration Name="overcurrentThreshold" Type="LREAL" />
+      <VarDeclaration Name="in_value" Type="SAV" Namespace="Main" Comment="Input event qualifier" />
+      <VarDeclaration Name="overcurrent_threshold" Type="LREAL" />
     </InputVars>
     <OutputVars>
-      <VarDeclaration Name="Op" Type="BOOL" />
-      <VarDeclaration Name="debug_Op_general" Type="BOOL" />
+      <VarDeclaration Name="out_value" Type="BOOL" />
+      <VarDeclaration Name="out_DEBUG" Type="BOOL" />
     </OutputVars>
   </InterfaceList>
   <BasicFB>
     <Attribute Name="FBType.Basic.Algorithm.Order" Value="INIT,resetCounter,increaseCounter,operate,notOperate,debug_Operate,debugNotOperate" />
     <InternalVars>
-      <VarDeclaration Name="overcurrentCounterInternal" Type="DINT" InitialValue="0" />
+      <VarDeclaration Name="overcurrent_counter_internal" Type="DINT" InitialValue="0" />
     </InternalVars>
     <ECC>
       <ECState Name="START" Comment="Initial State" x="552.9412" y="429.4117" />
@@ -52,7 +52,7 @@
       </ECState>
       <ECState Name="Compare" x="1332" y="1188" />
       <ECState Name="Operate" x="2692" y="924">
-        <ECAction Algorithm="operate" Output="OP" />
+        <ECAction Algorithm="operate" Output="OUTPUT" />
         <ECAction Algorithm="debug_Operate" Output="DEBUG" />
       </ECState>
       <ECTransition Source="START" Destination="INIT" Condition="INIT" x="731.1476" y="204.8375" />
@@ -85,22 +85,22 @@
       <ST Text=";" />
     </Algorithm>
     <Algorithm Name="resetCounter" Comment="&#xD;&#xA;Set the overcurrent counter to 0&#xD;&#xA;">
-      <ST Text=";&#xD;&#xA;&#xD;&#xA;overcurrentCounterInternal := 0;&#xD;&#xA;" />
+      <ST Text=";&#xD;&#xA;&#xD;&#xA;overcurrent_counter_internal := 0;&#xD;&#xA;" />
     </Algorithm>
     <Algorithm Name="increaseCounter" Comment="&#xD;&#xA;increase the internal overcurrent counter&#xD;&#xA;">
-      <ST Text=";&#xD;&#xA;&#xD;&#xA;overcurrentCounterInternal := overcurrentCounterInternal + 1;&#xD;&#xA;" />
+      <ST Text=";&#xD;&#xA;&#xD;&#xA;overcurrent_counter_internal := overcurrent_counter_internal + 1;&#xD;&#xA;" />
     </Algorithm>
     <Algorithm Name="operate" Comment="&#xD;&#xA;When an overcurrent fault is detected (after detection of 10 overcurrent measurement), Op_general is set to FALSE&#xD;&#xA;">
-      <ST Text=";&#xD;&#xA;&#xD;&#xA;Op := TRUE;&#xD;&#xA;" />
+      <ST Text=";&#xD;&#xA;&#xD;&#xA;out_value := TRUE;&#xD;&#xA;" />
     </Algorithm>
     <Algorithm Name="notOperate">
-      <ST Text=";&#xD;&#xA;&#xD;&#xA;Op := FALSE;&#xD;&#xA;" />
+      <ST Text=";&#xD;&#xA;&#xD;&#xA;out_value := FALSE;&#xD;&#xA;" />
     </Algorithm>
     <Algorithm Name="debug_Operate">
-      <ST Text=";&#xD;&#xA;&#xD;&#xA;debug_Op_general := TRUE;&#xD;&#xA;" />
+      <ST Text=";&#xD;&#xA;&#xD;&#xA;out_DEBUG := TRUE;&#xD;&#xA;" />
     </Algorithm>
     <Algorithm Name="debugNotOperate">
-      <ST Text=";&#xD;&#xA;&#xD;&#xA;debug_Op_general := FALSE;&#xD;&#xA;" />
+      <ST Text=";&#xD;&#xA;&#xD;&#xA;out_DEBUG := FALSE;&#xD;&#xA;" />
     </Algorithm>
   </BasicFB>
 </FBType>

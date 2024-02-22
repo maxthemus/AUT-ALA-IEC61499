@@ -5,12 +5,12 @@
   <VersionInfo Organization="Schneider Electric" Version="0.0" Author="Cheyan" Date="12/12/2023" />
   <InterfaceList>
     <EventOutputs>
-      <Event Name="ACTUATE" Comment="Confirmation from Plug">
-        <With Var="openSwitch" />
+      <Event Name="EVENT" Comment="Confirmation from Plug">
+        <With Var="value" />
       </Event>
     </EventOutputs>
     <OutputVars>
-      <VarDeclaration Name="openSwitch" Type="BOOL" Comment="Confirmation Data from Plug" />
+      <VarDeclaration Name="value" Type="BOOL" Comment="Confirmation Data from Plug" />
     </OutputVars>
   </InterfaceList>
   <Service RightInterface="PLUG" LeftInterface="SOCKET">
@@ -20,8 +20,8 @@
         <OutputPrimitive Interface="PLUG" Event="REQ" Parameters="REQD" />
       </ServiceTransaction>
       <ServiceTransaction>
-        <InputPrimitive Interface="PLUG" Event="ACTUATE" Parameters="openSwitch" />
-        <OutputPrimitive Interface="SOCKET" Event="ACTUATE" Parameters="openSwitch" />
+        <InputPrimitive Interface="PLUG" Event="EVENT" Parameters="value" />
+        <OutputPrimitive Interface="SOCKET" Event="EVENT" Parameters="value" />
       </ServiceTransaction>
     </ServiceSequence>
     <ServiceSequence Name="indication_response">

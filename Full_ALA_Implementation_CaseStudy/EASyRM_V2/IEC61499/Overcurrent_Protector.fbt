@@ -27,37 +27,35 @@
     </AdapterOutputs>
   </InterfaceList>
   <FBNetwork>
-    <FB ID="1" Name="FB1" Type="Current_Transformer" x="1200" y="120" Namespace="Main">
-      <Parameter Name="manual_currentMeasurement" Value="8" />
+    <FB ID="1" Name="FB1" Type="Current_Transformer" x="880" y="140" Namespace="Main">
+      <Parameter Name="manual_current_in" Value="8" />
     </FB>
-    <FB ID="2" Name="FB2" Type="Comparator" x="2960" y="120" Namespace="Main">
-      <Parameter Name="overcurrentThreshold" Value="10.0" />
+    <FB ID="2" Name="FB2" Type="Comparator" x="2260" y="140" Namespace="Main">
+      <Parameter Name="overcurrent_threshold" Value="10.0" />
     </FB>
-    <FB ID="5" Name="FB7" Type="Circuit_Breaker" x="4400" y="160" Namespace="Main" />
+    <FB ID="5" Name="FB7" Type="Circuit_Breaker" x="3340" y="160" Namespace="Main" />
     <Input Name="current" x="20" y="572" Type="Adapter" />
     <Input Name="INIT" x="40" y="152" Type="Event" />
     <Input Name="reset" x="40" y="212" Type="Event" />
     <Input Name="threshold_CONFIG" x="40" y="332" Type="Data" />
     <Input Name="trigger_time_CONFIG" x="40" y="392" Type="Data" />
-    <Output Name="cutoff" x="5080" y="612" Type="Adapter" />
+    <Output Name="cutoff" x="4060" y="832" Type="Adapter" />
     <Output Name="INITO" x="5140" y="132" Type="Event" />
     <EventConnections>
       <Connection Source="FB1.INITO" Destination="FB2.INIT" />
-      <Connection Source="FB1.AMPSV" Destination="FB2.SAMPLE" dx1="72.60425" />
-      <Connection Source="INIT" Destination="FB1.INIT" dx1="41.41669" />
-      <Connection Source="FB7.INITO" Destination="INITO" dx1="41.5415" />
-      <Connection Source="FB2.OP" Destination="FB7.OPOPN" dx1="79" />
-      <Connection Source="FB2.INITO" Destination="FB7.INIT" dx1="80" />
+      <Connection Source="FB1.OUTPUT" Destination="FB2.SAMPLE" dx1="72.60425" />
+      <Connection Source="INIT" Destination="FB1.INIT" />
+      <Connection Source="FB7.INITO" Destination="INITO" dx1="50" />
+      <Connection Source="FB2.OUTPUT" Destination="FB7.OPEN" dx1="79" />
+      <Connection Source="FB2.INITO" Destination="FB7.INIT" dx1="89.5" />
     </EventConnections>
     <DataConnections>
-      <Connection Source="FB1.current_out" Destination="FB2.AmpSV" />
-      <Connection Source="FB2.Op" Destination="FB7.OpOpn" dx1="89.00024">
-        <AvoidsNodes>false</AvoidsNodes>
-      </Connection>
+      <Connection Source="FB1.current_out" Destination="FB2.value_in" />
+      <Connection Source="FB2.value_out" Destination="FB7.open_circuit_breaker" dx1="99" />
     </DataConnections>
     <AdapterConnections>
-      <Connection Source="current" Destination="FB1.current_in" />
-      <Connection Source="FB7.GOOSE" Destination="cutoff" />
+      <Connection Source="current" Destination="FB1.current_in" dx1="40" dx2="90" dy="10" />
+      <Connection Source="FB7.circuit_breaker_status" Destination="cutoff" dx1="40" dx2="30" dy="90" />
     </AdapterConnections>
   </FBNetwork>
 </FBType>

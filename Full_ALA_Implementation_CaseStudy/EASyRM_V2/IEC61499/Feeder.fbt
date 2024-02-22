@@ -6,7 +6,7 @@
   <InterfaceList>
     <EventInputs>
       <Event Name="INIT">
-        <With Var="currentMeasurement" />
+        <With Var="current_measurement_in" />
       </Event>
       <Event Name="REQ" />
       <Event Name="SAMPLE" />
@@ -17,20 +17,20 @@
       <Event Name="INITO" Comment="Initialization Confirm" />
       <Event Name="CNF" Comment="Execution Confirmation" />
       <Event Name="SAMPLE_OUT">
-        <With Var="currentMeasurementOut" />
+        <With Var="current_measurement_out" />
       </Event>
     </EventOutputs>
     <InputVars>
-      <VarDeclaration Name="currentMeasurement" Type="LREAL" Comment="Input event qualifier" />
+      <VarDeclaration Name="current_measurement_in" Type="LREAL" Comment="Input event qualifier" />
     </InputVars>
     <OutputVars>
-      <VarDeclaration Name="currentMeasurementOut" Type="LREAL" Comment="Output event qualifier" />
+      <VarDeclaration Name="current_measurement_out" Type="LREAL" Comment="Output event qualifier" />
     </OutputVars>
   </InterfaceList>
   <BasicFB>
     <Attribute Name="FBType.Basic.Algorithm.Order" Value="INIT,REQ,SAMPLE,FAULT,CLEAR_FAULT" />
     <InternalVars>
-      <VarDeclaration Name="currentInternal" Type="LREAL" />
+      <VarDeclaration Name="current_internal" Type="LREAL" />
     </InternalVars>
     <ECC>
       <ECState Name="START" Comment="Initial State" x="552.9412" y="429.4117" />
@@ -73,19 +73,19 @@
       </ECTransition>
     </ECC>
     <Algorithm Name="INIT" Comment="Initialization algorithm&#xD;&#xA;&#xD;&#xA;Setting the initial current measurement of the Feeder&#xD;&#xA;">
-      <ST Text=";&#xD;&#xA;&#xD;&#xA;currentInternal := currentMeasurement;&#xD;&#xA;" />
+      <ST Text=";&#xD;&#xA;&#xD;&#xA;current_internalnternal := current_measurement_in;&#xD;&#xA;" />
     </Algorithm>
     <Algorithm Name="REQ" Comment="Normally executed algorithm">
       <ST Text=";" />
     </Algorithm>
     <Algorithm Name="SAMPLE" Comment="&#xD;&#xA;Sending out current measurement&#xD;&#xA;">
-      <ST Text=";&#xD;&#xA;&#xD;&#xA;currentMeasurementOut := currentInternal;&#xD;&#xA;" />
+      <ST Text=";&#xD;&#xA;&#xD;&#xA;current_measurement_out := current_internal;&#xD;&#xA;" />
     </Algorithm>
     <Algorithm Name="FAULT" Comment="&#xD;&#xA;Triggering fault current. Fault current set at 1.5x of the normal current&#xD;&#xA;">
-      <ST Text=";&#xD;&#xA;&#xD;&#xA;currentInternal := currentMeasurement + currentMeasurement/2;&#xD;&#xA;" />
+      <ST Text=";&#xD;&#xA;&#xD;&#xA;current_internal := current_measurement_in + current_measurement_in/2;&#xD;&#xA;" />
     </Algorithm>
     <Algorithm Name="CLEAR_FAULT">
-      <ST Text=";&#xD;&#xA;&#xD;&#xA;currentInternal := 0;&#xD;&#xA;" />
+      <ST Text=";&#xD;&#xA;&#xD;&#xA;current_internal := 0;&#xD;&#xA;" />
     </Algorithm>
   </BasicFB>
 </FBType>

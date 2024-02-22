@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ekBLstfI8vjG/makq1IRtVR/mBMZxVnLQPJ7whbQZpZjs+/Gqh+tYkWXFFjMKhx3+0gt5fZzIO0ASUj3mUiSxA==",
+  "dgSpecHash": "ccxoOY6nUvWIkGReoU4jU6wyVgU1y/S2+1vjFaU6JFCJpbTkc3GoXkXm3YNH5FbbzOcIeysyNXY1hfhXjAAquQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Maxth\\OneDrive\\Desktop\\ALA_Projects\\EASyRM_V2\\HMI\\HMI.csproj",
+  "projectFilePath": "C:\\Users\\Maxth\\OneDrive\\Documents\\GitHub\\AUT-ALA-IEC61499\\Full_ALA_Implementation_CaseStudy\\EASyRM_V2\\HMI\\HMI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Maxth\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Maxth\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"

@@ -8,24 +8,24 @@
     <EventInputs>
       <Event Name="INIT" Comment="Initialization Request" />
       <Event Name="MANUAL">
-        <With Var="manual_currentMeasurement" />
+        <With Var="manual_current_in" />
       </Event>
     </EventInputs>
     <EventOutputs>
       <Event Name="INITO" Comment="Initialization Confirm" />
       <Event Name="CNF" Comment="Execution Confirmation" />
       <Event Name="DEBUG">
-        <With Var="debug_AmpSV_instMag" />
+        <With Var="out_DEBUG" />
       </Event>
-      <Event Name="AMPSV">
+      <Event Name="OUTPUT">
         <With Var="current_out" />
       </Event>
     </EventOutputs>
     <InputVars>
-      <VarDeclaration Name="manual_currentMeasurement" Type="LREAL" />
+      <VarDeclaration Name="manual_current_in" Type="LREAL" />
     </InputVars>
     <OutputVars>
-      <VarDeclaration Name="debug_AmpSV_instMag" Type="LREAL" />
+      <VarDeclaration Name="out_DEBUG" Type="LREAL" />
       <VarDeclaration Name="current_out" Type="SAV" Namespace="Main" Comment="Output event qualifier" />
     </OutputVars>
     <Sockets>
@@ -36,27 +36,27 @@
     <FB ID="5" UID="1" Name="FB1" Type="TCTR_Logic" x="1660" y="900" Namespace="Main" />
     <Input Name="INIT" x="1260" y="912" Type="Event" />
     <Input Name="MANUAL" x="1180" y="692" Type="Event" />
-    <Input Name="manual_currentMeasurement" x="580" y="1352" Type="Data" />
-    <Output Name="AMPSV" x="2921.313" y="1032" Type="Event" />
+    <Input Name="manual_current_in" x="580" y="1352" Type="Data" />
+    <Output Name="OUTPUT" x="2921.313" y="1032" Type="Event" />
     <Output Name="current_out" x="2937.104" y="1292" Type="Data" />
     <Output Name="DEBUG" x="2940" y="1092" Type="Event" />
-    <Output Name="debug_AmpSV_instMag" x="2940" y="1352" Type="Data" />
+    <Output Name="out_DEBUG" x="2940" y="1352" Type="Data" />
     <Output Name="INITO" x="2940" y="912" Type="Event" />
     <Output Name="CNF" x="2940" y="972" Type="Event" />
     <EventConnections>
       <Connection Source="INIT" Destination="FB1.INIT" />
       <Connection Source="FB1.INITO" Destination="INITO" />
       <Connection Source="FB1.CNF" Destination="CNF" />
-      <Connection Source="current_in.SAMPLE" Destination="FB1.SAMPLE" dx1="56.35425" />
+      <Connection Source="current_in.EVENT" Destination="FB1.SAMPLE" dx1="56.35425" />
       <Connection Source="FB1.DEBUG" Destination="DEBUG" />
       <Connection Source="MANUAL" Destination="FB1.MANUAL" dx1="24.1875" />
-      <Connection Source="FB1.AMPSV" Destination="AMPSV" />
+      <Connection Source="FB1.OUTPUT" Destination="OUTPUT" />
     </EventConnections>
     <DataConnections>
-      <Connection Source="current_in.currentMeasurement" Destination="FB1.currentMeasurement" dx1="40" />
-      <Connection Source="FB1.debug_AmpSV_instMag" Destination="debug_AmpSV_instMag" />
-      <Connection Source="manual_currentMeasurement" Destination="FB1.manual_currentMeasurement" />
-      <Connection Source="FB1.AmpSV" Destination="current_out" />
+      <Connection Source="current_in.value" Destination="FB1.in_current" dx1="40" />
+      <Connection Source="FB1.out_current_DEBUG" Destination="out_DEBUG" />
+      <Connection Source="manual_current_in" Destination="FB1.in_current_MANUAL" />
+      <Connection Source="FB1.out_current" Destination="current_out" />
     </DataConnections>
   </FBNetwork>
 </FBType>

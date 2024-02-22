@@ -7,29 +7,29 @@
     <EventInputs>
       <Event Name="INIT" Comment="Initialization Request" />
       <Event Name="SAMPLE" Comment="Normal Execution Request">
-        <With Var="currentMeasurement" />
+        <With Var="in_current" />
       </Event>
       <Event Name="MANUAL">
-        <With Var="manual_currentMeasurement" />
+        <With Var="in_current_MANUAL" />
       </Event>
     </EventInputs>
     <EventOutputs>
       <Event Name="INITO" Comment="Initialization Confirm" />
       <Event Name="CNF" Comment="Execution Confirmation" />
-      <Event Name="AMPSV">
-        <With Var="AmpSV" />
+      <Event Name="OUTPUT">
+        <With Var="out_current" />
       </Event>
       <Event Name="DEBUG">
-        <With Var="debug_AmpSV_instMag" />
+        <With Var="out_current_DEBUG" />
       </Event>
     </EventOutputs>
     <InputVars>
-      <VarDeclaration Name="currentMeasurement" Type="LREAL" Comment="Input event qualifier" />
-      <VarDeclaration Name="manual_currentMeasurement" Type="LREAL" />
+      <VarDeclaration Name="in_current" Type="LREAL" Comment="Input event qualifier" />
+      <VarDeclaration Name="in_current_MANUAL" Type="LREAL" />
     </InputVars>
     <OutputVars>
-      <VarDeclaration Name="AmpSV" Type="SAV" Namespace="Main" Comment="Output event qualifier" />
-      <VarDeclaration Name="debug_AmpSV_instMag" Type="LREAL" />
+      <VarDeclaration Name="out_current" Type="SAV" Namespace="Main" Comment="Output event qualifier" />
+      <VarDeclaration Name="out_current_DEBUG" Type="LREAL" />
     </OutputVars>
   </InterfaceList>
   <BasicFB>
@@ -40,11 +40,11 @@
         <ECAction Algorithm="INIT" Output="INITO" />
       </ECState>
       <ECState Name="SampleReading" Comment="Normal execution" x="525.647" y="1064.941">
-        <ECAction Algorithm="readMeasurement" Output="AMPSV" />
+        <ECAction Algorithm="readMeasurement" Output="OUTPUT" />
         <ECAction Algorithm="debug" Output="DEBUG" />
       </ECState>
       <ECState Name="ManualTesting" x="1496" y="544">
-        <ECAction Algorithm="manualMeasurements" Output="AMPSV" />
+        <ECAction Algorithm="manualMeasurements" Output="OUTPUT" />
         <ECAction Algorithm="debug_manual" Output="DEBUG" />
       </ECState>
       <ECTransition Source="START" Destination="INIT" Condition="INIT" x="731.1476" y="204.8375" />
@@ -66,16 +66,16 @@
       <ST Text=";" />
     </Algorithm>
     <Algorithm Name="readMeasurement" Comment="Normally executed algorithm&#xD;&#xA;&#xD;&#xA;The analogue measurement from the electrical system (plant) is digitalized to an IEC61850 variable&#xD;&#xA;">
-      <ST Text=";&#xD;&#xA;&#xD;&#xA;AmpSV.instMag.f := currentMeasurement;&#xD;&#xA;" />
+      <ST Text=";&#xD;&#xA;&#xD;&#xA;out_current.instMag.f := in_current;&#xD;&#xA;" />
     </Algorithm>
     <Algorithm Name="debug" Comment="&#xD;&#xA;Debugging&#xD;&#xA;">
-      <ST Text=";&#xD;&#xA;&#xD;&#xA;debug_AmpSV_instMag := currentMeasurement;&#xD;&#xA;" />
+      <ST Text=";&#xD;&#xA;&#xD;&#xA;out_current_DEBUG := in_current;&#xD;&#xA;" />
     </Algorithm>
     <Algorithm Name="manualMeasurements" Comment="&#xD;&#xA;">
-      <ST Text=";&#xD;&#xA;&#xD;&#xA;AmpSV.instMag.f := manual_currentMeasurement;&#xD;&#xA;" />
+      <ST Text=";&#xD;&#xA;&#xD;&#xA;out_current.instMag.f := in_current_MANUAL;&#xD;&#xA;" />
     </Algorithm>
     <Algorithm Name="debug_manual">
-      <ST Text=";&#xD;&#xA;&#xD;&#xA;debug_AmpSV_instMag := manual_currentMeasurement;&#xD;&#xA;" />
+      <ST Text=";&#xD;&#xA;&#xD;&#xA;out_current_DEBUG := in_current_MANUAL;&#xD;&#xA;" />
     </Algorithm>
   </BasicFB>
 </FBType>
