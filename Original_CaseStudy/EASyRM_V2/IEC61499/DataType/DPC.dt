@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE DataType SYSTEM "../LibraryElement.dtd">
+<DataType Namespace="Main" Name="DPC" Comment="IEC61131-3, Table 14#5">
+  <Attribute Name="nxtDataType" Value="/vixPIdCcZLsYuYBrz+XyN166j18T5K4HgXF1dcTzTZHQJ1wIsOj+9aXLW6JvpI5liIDCK+YB6XbIe7VaGVjE0bwToVoS8iyEAyKPLQdQVMhZA8RLgefo7Yx7v7UbzEoNi1L3qeHb/EumZ+i8RhQUi+lIU4Z/rct1mfeorKNTf4ZIwa2bBiI8A==" Context="909287609519522819" />
+  <Identification Standard="1131-3" />
+  <VersionInfo Organization="Schneider Electric" Version="0.0" Author="Cheyan" Date="1/8/2024" Remarks="Template" />
+  <CompilerInfo />
+  <StructuredType>
+    <VarDeclaration Name="stVal" Type="stVal" Namespace="Main" />
+    <VarDeclaration Name="q" Type="Quality" Namespace="Main" />
+    <VarDeclaration Name="t" Type="TimeStamp" Namespace="Main" />
+    <VarDeclaration Name="CtlModel" Type="CtlModels" Namespace="Main" />
+  </StructuredType>
+</DataType>

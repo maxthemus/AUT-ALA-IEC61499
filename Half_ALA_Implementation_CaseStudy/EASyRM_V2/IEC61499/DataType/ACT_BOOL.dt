@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE DataType SYSTEM "../LibraryElement.dtd">
+<DataType Namespace="Main" Name="ACT_BOOL" Comment="IEC61131-3, Table 14#5">
+  <Attribute Name="nxtDataType" Value="JT5dSobJiOC0hxdCgULQYkV6QmDNh3dwlVWnclOqURyCVbEazVP+tQhGbSKe8NBJCTf08T6ksxmjxnOgL3ICxEIXf/Atxz/dcJ0RWHyXwP09L80WSH7X0nAlvWsfM5JYDpVl83k9u6YHoILb8OYKAg==" Context="14784723091610210065" />
+  <Identification Standard="1131-3" />
+  <VersionInfo Organization="Schneider Electric" Version="0.0" Author="Cheyan" Date="1/8/2024" Remarks="Template" />
+  <CompilerInfo />
+  <StructuredType>
+    <VarDeclaration Name="general" Type="BOOL" />
+    <VarDeclaration Name="q" Type="Quality" Namespace="Main" />
+    <VarDeclaration Name="t" Type="TimeStamp" Namespace="Main" />
+  </StructuredType>
+</DataType>

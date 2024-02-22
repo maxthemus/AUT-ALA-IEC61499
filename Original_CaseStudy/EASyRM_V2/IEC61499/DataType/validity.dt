@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE DataType SYSTEM "../LibraryElement.dtd">
+<DataType Namespace="Main" Name="validity" Comment="IEC61131-3, Table 14#5">
+  <Attribute Name="nxtDataType" Value="Lp5NebPSNARI2wwB7co/OJ7bm7Z6XnroHaJ9upnY2JiKs/1FJEdQUGp8i6Yee8lC5/PwtQPe9I9G+N2G/wSstA==" Context="9791514699025152345" />
+  <Identification Standard="1131-3" />
+  <VersionInfo Organization="Schneider Electric" Version="0.0" Author="Cheyan" Date="1/8/2024" Remarks="Template" />
+  <CompilerInfo />
+  <EnumeratedType>
+    <EnumeratedValue Name="good" />
+    <EnumeratedValue Name="invalid" />
+    <EnumeratedValue Name="reserved" />
+    <EnumeratedValue Name="questionable" />
+  </EnumeratedType>
+</DataType>

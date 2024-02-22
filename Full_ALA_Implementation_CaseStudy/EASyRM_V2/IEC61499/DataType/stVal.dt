@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE DataType SYSTEM "../LibraryElement.dtd">
+<DataType Namespace="Main" Name="stVal" Comment="IEC61131-3, Table 14#5">
+  <Attribute Name="nxtDataType" Value="iTGfw+cvqGRTVq2zQ9VNc0yfo+8yX9MnEbsH95Pdz7/sWlSqSXkpQS5z4aNszWL7dIc+u1teRKZmhRDl9zNqgQ==" Context="10973594712497224464" />
+  <Identification Standard="1131-3" />
+  <VersionInfo Organization="Schneider Electric" Version="0.0" Author="Cheyan" Date="1/8/2024" Remarks="Template" />
+  <CompilerInfo />
+  <EnumeratedType>
+    <EnumeratedValue Name="item1" />
+    <EnumeratedValue Name="item2" />
+    <EnumeratedValue Name="item3" />
+  </EnumeratedType>
+</DataType>

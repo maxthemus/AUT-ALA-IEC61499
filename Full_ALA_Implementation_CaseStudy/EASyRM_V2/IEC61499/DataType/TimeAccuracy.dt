@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE DataType SYSTEM "../LibraryElement.dtd">
+<DataType Namespace="Main" Name="TimeAccuracy" Comment="IEC61131-3, Table 14#5">
+  <Attribute Name="nxtDataType" Value="QdpEwqSPB7qzzh+NTQEinmNZ98ZHkHWxvNuG/cIXeimh6FQ57YZhv3Rx0Sj2iL0jUJM+RBxfMAI=" Context="10973594712497224464" />
+  <Identification Standard="1131-3" />
+  <VersionInfo Organization="Schneider Electric" Version="0.0" Author="Cheyan" Date="1/8/2024" Remarks="Template" />
+  <CompilerInfo />
+  <EnumeratedType>
+    <EnumeratedValue Name="item1" />
+    <EnumeratedValue Name="item2" />
+    <EnumeratedValue Name="item3" />
+  </EnumeratedType>
+</DataType>

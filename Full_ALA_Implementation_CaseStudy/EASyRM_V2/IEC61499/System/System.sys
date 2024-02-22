@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE System SYSTEM "../LibraryElement.dtd">
+<System Name="System" Comment="System Configuration">
+  <Attribute Name="System.Device.FolderPath" Value="EcoRT_0" />
+  <Identification Standard="61499-1" />
+  <VersionInfo Organization="Schneider Electric" Version="0.0" Author="Cheyan" Date="1/9/2024" />
+  <Application ID="4AF3182AC695837E" Name="APP1">
+    <SubAppNetwork>
+      <FB ID="866112D0B22B8608" Name="FB6" Type="Physical_Plant_SIMULATION" x="220" y="1120" Namespace="Main" />
+      <FB ID="D9F8785AF7B66D5F" Name="Feeder_2_overcurrent_protector" Type="Overcurrent_Protector" x="1720" y="1860" Namespace="Main" />
+      <AdapterConnections>
+        <Connection Source="FB6.feeder_2_current" Destination="Feeder_2_overcurrent_protector.current" dx1="43.22925" />
+        <Connection Source="Feeder_2_overcurrent_protector.cutoff" Destination="FB6.feeder_2_trip" dx1="40.77075" dx2="30" dy="260">
+          <AvoidsNodes>false</AvoidsNodes>
+        </Connection>
+      </AdapterConnections>
+      <Frame Name="FRAME2" X="80" Y="880" Width="1240" Height="1500">
+        <Parameter Name="BackgroundColor" Value="AliceBlue" />
+        <Parameter Name="TextColor" Value="Black" />
+        <Parameter Name="Font" Value="Microsoft Sans Serif, 10pt" />
+        <Parameter Name="TextAlignment" Value="TopLeft" />
+        <Parameter Name="MoveStyle" Value="AnyContained" />
+        <Parameter Name="NxtLayerIdentifier" Value="" />
+      </Frame>
+      <Frame Name="FRAME3" X="1540" Y="1600" Width="1260" Height="1000">
+        <Parameter Name="BackgroundColor" Value="AliceBlue" />
+        <Parameter Name="TextColor" Value="Black" />
+        <Parameter Name="Font" Value="Microsoft Sans Serif, 10pt" />
+        <Parameter Name="TextAlignment" Value="TopLeft" />
+        <Parameter Name="MoveStyle" Value="AnyContained" />
+        <Parameter Name="NxtLayerIdentifier" Value="" />
+      </Frame>
+      <Frame Name="Plant" X="340" Y="900" Width="740" Height="120.7292" IsComment="true">
+        <Parameter Name="BackgroundColor" Value="LemonChiffon" />
+        <Parameter Name="TextColor" Value="Black" />
+        <Parameter Name="Font" Value="Microsoft Sans Serif, 10pt" />
+        <Parameter Name="TextAlignment" Value="TopCenter" />
+        <Parameter Name="MoveStyle" Value="None" />
+        <Parameter Name="Text" Value="Plant (Power System)" />
+        <Parameter Name="NxtLayerIdentifier" Value="" />
+      </Frame>
+      <Frame Name="COMMENT1" X="1720" Y="1640" Width="1040" Height="120.7292" IsComment="true">
+        <Parameter Name="BackgroundColor" Value="LemonChiffon" />
+        <Parameter Name="TextColor" Value="Black" />
+        <Parameter Name="Font" Value="Microsoft Sans Serif, 10pt" />
+        <Parameter Name="TextAlignment" Value="TopCenter" />
+        <Parameter Name="MoveStyle" Value="None" />
+        <Parameter Name="Text" Value="Feeder 2" />
+        <Parameter Name="NxtLayerIdentifier" Value="" />
+      </Frame>
+    </SubAppNetwork>
+  </Application>
+  <Device ID="9AE5C21C-1485-4AC3-A0DD-896934350A5B" Name="EcoRT_0" Type="Soft_dPAC" x="700" y="700" Namespace="SE.DPAC">
+    <Resource ID="83616794E7D939D3" Name="RES0" Type="EMB_RES_ECO" x="800" y="800" Namespace="Runtime.Management">
+      <FBNetwork>
+        <FB ID="E36155C569CDD589" Name="FB6" Type="Physical_Plant_SIMULATION" x="520" y="820" Namespace="Main" />
+        <FB ID="64335972C96F197C" Name="Feeder_2_overcurrent_protector" Type="Overcurrent_Protector" x="1900" y="1440" Namespace="Main" />
+        <EventConnections>
+          <Connection Source="START.COLD" Destination="Feeder_2_overcurrent_protector.INIT" dx1="978.6042">
+            <AvoidsNodes>false</AvoidsNodes>
+          </Connection>
+        </EventConnections>
+        <AdapterConnections>
+          <Connection Source="FB6.feeder_2_current" Destination="Feeder_2_overcurrent_protector.current" dx1="43.22925" />
+          <Connection Source="Feeder_2_overcurrent_protector.cutoff" Destination="FB6.feeder_2_trip" dx1="40.771" dx2="30" dy="250" />
+        </AdapterConnections>
+      </FBNetwork>
+    </Resource>
+    <FBNetwork />
+  </Device>
+  <Mapping From="APP1.FB6" To="EcoRT_0.RES0" />
+  <Mapping From="APP1.Feeder_2_overcurrent_protector" To="EcoRT_0.RES0" />
+</System>

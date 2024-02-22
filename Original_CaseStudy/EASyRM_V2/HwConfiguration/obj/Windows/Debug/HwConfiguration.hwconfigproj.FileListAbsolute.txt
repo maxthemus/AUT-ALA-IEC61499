@@ -1,0 +1,8 @@
+C:\Users\Maxth\Desktop\EASyRM_V2\HwConfiguration\bin\Windows\Debug\HwConfiguration.dll
+C:\Users\Maxth\Desktop\EASyRM_V2\HwConfiguration\bin\Windows\Debug\HwConfiguration.pdb
+C:\Users\Maxth\Desktop\EASyRM_V2\HwConfiguration\bin\Windows\Debug\SE.DPAC.HwConfiguration.dll
+C:\Users\Maxth\Desktop\EASyRM_V2\HwConfiguration\obj\Windows\Debug\HwConfiguration.hwconfigprojAssemblyReference.cache
+C:\Users\Maxth\Desktop\EASyRM_V2\HwConfiguration\obj\Windows\Debug\HwConfiguration.hwconfigproj.CoreCompileInputs.cache
+C:\Users\Maxth\Desktop\EASyRM_V2\HwConfiguration\obj\Windows\Debug\HwConfiguration.hwconfigproj.CopyComplete
+C:\Users\Maxth\Desktop\EASyRM_V2\HwConfiguration\obj\Windows\Debug\HwConfiguration.dll
+C:\Users\Maxth\Desktop\EASyRM_V2\HwConfiguration\obj\Windows\Debug\HwConfiguration.pdb

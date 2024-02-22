@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectDatabase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="EASyRM_V2" Guid="{C3B61B48-6D98-4DDE-A982-6C89B1884C65}" Version="1.5.0.0" xmlns="http://www.nxtcontrol.com/IEC61499.xsd">
+  <Archive>
+    <ExcludeDir>
+      <string>Exports</string>
+      <string>Imports</string>
+      <string>Documentation</string>
+      <string>TestReports</string>
+    </ExcludeDir>
+  </Archive>
+  <References />
+  <CanvasResolution StartCanvasClass="" Width="-1" Height="-1" WorkAreaWidth="-1" WorkAreaHeight="-1" Template="" Login="true" NavigationControl="0" CurrentUser="true" LanguageButton="true" RuntimeConnection="true" Logger="false" NavigationBar="true" NewVersionDeployed="true" Exit="false" ShowWarningMessage="false" WarningText="" SiblingButtonCount="5" ChildButtonCount="5" IsCanvasTopologyPanel="true" ResizeBehaviour="None">
+    <Topology Name="Default" />
+  </CanvasResolution>
+  <Graphics Name="Graphics" IsExternal="false" />
+  <WebGraphics Name="WebGraphics" IsExternal="false" />
+  <Security Level="Internal" IsActive="true">
+    <Info>﻿&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;UserManager xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" HighestID="2"&gt;&lt;UserInfos Name="cheyan" Password="$1$8225C8F01D21D464A2B38DE9B4EAC1BAED5FCD331DED0C5DFAC89B280F238EF4$AA31020D6052850DB0CDD281B4AEBD70460A89212AFA2790F547BBA698473720" SecurityToken="127" ID="1" MeetsCalLaw="true" /&gt;&lt;/UserManager&gt;</Info>
+  </Security>
+  <PluginGUIDs />
+  <ConnectableAdapterList>
+    <ConnectableAdapters>
+      <CompatibleType Type="IHwSlaveConfig" Namespace="SE.FieldDevice" />
+      <CompatibleType Type="IHwSlaveConfig" Namespace="Standard.IoModbus" />
+    </ConnectableAdapters>
+  </ConnectableAdapterList>
+</ProjectDatabase>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE DataType SYSTEM "../LibraryElement.dtd">
+<DataType Namespace="Main" Name="AnalogueValue" Comment="IEC61131-3, Table 14#5">
+  <Attribute Name="nxtDataType" Value="F/ea0TupPJuJoVZpvzrlKQA4levS12OEkI6ogTkw31nr5l0edZEILHY/dfzMdMAouTKIDobrWo3b4AqhGXV9etB7pqTj5CPgZoUQ5fczaoE=" Context="16269851054983653642" />
+  <Identification Standard="1131-3" />
+  <VersionInfo Organization="Schneider Electric" Version="0.0" Author="Cheyan" Date="1/8/2024" Remarks="Template" />
+  <CompilerInfo />
+  <StructuredType>
+    <VarDeclaration Name="i" Type="DINT" />
+    <VarDeclaration Name="f" Type="LREAL" />
+  </StructuredType>
+</DataType>

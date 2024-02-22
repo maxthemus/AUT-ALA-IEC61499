@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HMIProjectDatabase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="EASyRM_V2" Guid="{C3B61B48-6D98-4DDE-A982-6C89B1884C65}" xmlns="http://www.nxtcontrol.com/IEC61499.xsd">
+  <DeviceDeployments Device="System.EcoRT_0" ID="9AE5C21C-1485-4AC3-A0DD-896934350A5B">
+    <DevAttrs Expanded="true">
+      <ComplexProperty Name="Security" DisplayName="Security" Hidden="true" Expanded="true">
+        <ProfileProperty GUID="{E0601B81-4A3A-4A96-B6C2-007BDC680D59}" Hidden="true" />
+        <Property Name="UseEncryption" Description="UseEncryption.Description" DisplayName="UseEncryption" Hidden="true" Value="false" Type="bool" UITypeEditor="EcoRTPlugin.PlatformEditors.InformAboutChangeConfig,EcoRTPlugin" Validation="EcoRTPlugin.PlatformEditors.InformAboutChangeConfig,EcoRTPlugin" ReadOnly="false" SaveModifiedTime="false" IsPassword="false">
+          <ProfileProperty GUID="{E0601B81-4A3A-4A96-B6C2-007BDC680D59}" Value="false" Hidden="true" />
+        </Property>
+        <Property Name="IgnoreCertificateErrors" Description="IgnoreCertificateErrors.Description" DisplayName="IgnoreCertificateErrors" Hidden="true" Value="true" Type="bool" ReadOnly="false" SaveModifiedTime="false" IsPassword="false">
+          <ProfileProperty GUID="{E0601B81-4A3A-4A96-B6C2-007BDC680D59}" Value="true" Hidden="true" />
+        </Property>
+      </ComplexProperty>
+      <ComplexProperty Name="DeployPlugin" DisplayName="Deploy Service" Expanded="true">
+        <Property Name="ClearBeforeDeploy" Description="Choose whether to clean device before deploying" DisplayName="Clean before deploy" Value="false" Type="bool" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+        <Property Name="HashFileNames" Description="Choose whether to hash file names for deploying. This is useful if any limitations regarding file name length exist on a specific platform" DisplayName="Hash file names" Value="false" Type="bool" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+        <Property Name="ExportDeployDataPath" Description="Choose the path where to export the deploy data to." DisplayName="Export deploy data path" Value="" Type="string" UITypeEditor="NxtControl.Automation.Engineering.Dialogs.ExportDeployDataDlg,NxtControl.PBEngineering" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+      </ComplexProperty>
+      <ComplexProperty Name="CrossCommunication" DisplayName="CrossCommunication" Expanded="true">
+        <Property Name="IntraDeviceCrossComm" Description="IntraDeviceCrossComm.Description" DisplayName="IntraDeviceCrossComm" Value="true" Type="bool" Items="Enabled=true|Disabled=false" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+      </ComplexProperty>
+      <ComplexProperty Name="WatchProfile" Description="WatchProfile.Description" DisplayName="WatchProfile" Hidden="true" Expanded="true">
+        <Property Name="Method" Description="Method.Description" DisplayName="Method" Value="smartrt" Items="smartrt" ReadOnly="true" SaveModifiedTime="false" IsPassword="false" />
+        <GroupProperty Name="WebSocket" Description="WebSocket.Description" DisplayName="WebSocket" Hidden="true" Expanded="true" Enabled="true">
+          <Property Name="UseEncryption" Description="UseEncryption.Description" DisplayName="UseEncryption" Value="false" Type="bool" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="IgnoreCertificateErrors" Description="IgnoreCertificateErrors.Description" DisplayName="IgnoreCertificateErrors" Value="true" Type="bool" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+        </GroupProperty>
+      </ComplexProperty>
+      <ComplexProperty Name="HMIProfile" Description="HMIProfile.Description" DisplayName="HMIProfile" Hidden="true" Expanded="true">
+        <Property Name="Method" Description="Method.Description" DisplayName="Method" Value="smartrt" Items="smartrt" ReadOnly="true" SaveModifiedTime="false" IsPassword="false" />
+        <GroupProperty Name="WebSocket" Description="WebSocket.Description" DisplayName="WebSocket" Hidden="true" Expanded="true" Enabled="true">
+          <Property Name="UseEncryption" Description="UseEncryption.Description" DisplayName="UseEncryption" Value="false" Type="bool" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="IgnoreCertificateErrors" Description="IgnoreCertificateErrors.Description" DisplayName="IgnoreCertificateErrors" Value="true" Type="bool" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+        </GroupProperty>
+      </ComplexProperty>
+      <GroupProperty Name="Archive" DisplayName="Archive" Expanded="true" Enabled="false">
+        <Property Name="Values" Description="Values.Description" DisplayName="Values" Value="true" Type="bool" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+        <Property Name="Alarms" Description="Alarms.Description" DisplayName="Alarms" Value="true" Type="bool" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+        <Property Name="LoginTimeout" Description="LoginTimeout.Description" DisplayName="LoginTimeout" Value="5000" Type="int" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+        <Property Name="LoginRetryTime" Description="LoginRetryTime.Description" DisplayName="LoginRetryTime" Value="15000" Type="int" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+        <Property Name="ServerTimeout" Description="ServerTimeout.Description" DisplayName="ServerTimeout" Value="5000" Type="int" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+      </GroupProperty>
+      <GroupProperty Name="Configuration" Description="Configuration.Description" DisplayName="Configuration" Expanded="true" Enabled="true" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+        <GroupProperty Name="Debug" Description="Debug.Description" DisplayName="Debug" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+          <GroupProperty Name="Log" Description="Log.Description" DisplayName="Log" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+            <Property Name="MaxFreezeTime" Description="MaxFreezeTime.Description" DisplayName="MaxFreezeTime" Value="15" Type="int" MinInclusive="1" MaxInclusive="600" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="FreezeWaitTime" Description="FreezeWaitTime.Description" DisplayName="FreezeWaitTime" Value="1" Type="int" MinInclusive="1" MaxInclusive="60" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="FreezeGuardTime" Description="FreezeGuardTime.Description" DisplayName="FreezeGuardTime" Value="1" Type="int" MinInclusive="0" MaxInclusive="60" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <GroupProperty Name="StdErr" Description="StdErr.Description" DisplayName="StdErr" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+              <Property Name="Level" Description="Level.Description" DisplayName="Level" Value="INFO" Type="string" Items="INFO|WARNING|ERROR|DEBUG" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            </GroupProperty>
+            <GroupProperty Name="File" Description="File.Description" DisplayName="File" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+              <Property Name="Level" Description="Level.Description" DisplayName="Level" Value="WARNING" Type="string" Items="INFO|WARNING|ERROR|DEBUG" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+              <Property Name="FlushInterval" Description="FlushInterval.Description" DisplayName="FlushInterval" Value="60" Type="int" MinInclusive="0" MaxInclusive="86400" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+              <Property Name="MaxFileSize" Description="MaxFileSize.Description" DisplayName="MaxFileSize" Value="262144" Type="int" MinInclusive="1024" MaxInclusive="33554432" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+              <Property Name="FlushLevel" Description="FlushLevel.Description" DisplayName="FlushLevel" Value="WARNING" Type="string" Items="INFO|WARNING|ERROR|DEBUG" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+              <Property Name="RingBufSize" Description="RingBufSize.Description" DisplayName="RingBufSize" Value="16384" Type="int" MinInclusive="1024" MaxInclusive="1048576" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            </GroupProperty>
+            <GroupProperty Name="Syslog" Description="Syslog.Description" DisplayName="Syslog" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+              <Property Name="Level" Description="Level.Description" DisplayName="Level" Value="WARNING" Type="string" Items="INFO|WARNING|ERROR|DEBUG" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+              <Property Name="Server" Description="Server.Description" DisplayName="Server" Value="" Type="string" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+              <Property Name="Facility" Description="Facility.Description" DisplayName="Facility" Value="16" Type="int" MinInclusive="0" MaxInclusive="23" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+              <Property Name="Hostname" Description="Hostname.Description" DisplayName="Hostname" Value="" Type="string" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+              <Property Name="Legacy" Description="Legacy.Description" DisplayName="Legacy" Value="false" Type="bool" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            </GroupProperty>
+            <GroupProperty Name="Cyclic" Description="Cyclic.Description" DisplayName="Cyclic" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+              <Property Name="Level" Description="Level.Description" DisplayName="Level" Value="WARNING" Type="string" Items="INFO|WARNING|ERROR|DEBUG" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+              <Property Name="MaxEntries" Description="MaxEntries.Description" DisplayName="MaxEntries" Value="100" Type="int" MinInclusive="5" MaxInclusive="100000" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            </GroupProperty>
+            <GroupProperty Name="Trace" Description="Trace.Description" DisplayName="Trace" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+              <Property Name="Areas" Description="Areas.Description" DisplayName="Areas" Value="" Type="string" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            </GroupProperty>
+          </GroupProperty>
+        </GroupProperty>
+        <GroupProperty Name="Resource" Description="Resource.Description" DisplayName="Resource" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+          <GroupProperty Name="Clock" Description="Clock.Description" DisplayName="Clock" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+            <Property Name="TicksPerSecond" Description="TicksPerSecond.Description" DisplayName="TicksPerSecond" Value="0" Type="int" MinInclusive="0" MaxInclusive="1000" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="TickFactor" Description="TickFactor.Description" DisplayName="TickFactor" Value="1" Type="int" MinInclusive="0" MaxInclusive="1000" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          </GroupProperty>
+          <GroupProperty Name="C2FBException" Description="C2FBException.Description" DisplayName="C2FBException" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+            <Property Name="StrictHandling" Description="StrictHandling.Description" DisplayName="StrictHandling" Value="true" Type="bool" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          </GroupProperty>
+          <GroupProperty Name="EventQueue" Description="EventQueue.Description" DisplayName="EventQueue" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+            <Property Name="MaxSize" Description="MaxSize.Description" DisplayName="MaxSize" Value="131072" Type="int" MinInclusive="128" MaxInclusive="131072" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="ExternalMaxSize" Description="ExternalMaxSize.Description" DisplayName="ExternalMaxSize" Value="131072" Type="int" MinInclusive="128" MaxInclusive="131072" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="WakeupInterval" Description="WakeupInterval.Description" DisplayName="WakeupInterval" Value="20" Type="int" MinInclusive="1" MaxInclusive="1000" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <GroupProperty Name="Throttle" Description="Throttle.Description" DisplayName="Throttle" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+              <Property Name="LimitTime" Description="LimitTime.Description" DisplayName="LimitTime" Value="0" Type="int" MinInclusive="0" MaxInclusive="60000" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+              <Property Name="PauseTime" Description="PauseTime.Description" DisplayName="PauseTime" Value="20" Type="int" MinInclusive="0" MaxInclusive="100" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+              <Property Name="HaltTimeInit" Description="HaltTimeInit.Description" DisplayName="HaltTimeInit" Value="10000" Type="int" MinInclusive="100" MaxInclusive="30000" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+              <Property Name="HaltTime" Description="HaltTime.Description" DisplayName="HaltTime" Value="2000" Type="int" MinInclusive="10" MaxInclusive="30000" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            </GroupProperty>
+          </GroupProperty>
+          <GroupProperty Name="FBNetwork" Description="FBNetwork.Description" DisplayName="FBNetwork" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+            <Property Name="AllowExplicitConnection" Description="AllowExplicitConnection.Description" DisplayName="AllowExplicitConnection" Value="true" Type="bool" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          </GroupProperty>
+          <GroupProperty Name="AsyncRW" Description="AsyncRW.Description" DisplayName="AsyncRW" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+            <Property Name="RequestQueueSize" Description="RequestQueueSize.Description" DisplayName="RequestQueueSize" Value="80000" Type="int" MinInclusive="40000" MaxInclusive="80000" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="ResponseQueueSize" Description="ResponseQueueSize.Description" DisplayName="ResponseQueueSize" Value="100000" Type="int" MinInclusive="40000" MaxInclusive="250000" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="NumberOfRequestsToProcessAtATime" Description="NumberOfRequestsToProcessAtATime.Description" DisplayName="NumberOfRequestsToProcessAtATime" Value="100" Type="int" MinInclusive="1" MaxInclusive="200" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="DynamicSTRINGMaximumSize" Description="DynamicSTRINGMaximumSize.Description" DisplayName="DynamicSTRINGMaximumSize" Value="10000" Type="int" MinInclusive="1000" MaxInclusive="65535" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="DynamicWSTRINGMaximumSize" Description="DynamicWSTRINGMaximumSize.Description" DisplayName="DynamicWSTRINGMaximumSize" Value="5000" Type="int" MinInclusive="500" MaxInclusive="65535" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          </GroupProperty>
+          <GroupProperty Name="Watch" Description="Watch.Description" DisplayName="Watch" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+            <Property Name="MaxStringLength" Description="MaxStringLength.Description" DisplayName="MaxStringLength" Value="128" Type="int" MinInclusive="16" MaxInclusive="65535" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="MaxWatches" Description="MaxWatches.Description" DisplayName="MaxWatches" Value="100" Type="int" MinInclusive="8" MaxInclusive="1024" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="MaxDataSize" Description="MaxDataSize.Description" DisplayName="MaxDataSize" Value="1024" Type="int" MinInclusive="128" MaxInclusive="64000" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="MaxForces" Description="MaxForces.Description" DisplayName="MaxForces" Value="16" Type="int" MinInclusive="8" MaxInclusive="1024" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="MaxForceDataSize" Description="MaxForceDataSize.Description" DisplayName="MaxForceDataSize" Value="1024" Type="int" MinInclusive="128" MaxInclusive="64000" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="MaxBlocks" Description="MaxBlocks.Description" DisplayName="MaxBlocks" Value="16" Type="int" MinInclusive="8" MaxInclusive="1024" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="MaxForcesInQueryMsg" Description="MaxForcesInQueryMsg.Description" DisplayName="MaxForcesInQueryMsg" Value="4" Type="int" MinInclusive="1" MaxInclusive="1024" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="MaxBlocksInQueryMsg" Description="MaxBlocksInQueryMsg.Description" DisplayName="MaxBlocksInQueryMsg" Value="4" Type="int" MinInclusive="1" MaxInclusive="1024" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          </GroupProperty>
+        </GroupProperty>
+        <GroupProperty Name="Communication" Description="Communication.Description" DisplayName="Communication" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+          <GroupProperty Name="Endpoint" Description="Endpoint.Description" DisplayName="Endpoint" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+            <Property Name="MaxRequestSize" Description="Maximum size of file that can be deployed to the runtime in KB" DisplayName="MaxRequestSize" Value="51200" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="CommunicationTimeout" Description="CommunicationTimeout.Description" DisplayName="CommunicationTimeout" Value="30" Type="int" MinInclusive="1" MaxInclusive="300" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="MaxPktSize" Description="MaxPktSize.Description" DisplayName="MaxPktSize" Value="32768" Type="int" MinInclusive="512" MaxInclusive="65507" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="MaxDeployConnections" Description="MaxDeployConnections.Description" DisplayName="MaxDeployConnections" Value="1" Type="int" MinInclusive="1" MaxInclusive="1024" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="MaxDiagConnections" Description="MaxDiagConnections.Description" DisplayName="MaxDiagConnections" Value="32" Type="int" MinInclusive="1" MaxInclusive="1024" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="MaxWatchConnections" Description="MaxWatchConnections.Description" DisplayName="MaxWatchConnections" Value="1" Type="int" MinInclusive="1" MaxInclusive="1024" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="MaxHMIConnections" Description="MaxHMIConnections.Description" DisplayName="MaxHMIConnections" Value="32" Type="int" MinInclusive="1" MaxInclusive="1024" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="MaxTestConnections" Description="MaxTestConnections.Description" DisplayName="MaxTestConnections" Value="1" Type="int" MinInclusive="1" MaxInclusive="1024" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <GroupProperty Name="UDP" Description="UDP.Description" DisplayName="UDP" Hidden="true" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+              <ProfileProperty GUID="{E0601B81-4A3A-4A96-B6C2-007BDC680D59}" Hidden="true" />
+              <Property Name="URI" Description="URI.Description" DisplayName="URI" Value="udp://0.0.0.0:51499" Type="string" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            </GroupProperty>
+            <GroupProperty Name="WebSocket" Description="WebSocket.Description" DisplayName="WebSocket" Hidden="true" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+              <ProfileProperty GUID="{E0601B81-4A3A-4A96-B6C2-007BDC680D59}" Hidden="true" />
+              <Property Name="Encryption" Description="Encryption.Description" DisplayName="Encryption" Hidden="true" PreventReset="true" Value="false" Type="bool" UITypeEditor="EcoRTPlugin.PlatformEditors.UseEncryptionConfig,EcoRTPlugin" Validation="EcoRTPlugin.PlatformEditors.UseEncryptionConfig,EcoRTPlugin" ReadOnly="false" SaveModifiedTime="false" IsPassword="false">
+                <ProfileProperty GUID="{E0601B81-4A3A-4A96-B6C2-007BDC680D59}" Value="false" Hidden="true" />
+              </Property>
+              <Property Name="URI" Description="URI_websocket.Description" DisplayName="URI" Hidden="true" PreventReset="true" Value="ws://0.0.0.0:51499,ws://[::]:51499,wss://0.0.0.0:51443,wss://[::]:51443" UITypeEditor="EcoRTPlugin.PlatformEditors.WebsocketPortEditor,EcoRTPlugin" TypeConverter="EcoRTPlugin.PlatformEditors.ValidationTypeConverter,EcoRTPlugin" ReadOnly="false" SaveModifiedTime="false" IsPassword="false">
+                <ProfileProperty GUID="{E0601B81-4A3A-4A96-B6C2-007BDC680D59}" Value="ws://0.0.0.0:51499,ws://[::]:51499,wss://0.0.0.0:51443,wss://[::]:51443" Hidden="true" />
+              </Property>
+              <Property Name="MaxConnections" Description="MaxConnections.Description" DisplayName="MaxConnections" Value="32" Type="int" MinInclusive="4" MaxInclusive="1024" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+              <Property Name="HandshakeTimeout" Description="HandshakeTimeout.Description" DisplayName="HandshakeTimeout" Value="10" Type="int" MinInclusive="1" MaxInclusive="60" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+              <Property Name="CertAndKeyFile" Description="CertAndKeyFile.Description" DisplayName="CertAndKeyFile" Hidden="true" Value="srt61499n.pem" Type="string" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            </GroupProperty>
+          </GroupProperty>
+          <GroupProperty Name="Authentication" Description="Authentication.Description" DisplayName="Authentication" Hidden="true" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+            <ProfileProperty GUID="{E0601B81-4A3A-4A96-B6C2-007BDC680D59}" Hidden="true" />
+            <Property Name="DisableAnonymousBackend" Description="DisableAnonymousBackend.Description" DisplayName="Disable anonymous backend" Hidden="true" Value="false" Type="bool" ReadOnly="false" SaveModifiedTime="false" IsPassword="false">
+              <ProfileProperty GUID="{E0601B81-4A3A-4A96-B6C2-007BDC680D59}" Value="false" Hidden="true" />
+            </Property>
+          </GroupProperty>
+          <GroupProperty Name="CrossComm" Description="CrossComm.Description" DisplayName="CrossComm" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+            <Property Name="SndPacketSize" Description="SndPacketSize.Description" DisplayName="SndPacketSize" Value="65507" Type="int" MinInclusive="1024" MaxInclusive="65536" ReadOnly="true" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="RcvPacketSize" Description="RcvPacketSize.Description" DisplayName="RcvPacketSize" Value="65507" Type="int" MinInclusive="1024" MaxInclusive="65536" ReadOnly="true" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="ChnLinkEvalInterval" Description="ChnLinkEvalInterval.Description" DisplayName="ChnLinkEvalInterval" Value="5000" Type="uint" MinInclusive="100" MaxInclusive="100000" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="EventLostThreshold" Description="EventLostThreshold.Description" DisplayName="EventLostThreshold" Value="0" Type="uint" MinInclusive="0" MaxInclusive="1000" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          </GroupProperty>
+          <GroupProperty Name="Deploy" Description="Deploy.Description" DisplayName="Deploy" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+            <Property Name="TimeoutShort" Description="TimeoutShort.Description" DisplayName="TimeoutShort" Value="5000" Type="int" MinInclusive="1000" MaxInclusive="60000" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="TimeoutLong" Description="TimeoutLong.Description" DisplayName="TimeoutLong" Value="30000" Type="int" MinInclusive="1000" MaxInclusive="600000" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          </GroupProperty>
+          <GroupProperty Name="HMI" Description="HMI.Description" DisplayName="HMI" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+            <Property Name="EventDataSize" Description="EventDataSize.Description" DisplayName="EventDataSize" Value="4096" Type="int" MinInclusive="128" MaxInclusive="65500" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="NotificationQueueSize" Description="NotificationQueueSize.Description" DisplayName="NotificationQueueSize" Value="131072" Type="int" MinInclusive="1024" MaxInclusive="1048576" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="ClientQueueSize" Description="ClientQueueSize.Description" DisplayName="ClientQueueSize" Value="65536" Type="int" MinInclusive="1024" MaxInclusive="1048576" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="ClientAlarmQueueSize" Description="ClientAlarmQueueSize.Description" DisplayName="ClientAlarmQueueSize" Value="65536" Type="int" MinInclusive="1024" MaxInclusive="1048576" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="NotificationsInOnePass" Description="NotificationsInOnePass.Description" DisplayName="NotificationsInOnePass" Value="1024" Type="int" MinInclusive="1" MaxInclusive="16384" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="NotificationsInPollReply" Description="NotificationsInPollReply.Description" DisplayName="NotificationsInPollReply" Value="1024" Type="int" MinInclusive="1" MaxInclusive="16384" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="NotificationsPollTimeout" Description="NotificationsPollTimeout.Description" DisplayName="NotificationsPollTimeout" Value="500" Type="int" MinInclusive="1" MaxInclusive="60000" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          </GroupProperty>
+          <GroupProperty Name="OPCUA" Description="OPCUA.Server.Description" DisplayName="OPCUA.Server" Expanded="true" Enabled="true" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+            <Property Name="EnableServer" Description="EnableServer.Description" DisplayName="EnableServer" Value="true" Items="true|false" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="Middleware.Maximum.Variables.Per.FB.Request" Description="Middleware.Maximum.Variables.Per.FB.Request.Description" DisplayName="Middleware.Maximum.Variables.Per.FB.Request" Hidden="true" Value="30" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="MaxVariableNodes" Description="MaxVariableNodes.Description" DisplayName="MaxVariableNodes" Value="25000" Type="uint" MinInclusive="1000" MaxInclusive="25000" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="MaxReferences" Description="MaxReferences.Description" DisplayName="MaxReferences" Value="65535" Type="uint" MinInclusive="4000" MaxInclusive="65535" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="MaxNumOfStrings" Description="MaxNumOfStrings.Description" DisplayName="MaxNumOfStrings" Value="10000" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="FbVariablesSamplingRate" Description="FbVariablesSamplingRate.Description" DisplayName="FbVariablesSamplingRate" Value="500" MinInclusive="100" MaxInclusive="65535" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="StoreItemsSamplingRate" Description="StoreItemsSamplingRate.Description" DisplayName="StoreItemsSamplingRate" Hidden="true" Value="100" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="MaxFlushTickCount" Description="MaxFlushTickCount.Description" DisplayName="MaxFlushTickCount" Value="1000" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          </GroupProperty>
+          <GroupProperty Name="OPCUA.Client" Description="OPCUA.Client.Description" DisplayName="OPCUA.Client" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+            <Property Name="EnableClient" Description="OPCUA.Client.EnableClient.Description" DisplayName="OPCUA.Client.EnableClient" Value="true" Items="true|false" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="MaxRequestPer100ms" Description="OPCUA.Client.MaxRequestPer100ms.Description" DisplayName="OPCUA.Client.MaxRequestPer100ms" Value="100" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="SustainableRequestPer100ms" Description="OPCUA.Client.SustainableRequestPer100ms.Description" DisplayName="OPCUA.Client.SustainableRequestPer100ms" Value="50" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="MaxOverlappedOperations" Description="OPCUA.Client.MaxOverlappedOperations.Description" DisplayName="OPCUA.Client.MaxOverlappedOperations" Value="50" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="ResponseTimeout" Description="OPCUA.Client.ResponseTimeout.Description" DisplayName="OPCUA.Client.ResponseTimeout" Value="15000" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          </GroupProperty>
+          <GroupProperty Name="Diag" Description="Diag.Description" DisplayName="Diag" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+            <Property Name="PollTimeout" Description="PollTimeout.Description" DisplayName="PollTimeout" Value="15000" Type="int" MinInclusive="500" MaxInclusive="60000" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          </GroupProperty>
+          <GroupProperty Name="WebConnectionManager" Description="Web Connection settings (WebSocket Server)" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+            <Property Name="MongoosePollSleepTime" Description="Mongoose manager poll sleep time (ms)" Value="10" Type="uint" MinInclusive="10" MaxInclusive="1000" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="MaxMessageQueueSize" Description="Maximum number of messages the input and output message queue can contain" Value="256" Type="uint" MinInclusive="100" MaxInclusive="1000" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="MaxMessageSize" Description="Maximum size of the web message (bytes) " Value="10000" Type="uint" MinInclusive="1000" MaxInclusive="65535" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          </GroupProperty>
+          <GroupProperty Name="ReliableCrossComm" Description="Description.ReliableCrossComm" DisplayName="Name.ReliableCrossComm" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+            <Property Name="URI" Description="Description.ReliableCrossComm.URI" Value="udp://0.0.0.0:41499" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <GroupProperty Name="Network" Description="Description.ReliableCrossComm.Network" DisplayName="Name.ReliableCrossComm.Network" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+              <Property Name="SendPacketSize" Description="Description.ReliableCrossComm.Network.SendPacketSize" DisplayName="Name.ReliableCrossComm.Network.SendPacketSize" Value="1424" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+              <Property Name="ReceivePacketSize" Description="Description.ReliableCrossComm.Network.ReceivePacketSize" DisplayName="Name.ReliableCrossComm.Network.ReceivePacketSize" Value="1500" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+              <Property Name="SendSocketBufferSize" Description="Description.ReliableCrossComm.Network.SendSocketBufferSize" DisplayName="Name.ReliableCrossComm.Network.SendSocketBufferSize" Value="131072" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+              <Property Name="ReceiveSocketBufferSize" Description="Description.ReliableCrossComm.Network.ReceiveSocketBufferSize" DisplayName="Name.ReliableCrossComm.Network.ReceiveSocketBufferSize" Value="131072" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            </GroupProperty>
+            <GroupProperty Name="Protocol" Description="Description.ReliableCrossComm.Protocol" DisplayName="Name.ReliableCrossComm.Protocol" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+              <Property Name="PeriodicTickMs" Description="Description.ReliableCrossComm.Protocol.PeriodicTickMs" DisplayName="Name.ReliableCrossComm.Protocol.PeriodicTickMs" Value="5" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            </GroupProperty>
+            <GroupProperty Name="Handshake" Description="Description.ReliableCrossComm.Handshake" DisplayName="Name.ReliableCrossComm.Handshake" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+              <Property Name="WaitMs" Description="Description.ReliableCrossComm.Handshake.WaitMs" DisplayName="Name.ReliableCrossComm.Handshake.WaitMs" Value="1000" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+              <Property Name="RetryMs" Description="Description.ReliableCrossComm.Handshake.RetryMs" DisplayName="Name.ReliableCrossComm.Handshake.RetryMs" Value="5000" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            </GroupProperty>
+            <GroupProperty Name="Data" Description="Description.ReliableCrossComm.Data" DisplayName="Name.ReliableCrossComm.Data" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+              <Property Name="MaxPacketGap" Description="Description.ReliableCrossComm.Data.MaxPacketGap" DisplayName="Name.ReliableCrossComm.Data.MaxPacketGap" Value="4096" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+              <Property Name="MaxMessagePacketGap" Description="Description.ReliableCrossComm.Data.MaxMessagePacketGap" DisplayName="Name.ReliableCrossComm.Data.MaxMessagePacketGap" Value="2048" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+              <Property Name="MaxMessageGap" Description="Description.ReliableCrossComm.Data.MaxMessageGap" DisplayName="Name.ReliableCrossComm.Data.MaxMessageGap" Value="64" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+              <Property Name="MaxMessagesInFlight" Description="Description.ReliableCrossComm.Data.MaxMessagesInFlight" DisplayName="Name.ReliableCrossComm.Data.MaxMessagesInFlight" Value="16" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            </GroupProperty>
+            <GroupProperty Name="Acknowledge" Description="Description.ReliableCrossComm.Acknowledge.Acknowledge" DisplayName="Name.ReliableCrossComm.Acknowledge" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+              <Property Name="SendAckTimeMs" Description="Description.ReliableCrossComm.Acknowledge.SendAckTimeMs" DisplayName="Name.ReliableCrossComm.Acknowledge.SendAckTimeMs" Value="1000" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+              <Property Name="ReceiveAckTimeMs" Description="Description.ReliableCrossComm.Acknowledge.ReceiveAckTimeMs" DisplayName="Name.ReliableCrossComm.Acknowledge.ReceiveAckTimeMs" Value="1000" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+              <Property Name="FullIntervalReliableMs" Description="Description.ReliableCrossComm.Acknowledge.FullIntervalReliableMs" DisplayName="Name.ReliableCrossComm.Acknowledge.FullIntervalReliableMs" Value="10" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+              <Property Name="FullIntervalBestEffortMs" Description="Description.ReliableCrossComm.Acknowledge.FullIntervalBestEffortMs" DisplayName="Name.ReliableCrossComm.Acknowledge.FullIntervalBestEffortMs" Value="100" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+              <Property Name="LightIntervalNr" Description="Description.ReliableCrossComm.Acknowledge.LightIntervalNr" DisplayName="Name.ReliableCrossComm.Acknowledge.LightIntervalNr" Value="64" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+              <Property Name="NAKIntervalMs" Description="Description.ReliableCrossComm.Acknowledge.NAKIntervalMs" DisplayName="Name.ReliableCrossComm.Acknowledge.NAKIntervalMs" Value="10" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            </GroupProperty>
+            <GroupProperty Name="Queue" Description="Description.ReliableCrossComm.Queue" DisplayName="Name.ReliableCrossComm.Queue" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+              <Property Name="SendPackets" Description="Description.ReliableCrossComm.Queue.SendPackets" DisplayName="Name.ReliableCrossComm.Queue.SendPackets" Value="512" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+              <Property Name="ReceiveMessages" Description="Description.ReliableCrossComm.Queue.ReceiveMessages" DisplayName="Name.ReliableCrossComm.Queue.ReceiveMessages" Value="128" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+              <Property Name="DedupMessages" Description="Description.ReliableCrossComm.Queue.DedupMessages" DisplayName="Name.ReliableCrossComm.Queue.DedupMessages" Value="64" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+              <Property Name="SendMessageSize" Description="Description.ReliableCrossComm.Queue.SendMessageSize" DisplayName="Name.ReliableCrossComm.Queue.SendMessageSize" Value="65407" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+              <Property Name="ReceiveMessageSize" Description="Description.ReliableCrossComm.Queue.ReceiveMessageSize" DisplayName="Name.ReliableCrossComm.Queue.ReceiveMessageSize" Value="65407" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+              <Property Name="SendQueueSize" Description="Description.ReliableCrossComm.Queue.SendQueueSize" DisplayName="Name.ReliableCrossComm.Queue.SendQueueSize" Value="262144" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            </GroupProperty>
+            <GroupProperty Name="Limits" Description="Limits" DisplayName="Name.ReliableCrossComm.Limits" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+              <Property Name="MaxPartners" Description="Description.ReliableCrossComm.Limits.MaxPartners" DisplayName="Name.ReliableCrossComm.Limits.MaxPartners" Value="128" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+              <GroupProperty Name="Buffers" Description="Description.ReliableCrossComm.Limits.Buffers" DisplayName="Name.ReliableCrossComm.Limits.Buffers" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+                <Property Name="Min" Description="Description.ReliableCrossComm.Limits.Buffers.Min" DisplayName="Name.ReliableCrossComm.Limits.Buffers.Min" Value="1024" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+                <Property Name="128" Description="Description.ReliableCrossComm.Limits.Buffers.128" Value="256" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+                <Property Name="256" Description="Description.ReliableCrossComm.Limits.Buffers.256" Value="256" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+                <Property Name="512" Description="Description.ReliableCrossComm.Limits.Buffers.512" Value="128" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+                <Property Name="Max" Description="Description.ReliableCrossComm.Limits.Buffers.Max" DisplayName="Name.ReliableCrossComm.Limits.Buffers.Max" Value="256" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+              </GroupProperty>
+            </GroupProperty>
+          </GroupProperty>
+          <Property Name="OPCUADisplayInternalMemoryUsage" Description="Description.OPCUADisplayInternalMemoryUsage" DisplayName="Name.OPCUADisplayInternalMemoryUsage" Value="false" Items="true|false" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+        </GroupProperty>
+        <GroupProperty Name="Persistence" Description="Persistence.Description" DisplayName="Persistence" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+          <GroupProperty Name="Backend" Description="Backend.Description" DisplayName="Backend" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+            <Property Name="EnableWriteDelay" Description="EnableWriteDelay.Description" DisplayName="EnableWriteDelay" Value="10" Type="int" MinInclusive="0" MaxInclusive="600" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          </GroupProperty>
+          <GroupProperty Name="RotatingFiles" Description="RotatingFiles.Description" DisplayName="RotatingFiles" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+            <Property Name="RetainFiles" Description="RetainFiles.Description" DisplayName="RetainFiles" Value="2" Type="int" MinInclusive="1" MaxInclusive="8" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="FileBufferSize" Description="FileBufferSize.Description" DisplayName="FileBufferSize" Value="32768" Type="int" MinInclusive="4096" MaxInclusive="65536" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="CollectQueueSize" Description="CollectQueueSize.Description" DisplayName="CollectQueueSize" Value="131072" Type="int" MinInclusive="4096" MaxInclusive="262144" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="VariablesInCollectPass" Description="VariablesInCollectPass.Description" DisplayName="VariablesInCollectPass" Value="16" Type="int" MinInclusive="1" MaxInclusive="1024" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="DataSizeInCollectPass" Description="DataSizeInCollectPass.Description" DisplayName="DataSizeInCollectPass" Value="32768" Type="int" MinInclusive="128" MaxInclusive="1048576" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="DataSizeInPersistPass" Description="DataSizeInPersistPass.Description" DisplayName="DataSizeInPersistPass" Value="32768" Type="int" MinInclusive="128" MaxInclusive="1048576" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="DataSizeInInitPass" Description="DataSizeInInitPass.Description" DisplayName="DataSizeInInitPass" Value="32768" Type="int" MinInclusive="128" MaxInclusive="1048576" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          </GroupProperty>
+        </GroupProperty>
+        <GroupProperty Name="Symlink" Description="Symlink.Description" DisplayName="Symlink" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+          <Property Name="EventDataSize" Description="EventDataSize.Description" DisplayName="EventDataSize" Value="32768" Type="int" MinInclusive="128" MaxInclusive="65500" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+        </GroupProperty>
+        <GroupProperty Name="FB" Description="FB.Description" DisplayName="FB" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+          <GroupProperty Name="BM_FILE" Description="BM_FILE.Description" DisplayName="BM_FILE" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+            <Property Name="MaxPISize" Description="MaxPISize.Description" DisplayName="MaxPISize" Value="4096" Type="int" MinInclusive="256" MaxInclusive="1048576" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="MaxAXFileSize" Description="MaxAXFileSize.Description" DisplayName="MaxAXFileSize" Value="16384" Type="int" MinInclusive="1024" MaxInclusive="65536" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          </GroupProperty>
+          <GroupProperty Name="BM_MODBUS" Description="BM_MODBUS.Description" DisplayName="BM_MODBUS" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+            <GroupProperty Name="CycleMonitor" Description="CycleMonitor.Description" DisplayName="CycleMonitor" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+              <Property Name="Period" Description="Period.Description" DisplayName="Period" Value="30" Type="int" MinInclusive="15" MaxInclusive="600" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+              <Property Name="Warning" Description="Warning.Description" DisplayName="Warning" Value="250000" Type="int" MinInclusive="1000" MaxInclusive="10000000" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+              <Property Name="Error" Description="Error.Description" DisplayName="Error" Value="900000" Type="int" MinInclusive="1000" MaxInclusive="10000000" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            </GroupProperty>
+          </GroupProperty>
+          <GroupProperty Name="NETIO" Description="NETIO.Description" DisplayName="NETIO" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+            <Property Name="RecvBufSize" Description="RecvBufSize.Description" DisplayName="RecvBufSize" Value="1024" Type="int" MinInclusive="1024" MaxInclusive="1048576" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          </GroupProperty>
+          <GroupProperty Name="SERIALIO" Description="SERIALIO.Description" DisplayName="SERIALIO" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+            <Property Name="RecvBufSize" Description="RecvBufSize.Description" DisplayName="RecvBufSize" Value="1500" Type="int" MinInclusive="1024" MaxInclusive="1048576" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          </GroupProperty>
+        </GroupProperty>
+        <GroupProperty Name="FileSystem" Description="FileSystem.Description" DisplayName="FileSystem" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+          <GroupProperty Name="UserRoots" Description="UserRoots.Description" DisplayName="UserRoots" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+            <Property Name="1" Description="1.Description" DisplayName="1" Value="#ignore#" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="2" Description="2.Description" DisplayName="2" Value="#ignore#" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="3" Description="3.Description" DisplayName="3" Value="#ignore#" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="4" Description="4.Description" DisplayName="4" Value="#ignore#" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="5" Description="5.Description" DisplayName="5" Value="#ignore#" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          </GroupProperty>
+        </GroupProperty>
+        <GroupProperty Name="Alarming" Description="Alarming.Description" DisplayName="Alarming" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+          <Property Name="AlarmLogSize" Description="AlarmLogSize.Description" DisplayName="AlarmLogSize" Value="256" Type="int" MinInclusive="8" MaxInclusive="16384" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="NotificationsAtOnce" Description="NotificationsAtOnce.Description" DisplayName="NotificationsAtOnce" Value="64" Type="int" MinInclusive="16" MaxInclusive="1024" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+        </GroupProperty>
+        <GroupProperty Name="Deploy" Description="Deploy.Description" DisplayName="Deploy" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+          <Property Name="AutoStart" Description="AutoStart.Description" DisplayName="AutoStart" Value="false" Items="true|false" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="AutoSwap" Description="AutoSwap.Description" DisplayName="Auto Swap" Value="false" Type="bool" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+        </GroupProperty>
+        <GroupProperty Name="Boot" Description="Boot.Description" DisplayName="Boot" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+          <Property Name="BootMode" Description="BootMode.Description" DisplayName="BootMode" Value="Stop" Items="Stop|Run|LastState|LastStateIgnoreErr" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+        </GroupProperty>
+        <GroupProperty Name="Archiving" Description="Archiving.Description" DisplayName="Archiving" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+          <GroupProperty Name="Collector" Description="Collector.Description" DisplayName="Collector" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+            <Property Name="Sleep" Description="Sleep.Description" DisplayName="Sleep" Value="10" Type="int" MinInclusive="5" MaxInclusive="60000" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="Interval" Description="Interval.Description" DisplayName="Interval" Value="20" Type="int" MinInclusive="10" MaxInclusive="120000" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <GroupProperty Name="Pass" Description="Pass.Description" DisplayName="Pass" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+              <Property Name="Iterations" Description="Iterations.Description" DisplayName="Iterations" Value="64" Type="int" MinInclusive="1" MaxInclusive="8192" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            </GroupProperty>
+            <GroupProperty Name="FB" Description="FB.Description" DisplayName="FB" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+              <Property Name="Iterations" Description="Iterations.Description" DisplayName="Iterations" Value="8" Type="int" MinInclusive="1" MaxInclusive="8192" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            </GroupProperty>
+            <GroupProperty Name="Alarm" Description="Alarm.Description" DisplayName="Alarm" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+              <Property Name="Iterations" Description="Iterations.Description" DisplayName="Iterations" Value="32" Type="int" MinInclusive="1" MaxInclusive="8192" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            </GroupProperty>
+          </GroupProperty>
+          <GroupProperty Name="Server" Description="Server.Description" DisplayName="Server" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+            <Property Name="Interval" Description="Interval.Description" DisplayName="Interval" Value="50" Type="int" MinInclusive="10" MaxInclusive="120000" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="Enabled" Description="Enabled.Description" DisplayName="Enabled" Value="true" Type="bool" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="Port" Description="Port.Description" DisplayName="Port" Hidden="true" Value="51496" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="QueueSize" Description="QueueSize.Description" DisplayName="QueueSize" Value="131072" Type="int" MinInclusive="2048" MaxInclusive="260000" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="MaxSendMsgSize" Description="MaxSendMsgSize.Description" DisplayName="MaxSendMsgSize" Value="8192" Type="int" MinInclusive="512" MaxInclusive="65000" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="AlarmQueueSize" Description="AlarmQueueSize.Description" DisplayName="AlarmQueueSize" Value="131072" Type="int" MinInclusive="2560" MaxInclusive="325000" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <Property Name="AcksNeeded" Description="AcksNeeded.Description" DisplayName="AcksNeeded" Value="1" Type="string" Items="All|0|1|2|3|4|5|6|7|8|9|10" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            <GroupProperty Name="Transmit" Description="Transmit.Description" DisplayName="Transmit" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+              <Property Name="Window" Description="Window.Description" DisplayName="Window" Value="3" Type="int" MinInclusive="1" MaxInclusive="8" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            </GroupProperty>
+            <GroupProperty Name="Retransmit" Description="Retransmit.Description" DisplayName="Retransmit" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+              <Property Name="Count" Description="Count.Description" DisplayName="Count" Value="3" Type="int" MinInclusive="0" MaxInclusive="100" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+              <Property Name="Interval" Description="Interval.Description" DisplayName="Interval" Value="500" Type="int" MinInclusive="10" MaxInclusive="60000" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            </GroupProperty>
+            <GroupProperty Name="KeepAlive" Description="KeepAlive.Description" DisplayName="KeepAlive" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+              <Property Name="Limit" Description="Limit.Description" DisplayName="Limit" Value="10000" Type="int" MinInclusive="500" MaxInclusive="6000000" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            </GroupProperty>
+            <GroupProperty Name="Watermark" Description="Watermark.Description" DisplayName="Watermark" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+              <Property Name="Low" Description="Low.Description" DisplayName="Low" Value="50" Type="int" MinInclusive="10" MaxInclusive="99" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+              <Property Name="High" Description="High.Description" DisplayName="High" Value="80" Type="int" MinInclusive="10" MaxInclusive="99" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+            </GroupProperty>
+          </GroupProperty>
+          <GroupProperty Name="HMI" Description="HMI.Description" DisplayName="HMI" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+            <Property Name="MaxDataHistoryDepth" Description="MaxDataHistoryDepth.Description" DisplayName="MaxDataHistoryDepth" Value="256" Type="int" MinInclusive="8" MaxInclusive="256" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          </GroupProperty>
+        </GroupProperty>
+      </GroupProperty>
+      <GroupProperty Name="OPCUASettings" Description="OPCUASettings.Description" DisplayName="OPCUASettings" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+        <GroupProperty Name="general" Description="general.Description" DisplayName="general" Hidden="true" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+          <Property Name="num_timers" Description="num_timers.Description" DisplayName="num_timers" Hidden="true" Value="200" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+        </GroupProperty>
+        <GroupProperty Name="ipc" Description="ipc.Description" DisplayName="ipc" Hidden="true" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+          <Property Name="ipc_size" Description="ipc_size.Description" DisplayName="ipc_size" Hidden="true" Value="10000000" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="heap_size" Description="heap_size.Description" DisplayName="heap_size" Value="0" Type="uint" ReadOnly="true" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="queue_size" Description="queue_size.Description" DisplayName="queue_size" Mandatory="true" Value="100" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="num_queues" Description="num_queues.Description" DisplayName="num_queues" Value="10" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="num_messages" Description="num_messages.Description" DisplayName="num_messages" Value="100" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="num_services" Description="num_services.Description" DisplayName="num_services" Value="100" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="outprocess_encoder" Description="outprocess_encoder.Description" DisplayName="outprocess_encoder" Value="false" Type="bool" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="outprocess_seconv" Description="outprocess_seconv.Description" DisplayName="outprocess_seconv" Value="false" Type="bool" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+        </GroupProperty>
+        <GroupProperty Name="network" Description="network.Description" DisplayName="network" Hidden="true" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+          <Property Name="buffer_size" Description="buffer_size.Description" DisplayName="buffer_size" Value="65536" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="num_buffers" Description="num_buffers.Description" DisplayName="num_buffers" Value="50" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="num_buffers_per_connection" Description="num_buffers_per_connection.Description" DisplayName="num_buffers_per_connection" Value="20" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="max_connections_per_ip" Description="max_connections_per_ip.Description" DisplayName="max_connections_per_ip" Value="10" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+        </GroupProperty>
+        <GroupProperty Name="encoder" Description="encoder.Description" DisplayName="encoder" Hidden="true" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+          <Property Name="max_call_depth" Description="max_call_depth.Description" DisplayName="max_call_depth" Value="10" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="max_string_length" Description="max_string_length.Description" DisplayName="max_string_length" Value="1000" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="max_bytestring_length" Description="max_bytestring_length.Description" DisplayName="max_bytestring_length" Value="8000" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="max_array_length" Description="max_array_length.Description" DisplayName="max_array_length" Value="1000" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+        </GroupProperty>
+        <GroupProperty Name="subscription" Description="subscription.Description" DisplayName="subscription" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+          <Property Name="num_sessions_with_subscriptions" Description="num_sessions_with_subscriptions.Description" DisplayName="num_sessions_with_subscriptions" Hidden="true" Value="10" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="num_publishrequests_per_session" Description="num_publishrequests_per_session.Description" DisplayName="num_publishrequests_per_session" Hidden="true" Value="4" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="num_notificationmessages_per_session" Description="num_notificationmessages_per_session.Description" DisplayName="num_notificationmessages_per_session" Hidden="true" Value="8" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="num_subscriptions_per_session" Description="num_subscriptions_per_session.Description" DisplayName="num_subscriptions_per_session" Value="4" Type="uint" MinInclusive="1" MaxInclusive="10" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="num_subscriptions" Description="num_subscriptions.Description" DisplayName="num_subscriptions" Hidden="true" Value="20" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="num_monitoreditems_per_subscription" Description="num_monitoreditems_per_subscription.Description" DisplayName="num_monitoreditems_per_subscription" Value="500" Type="uint" MinInclusive="1" MaxInclusive="5000" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="num_monitoreditems" Description="num_monitoreditems.Description" DisplayName="num_monitoreditems" Hidden="true" Value="5000" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="max_monitoreditem_queue_size" Description="max_monitoreditem_queue_size.Description" DisplayName="max_monitoreditem_queue_size" Hidden="true" Value="3" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="max_monitoreditem_event_queue_size" Description="max_monitoreditem_event_queue_size.Description" DisplayName="max_monitoreditem_event_queue_size" Hidden="true" Value="50" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="max_notifications_per_publish" Description="max_notifications_per_publish.Description" DisplayName="max_notifications_per_publish" Hidden="true" Value="1000" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="min_publishing_interval" Description="min_publishing_interval.Description" DisplayName="min_publishing_interval" Value="10" Type="uint" MinInclusive="100" MaxInclusive="5000" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="max_publishing_interval" Description="max_publishing_interval.Description" DisplayName="max_publishing_interval" Hidden="true" Value="10000" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="min_sampling_interval" Description="min_sampling_interval.Description" DisplayName="min_sampling_interval" Hidden="true" Value="10" Type="uint" MinInclusive="200" MaxInclusive="10000" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="max_sampling_interval" Description="max_sampling_interval.Description" DisplayName="max_sampling_interval" Hidden="true" Value="10000" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="min_lifetime" Description="min_lifetime.Description" DisplayName="min_lifetime" Value="1000" Type="uint" MinInclusive="100" MaxInclusive="100000" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="max_lifetime" Description="max_lifetime.Description" DisplayName="max_lifetime" Hidden="true" Value="100000" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="num_eventnotifiers" Description="num_eventnotifiers.Description" DisplayName="num_eventnotifiers" Hidden="true" Value="20" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="num_eventfields" Description="num_eventfields.Description" DisplayName="num_eventfields" Hidden="true" Value="250" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+        </GroupProperty>
+        <GroupProperty Name="session" Description="session.Description" DisplayName="session" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+          <Property Name="num_sessions" Description="num_sessions.Description" DisplayName="num_sessions" Value="10" Type="uint" MinInclusive="1" MaxInclusive="10" ReadOnly="true" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="max_sessions_per_channel" Description="max_session_per_channel.Description" DisplayName="max_sessions_per_channel" Value="1" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="num_calls" Description="num_calls.Description" DisplayName="num_calls" Hidden="true" Value="50" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="lifetime_check_interval" Description="lifetime_check_interval.Description" DisplayName="lifetime_check_interval" Value="1000" Type="uint" MinInclusive="1" MaxInclusive="3600" ReadOnly="true" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="lifetime_min" Description="lifetime_min.Description" DisplayName="lifetime_min" Value="10000" Type="uint" MinInclusive="1000" MaxInclusive="3600000" ReadOnly="true" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="lifetime_max" Description="lifetime_max.Description" DisplayName="lifetime_max" Value="3600000" Type="uint" ReadOnly="true" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="keep_spare_session" Description="keep_spare_session.Description" DisplayName="keep_spare_session" Hidden="true" Value="true" Type="bool" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="authentication_num_users" Description="authentication_num_users.Description" DisplayName="authentication_num_users" Hidden="true" Value="10" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="max_references_per_node" Description="max_references_per_node.Description" DisplayName="max_references_per_node" Hidden="true" Value="1000" Type="unit" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="max_nodes_per_read" Description="max_nodes_per_read.Description" DisplayName="max_nodes_per_read" Hidden="true" Value="100" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="max_nodes_per_write" Description="max_nodes_per_write.Description" DisplayName="max_nodes_per_write" Hidden="true" Value="100" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="max_nodes_per_methodcall" Description="max_nodes_per_methodcall.Description" DisplayName="max_nodes_per_methodcall" Hidden="true" Value="100" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="max_nodes_per_browse" Description="max_nodes_per_browse.Description" DisplayName="max_nodes_per_browse" Hidden="true" Value="100" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="max_nodes_per_registernodes" Description="max_nodes_per_registernodes.Description" DisplayName="max_nodes_per_registernodes" Hidden="true" Value="100" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="max_nodes_per_translate" Description="max_nodes_per_translate.Description" DisplayName="max_nodes_per_translate" Hidden="true" Value="100" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="max_nodes_per_nodemanagement" Description="max_nodes_per_nodemanagement.Description" DisplayName="max_nodes_per_nodemanagement" Hidden="true" Value="100" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="max_nodes_per_historyread" Description="max_nodes_per_historyread.Description" DisplayName="max_nodes_per_historyread" Hidden="true" Value="100" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="max_nodes_per_historyupdate" Description="max_nodes_per_historyupdate.Description" DisplayName="max_nodes_per_historyupdate" Hidden="true" Value="100" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="max_monitoreditems_per_call" Description="max_monitoreditems_per_call.Description" DisplayName="max_monitoreditems_per_call" Hidden="true" Value="100" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+        </GroupProperty>
+        <GroupProperty Name="uatcpmsg" Description="uatcpmsg.Description" DisplayName="uatcpmsg" Hidden="true" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+          <Property Name="num_conns" Description="num_conns.Description" DisplayName="num_conns" Value="15" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="num_listeners" Description="num_listeners.Description" DisplayName="num_listeners" Value="1" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="num_ctxts" Description="num_ctxts.Description" DisplayName="num_ctxts" Value="50" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="num_chunks" Description="num_chunks.Description" DisplayName="num_chunks" Value="10" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+        </GroupProperty>
+        <GroupProperty Name="seconv" Description="seconv.Description" DisplayName="seconv" Hidden="true" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+          <Property Name="num_channels" Description="num_channels.Description" DisplayName="num_channels" Value="15" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="keep_spare_channel" Description="keep_spare_channel.Description" DisplayName="keep_spare_channel" Value="true" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="min_security_token_lifetime" Description="min_security_token_lifetime.Description" DisplayName="min_security_token_lifetime" Value="300000" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="max_security_token_lifetime" Description="max_security_token_lifetime.Description" DisplayName="max_security_token_lifetime" Value="3600000" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+        </GroupProperty>
+        <GroupProperty Name="cagroup" Description="cagroup.Description" DisplayName="cagroup" Hidden="true" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+          <Property Name="cagroups/size" Description="cagroups.size.Description" DisplayName="cagroups.size" Value="1" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="cagroups/0/cagroupid" Description="cagroups.0.cagroupid.Description" DisplayName="cagroups.0.cagroupid" Value="DefaultApplicationGroup" Type="string" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="cagroups/0/store_index" Description="cagroups.0.store_index.Description" DisplayName="cagroups.0.store_index" Value="0" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="cagroups/0/certificates" Description="cagroups.0.certificates.Description" DisplayName="cagroups.0.certificates" Value="0" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+        </GroupProperty>
+        <GroupProperty Name="endpoint" Description="endpoint_server_configuration.Description" DisplayName="endpoint_server_configuration" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+          <Property Name="security" Description="endpoint_security.Description" DisplayName="endpoint_security" Hidden="true" PreventReset="true" Value="Non Secured" Type="string" UITypeEditor="EcoRTPlugin.PlatformEditors.OPCUASecurityConfigurationEditor,EcoRTPlugin" TypeConverter="EcoRTPlugin.PlatformEditors.ValidationTypeConverter,EcoRTPlugin" Items="Secured|Non Secured" ReadOnly="false" SaveModifiedTime="false" IsPassword="false">
+            <ProfileProperty GUID="{E0601B81-4A3A-4A96-B6C2-007BDC680D59}" Value="Non Secured" Hidden="true" />
+          </Property>
+          <Property Name="securityconfiguration" Description="securityconfiguration.Description" DisplayName="securityconfiguration" Hidden="true" Value="161|security_policies/size = 1|security_policies/0/policy_id = http://opcfoundation.org/UA/SecurityPolicy#None|security_policies/0/store = 0|security_policies/0/mode_sign = false|security_policies/0/mode_sign_and_encrypt = false|security_policies/0/mode_none = true|security_policies/0/max_chain_length = 0|security_policies/0/ign_time = false|security_policies/0/ign_issuer_time = false|security_policies/0/ign_miss_crl = false|security_policies/0/ign_miss_issuer_crl = false|security_policies/0/ign_untrusted = false|security_policies/0/check_complete_chain = true|security_policies/0/disable_crl_check = false|security_policies/0/disable_cert_validate = true|security_policies/0/max_verify_results = 0|security_policies/0/ign_key_usage = false|security_policies/0/ign_ext_key_usage = false|user_tokens/size = 1|user_tokens/0/name  = Anonymous_None_Token|user_tokens/0/type = Anonymous|user_tokens/0/policy_id = http://opcfoundation.org/UA/SecurityPolicy#None|endpoints/size = 1|endpoints/0/security_policies = 0|endpoints/0/user_tokens = 0" Type="string" ReadOnly="false" SaveModifiedTime="false" IsPassword="false">
+            <ProfileProperty GUID="{E0601B81-4A3A-4A96-B6C2-007BDC680D59}" Value="161|security_policies/size = 1|security_policies/0/policy_id = http://opcfoundation.org/UA/SecurityPolicy#None|security_policies/0/store = 0|security_policies/0/mode_sign = false|security_policies/0/mode_sign_and_encrypt = false|security_policies/0/mode_none = true|security_policies/0/max_chain_length = 0|security_policies/0/ign_time = false|security_policies/0/ign_issuer_time = false|security_policies/0/ign_miss_crl = false|security_policies/0/ign_miss_issuer_crl = false|security_policies/0/ign_untrusted = false|security_policies/0/check_complete_chain = true|security_policies/0/disable_crl_check = false|security_policies/0/disable_cert_validate = true|security_policies/0/max_verify_results = 0|security_policies/0/ign_key_usage = false|security_policies/0/ign_ext_key_usage = false|user_tokens/size = 1|user_tokens/0/name  = Anonymous_None_Token|user_tokens/0/type = Anonymous|user_tokens/0/policy_id = http://opcfoundation.org/UA/SecurityPolicy#None|endpoints/size = 1|endpoints/0/security_policies = 0|endpoints/0/user_tokens = 0" />
+          </Property>
+          <Property Name="endpoints/0/bind_port" Description="endpoints.0.bind_port.Description" DisplayName="endpoints.0.bind_port" Value="4840" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="endpoints/0/endpoint_url" Description="endpoints.0.endpoint_url.Description" DisplayName="endpoints.0.endpoint_url" Value="opc.tcp://[hostname]" Type="string" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="endpoints/0/bind_address" Description="endpoints.0.bind_address.Description" DisplayName="endpoints.0.bind_address" Hidden="true" Value="0.0.0.0" Type="string" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+        </GroupProperty>
+        <GroupProperty Name="server" Description="server.Description" DisplayName="server" Hidden="true" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+          <Property Name="max_dimensions" Description="max_dimensions.Description" DisplayName="max_dimensions" Value="3" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="serverprofiles/size" Description="serverprofiles.size.Description" DisplayName="serverprofiles/size" Value="6" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="serverprofiles/0/uri" Description="serverprofiles.0.uri.Description" DisplayName="serverprofiles/0/uri" Value="&quot;http://opcfoundation.org/UA-Profile/Server/NanoEmbeddedDevice2017&quot;" Type="string" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="serverprofiles/1/uri" Description="serverprofiles.1.uri.Description" DisplayName="serverprofiles/1/uri" Value="&quot;http://opcfoundation.org/UA-Profile/Server/DataAccess&quot;" Type="string" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="serverprofiles/2/uri" Description="serverprofiles.2.uri.Description" DisplayName="serverprofiles/2/uri" Value="&quot;http://opcfoundation.org/UA-Profile/Server/Methods&quot;" Type="string" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="serverprofiles/3/uri" Description="serverprofiles.3.uri.Description" DisplayName="serverprofiles/3/uri" Value="&quot;http://opcfoundation.org/UA-Profile/Server/StateMachine&quot;" Type="string" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="serverprofiles/4/uri" Description="serverprofiles.4.uri.Description" DisplayName="serverprofiles/4/uri" Value="&quot;http://opcfoundation.org/UA-Profile/Server/StandardEventSubscription&quot;" Type="string" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="serverprofiles/5/uri" Description="serverprofiles.5.uri.Description" DisplayName="serverprofiles/5/uri" Value="&quot;http://opcfoundation.org/UA-Profile/Server/AddressSpaceNotifier&quot;" Type="string" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+        </GroupProperty>
+        <GroupProperty Name="client" Description="client.Description" DisplayName="client" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+          <Property Name="num_clients" Description="num_clients.Description" DisplayName="num_clients" Value="10" Type="uint" MinInclusive="1" MaxInclusive="100" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="num_subscriptions" Description="num_subscriptions.Description" DisplayName="num_subscriptions" Value="10" Type="uint" MinInclusive="0" MaxInclusive="100" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="store" Description="store.Description" DisplayName="store" Value="0" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="certificate" Description="certificate.Description" DisplayName="certificate" Hidden="true" Value="0" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+        </GroupProperty>
+        <GroupProperty Name="redundancy" Description="redundancy.Description" DisplayName="redundancy" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+          <Property Name="server_uris/size" Description="num_clients.Description" DisplayName="server_uris/size" Value="2" Type="uint" MinInclusive="1" MaxInclusive="100" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="server_uris/0/uri" Description="server_uris.0.uri.Description" DisplayName="server_uris/0/uri" Value="opc.tcp://[hostname]:4840" Type="string" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+          <Property Name="server_uris/1/uri" Description="server_uris.1.uri.Description" DisplayName="server_uris/1/uri" Value="opc.tcp://[hostname]:4841" Type="string" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+        </GroupProperty>
+        <GroupProperty Name="ns0_config" Description="ns0_config.Description" DisplayName="ns0_config" Expanded="true" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+          <Property Name="add_references" Description="add_references.Description" DisplayName="add_references" Value="1000" Type="uint" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+        </GroupProperty>
+      </GroupProperty>
+      <GroupProperty Name="PersistenceBackend" Description="PersistenceBackend.Description" DisplayName="PersistenceBackend" Expanded="false" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+        <GroupProperty Name="RotatingFiles" Description="RotatingFiles.Description" DisplayName="RotatingFiles" Expanded="false" Enabled="false" EnabledText="OVERWRITE" DisabledText="DEFAULT">
+          <Property Name="RateLimitPerHour" Description="RateLimitPerHour.Description" DisplayName="RateLimitPerHour" Value="12" Type="ulong" MinInclusive="1" MaxInclusive="12" ReadOnly="false" SaveModifiedTime="false" IsPassword="false" />
+        </GroupProperty>
+      </GroupProperty>
+    </DevAttrs>
+  </DeviceDeployments>
+</HMIProjectDatabase>

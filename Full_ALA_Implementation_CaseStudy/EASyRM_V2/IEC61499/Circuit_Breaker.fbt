@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FBType SYSTEM "../LibraryElement.dtd">
+<FBType GUID="432a0bbb-b3f4-4e98-999b-00c6be528f84" Name="Circuit_Breaker" Comment="Composite Function Block Type" Namespace="Main">
+  <Attribute Name="Configuration.FB.IDCounter" Value="9" />
+  <Identification Standard="61499-2" />
+  <VersionInfo Organization="Schneider Electric" Version="0.0" Author="Cheyan" Date="12/11/2023" Remarks="template" />
+  <InterfaceList>
+    <EventInputs>
+      <Event Name="INIT" Comment="Initialization Request" />
+      <Event Name="REQ" Comment="Normal Execution Request" />
+      <Event Name="OPOPN">
+        <With Var="OpOpn" />
+      </Event>
+      <Event Name="OPCLS">
+        <With Var="OpCls" />
+      </Event>
+    </EventInputs>
+    <EventOutputs>
+      <Event Name="INITO" Comment="Initialization Confirm" />
+      <Event Name="DEBUG">
+        <With Var="debug_Pos_stVal" />
+      </Event>
+    </EventOutputs>
+    <InputVars>
+      <VarDeclaration Name="OpOpn" Type="BOOL" Comment="Input event qualifier" />
+      <VarDeclaration Name="OpCls" Type="BOOL" />
+    </InputVars>
+    <OutputVars>
+      <VarDeclaration Name="debug_Pos_stVal" Type="DINT" />
+    </OutputVars>
+    <Plugs>
+      <AdapterDeclaration Name="GOOSE" Type="BOOL_EVENT" Namespace="Main" x="3320" y="1560" />
+    </Plugs>
+  </InterfaceList>
+  <FBNetwork>
+    <FB ID="9" UID="1" Name="FB1" Type="XCBR_Logic" x="1780" y="1000" Namespace="Main" />
+    <Input Name="INIT" x="1360" y="1012" Type="Event" />
+    <Input Name="REQ" x="1360" y="1072" Type="Event" />
+    <Input Name="OPOPN" x="1298.948" y="1132" Type="Event" />
+    <Input Name="OPCLS" x="1303.677" y="1192" Type="Event" />
+    <Input Name="OpOpn" x="1160.667" y="1692" Type="Data" />
+    <Input Name="OpCls" x="1150.052" y="1752" Type="Data" />
+    <Output Name="DEBUG" x="2580" y="1492" Type="Event" />
+    <Output Name="debug_Pos_stVal" x="2640" y="2052" Type="Data" />
+    <Output Name="INITO" x="2900" y="1012" Type="Event" />
+    <EventConnections>
+      <Connection Source="INIT" Destination="FB1.INIT" />
+      <Connection Source="REQ" Destination="FB1.REQ" />
+      <Connection Source="FB1.INITO" Destination="INITO" />
+      <Connection Source="FB1.OPERATE_CB" Destination="GOOSE.ACTUATE" dx1="41.54175" />
+      <Connection Source="FB1.DEBUG" Destination="DEBUG" />
+      <Connection Source="OPOPN" Destination="FB1.OPOPN" />
+      <Connection Source="OPCLS" Destination="FB1.OPCLS" />
+    </EventConnections>
+    <DataConnections>
+      <Connection Source="FB1.openCB" Destination="GOOSE.openSwitch" dx1="711.5417">
+        <AvoidsNodes>false</AvoidsNodes>
+      </Connection>
+      <Connection Source="FB1.debug_Pos_stVal" Destination="debug_Pos_stVal" />
+      <Connection Source="OpOpn" Destination="FB1.OpOpn" />
+      <Connection Source="OpCls" Destination="FB1.OpCls" />
+    </DataConnections>
+  </FBNetwork>
+</FBType>

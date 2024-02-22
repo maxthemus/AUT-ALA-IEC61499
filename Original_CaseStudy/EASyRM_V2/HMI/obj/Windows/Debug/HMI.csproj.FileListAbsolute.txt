@@ -1,0 +1,13 @@
+C:\Users\Maxth\Desktop\EASyRM_V2\HMI\bin\Windows\Debug\HMI.deps.json
+C:\Users\Maxth\Desktop\EASyRM_V2\HMI\bin\Windows\Debug\HMI.dll
+C:\Users\Maxth\Desktop\EASyRM_V2\HMI\bin\Windows\Debug\HMI.pdb
+C:\Users\Maxth\Desktop\EASyRM_V2\HMI\bin\Windows\Debug\HMIBaseSymbols.dll
+C:\Users\Maxth\Desktop\EASyRM_V2\HMI\bin\Windows\Debug\SE.DPAC.HMI.dll
+C:\Users\Maxth\Desktop\EASyRM_V2\HMI\bin\Windows\Debug\SE.DPAC.HMI.imgstore
+C:\Users\Maxth\Desktop\EASyRM_V2\HMI\obj\Windows\Debug\HMI.csprojAssemblyReference.cache
+C:\Users\Maxth\Desktop\EASyRM_V2\HMI\obj\Windows\Debug\HMI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Maxth\Desktop\EASyRM_V2\HMI\obj\Windows\Debug\HMI.csproj.CoreCompileInputs.cache
+C:\Users\Maxth\Desktop\EASyRM_V2\HMI\obj\Windows\Debug\HMI.langstore
+C:\Users\Maxth\Desktop\EASyRM_V2\HMI\obj\Windows\Debug\HMI.csproj.CopyComplete
+C:\Users\Maxth\Desktop\EASyRM_V2\HMI\obj\Windows\Debug\HMI.dll
+C:\Users\Maxth\Desktop\EASyRM_V2\HMI\obj\Windows\Debug\HMI.pdb

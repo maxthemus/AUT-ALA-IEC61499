@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE System SYSTEM "../LibraryElement.dtd">
+<System Name="System" Comment="System Configuration">
+  <Attribute Name="System.Device.FolderPath" Value="EcoRT_0" />
+  <Identification Standard="61499-1" />
+  <VersionInfo Organization="Schneider Electric" Version="0.0" Author="Cheyan" Date="1/9/2024" />
+  <Application ID="4AF3182AC695837E" Name="APP1">
+    <SubAppNetwork>
+      <FB ID="2901CC72663611FF" Name="FB1" Type="TCTR" x="1520" y="1940" Namespace="Main">
+        <Parameter Name="manual_currentMeasurement" Value="8" />
+      </FB>
+      <FB ID="866112D0B22B8608" Name="FB6" Type="Plant" x="420" y="1520" Namespace="Main" />
+      <FB ID="42351A2A1B1054E3" Name="FB2" Type="PIOC" x="2820" y="1960" Namespace="Main">
+        <Parameter Name="overcurrentThreshold" Value="10.0" />
+      </FB>
+      <FB ID="601D5F7D26D16DE1" Name="FB3" Type="PTRC" x="3860" y="1960" Namespace="Main" />
+      <FB ID="9728F15ADF07D788" Name="FB4" Type="CSWI" x="4680" y="1960" Namespace="Main" />
+      <FB ID="BFA18447D547A72E" Name="FB7" Type="XCBR" x="5520" y="1960" Namespace="Main" />
+      <EventConnections>
+        <Connection Source="FB1.INITO" Destination="FB2.INIT" dx1="80" dx2="50" dy="10" />
+        <Connection Source="FB1.AMPSV" Destination="FB2.SAMPLE" dx1="52.60425" />
+        <Connection Source="FB2.INITO" Destination="FB3.INIT" />
+        <Connection Source="FB2.OP" Destination="FB3.OPERATE" dx1="59" />
+        <Connection Source="FB3.INITO" Destination="FB4.INIT" />
+        <Connection Source="FB3.TR" Destination="FB4.TR" dx1="57.521" />
+        <Connection Source="FB4.INITO" Destination="FB7.INIT" />
+        <Connection Source="FB4.OPOPN" Destination="FB7.OPOPN" dx1="51.66699" />
+        <Connection Source="FB4.OPCLS" Destination="FB7.OPCLS" dx1="71.66699" />
+      </EventConnections>
+      <DataConnections>
+        <Connection Source="FB1.AmpSV" Destination="FB2.AmpSV" dx1="40" />
+        <Connection Source="FB2.Op" Destination="FB3.Op" dx1="859" dx2="30" dy="90" />
+        <Connection Source="FB3.Tr" Destination="FB4.Tr" dx1="40" />
+        <Connection Source="FB4.OpOpn" Destination="FB7.OpOpn" dx1="91.66699" />
+        <Connection Source="FB4.OpCls" Destination="FB7.OpCls" dx1="831.667" dx2="30" dy="330" />
+      </DataConnections>
+      <AdapterConnections>
+        <Connection Source="FB6.F2_SV" Destination="FB1.SV" />
+        <Connection Source="FB7.GOOSE" Destination="FB6.F2_GOOSE" dx1="41.54199" dx2="30" dy="90" />
+      </AdapterConnections>
+      <Frame Name="FRAME1" X="1400" Y="900" Width="6060" Height="2280">
+        <Parameter Name="BackgroundColor" Value="AliceBlue" />
+        <Parameter Name="TextColor" Value="Black" />
+        <Parameter Name="Font" Value="Microsoft Sans Serif, 10pt" />
+        <Parameter Name="TextAlignment" Value="TopLeft" />
+        <Parameter Name="MoveStyle" Value="AnyContained" />
+        <Parameter Name="NxtLayerIdentifier" Value="" />
+      </Frame>
+      <Frame Name="FRAME2" X="320" Y="1280" Width="1000" Height="1500">
+        <Parameter Name="BackgroundColor" Value="AliceBlue" />
+        <Parameter Name="TextColor" Value="Black" />
+        <Parameter Name="Font" Value="Microsoft Sans Serif, 10pt" />
+        <Parameter Name="TextAlignment" Value="TopLeft" />
+        <Parameter Name="MoveStyle" Value="AnyContained" />
+        <Parameter Name="NxtLayerIdentifier" Value="" />
+      </Frame>
+      <Frame Name="FRAME3" X="1540" Y="1600" Width="5880" Height="1500">
+        <Parameter Name="BackgroundColor" Value="AliceBlue" />
+        <Parameter Name="TextColor" Value="Black" />
+        <Parameter Name="Font" Value="Microsoft Sans Serif, 10pt" />
+        <Parameter Name="TextAlignment" Value="TopLeft" />
+        <Parameter Name="MoveStyle" Value="AnyContained" />
+        <Parameter Name="NxtLayerIdentifier" Value="" />
+      </Frame>
+      <Frame Name="Plant" X="340" Y="1300" Width="740" Height="120.7292" IsComment="true">
+        <Parameter Name="BackgroundColor" Value="LemonChiffon" />
+        <Parameter Name="TextColor" Value="Black" />
+        <Parameter Name="Font" Value="Microsoft Sans Serif, 10pt" />
+        <Parameter Name="TextAlignment" Value="TopCenter" />
+        <Parameter Name="MoveStyle" Value="None" />
+        <Parameter Name="Text" Value="Plant (Power System)" />
+        <Parameter Name="NxtLayerIdentifier" Value="" />
+      </Frame>
+      <Frame Name="Control" X="1440" Y="940" Width="1540" Height="120.7292" IsComment="true">
+        <Parameter Name="BackgroundColor" Value="LemonChiffon" />
+        <Parameter Name="TextColor" Value="Black" />
+        <Parameter Name="Font" Value="Microsoft Sans Serif, 10pt" />
+        <Parameter Name="TextAlignment" Value="TopCenter" />
+        <Parameter Name="MoveStyle" Value="None" />
+        <Parameter Name="Text" Value="Control (IEC 61499)" />
+        <Parameter Name="NxtLayerIdentifier" Value="" />
+      </Frame>
+      <Frame Name="COMMENT1" X="1720" Y="1640" Width="1040" Height="120.7292" IsComment="true">
+        <Parameter Name="BackgroundColor" Value="LemonChiffon" />
+        <Parameter Name="TextColor" Value="Black" />
+        <Parameter Name="Font" Value="Microsoft Sans Serif, 10pt" />
+        <Parameter Name="TextAlignment" Value="TopCenter" />
+        <Parameter Name="MoveStyle" Value="None" />
+        <Parameter Name="Text" Value="Feeder 2" />
+        <Parameter Name="NxtLayerIdentifier" Value="" />
+      </Frame>
+    </SubAppNetwork>
+  </Application>
+  <Device ID="9AE5C21C-1485-4AC3-A0DD-896934350A5B" Name="EcoRT_0" Type="Soft_dPAC" x="700" y="700" Namespace="SE.DPAC">
+    <Resource ID="83616794E7D939D3" Name="RES0" Type="EMB_RES_ECO" x="800" y="800" Namespace="Runtime.Management">
+      <FBNetwork>
+        <FB ID="E36155C569CDD589" Name="FB6" Type="Plant" x="420" y="1120" Namespace="Main" />
+        <FB ID="3898C373703DF9C3" Name="FB1" Type="TCTR" x="1760" y="1920" Namespace="Main">
+          <Parameter Name="manual_currentMeasurement" Value="8" />
+        </FB>
+        <FB ID="18368B3EA011949E" Name="FB2" Type="PIOC" x="3140" y="1920" Namespace="Main">
+          <Parameter Name="overcurrentThreshold" Value="10.0" />
+        </FB>
+        <FB ID="360042365F2E1396" Name="FB3" Type="PTRC" x="4180" y="1920" Namespace="Main" />
+        <FB ID="EDBA130F1748F407" Name="FB4" Type="CSWI" x="4960" y="1920" Namespace="Main" />
+        <FB ID="7F0EC5822A67FA17" Name="FB7" Type="XCBR" x="6700" y="1920" Namespace="Main" />
+        <EventConnections>
+          <Connection Source="FB1.INITO" Destination="FB2.INIT" />
+          <Connection Source="FB1.AMPSV" Destination="FB2.SAMPLE" dx1="72.60425" />
+          <Connection Source="FB2.INITO" Destination="FB3.INIT" />
+          <Connection Source="FB2.OP" Destination="FB3.OPERATE" dx1="59" />
+          <Connection Source="FB3.INITO" Destination="FB4.INIT" />
+          <Connection Source="FB3.TR" Destination="FB4.TR">
+            <Points>
+              <Points>
+                <X>1218.11975</X>
+                <Y>535</Y>
+              </Points>
+              <Points>
+                <X>1235.61975</X>
+                <Y>535</Y>
+              </Points>
+              <Points>
+                <X>1235.61975</X>
+                <Y>520</Y>
+              </Points>
+              <Points>
+                <X>1235</X>
+                <Y>520</Y>
+              </Points>
+            </Points>
+          </Connection>
+          <Connection Source="FB4.INITO" Destination="FB7.INIT" />
+          <Connection Source="FB4.OPOPN" Destination="FB7.OPOPN" dx1="71.66699" />
+          <Connection Source="FB4.OPCLS" Destination="FB7.OPCLS" dx1="91.66699" />
+          <Connection Source="START.COLD" Destination="FB1.INIT" dx1="768.6042" />
+        </EventConnections>
+        <DataConnections>
+          <Connection Source="FB1.AmpSV" Destination="FB2.AmpSV" />
+          <Connection Source="FB2.Op" Destination="FB3.Op" dx1="859" dx2="30" dy="90" />
+          <Connection Source="FB3.Tr" Destination="FB4.Tr" dx1="40" dx2="90" dy="90" />
+          <Connection Source="FB4.OpOpn" Destination="FB7.OpOpn" dx1="111.667" />
+          <Connection Source="FB4.OpCls" Destination="FB7.OpCls" dx1="131.667" />
+        </DataConnections>
+        <AdapterConnections>
+          <Connection Source="FB6.F2_SV" Destination="FB1.SV" dx1="43.375" />
+          <Connection Source="FB7.GOOSE" Destination="FB6.F2_GOOSE" dx1="41.54199" dx2="30" dy="90" />
+        </AdapterConnections>
+      </FBNetwork>
+    </Resource>
+    <FBNetwork />
+  </Device>
+  <Mapping From="APP1.FB6" To="EcoRT_0.RES0" />
+  <Mapping From="APP1.FB1" To="EcoRT_0.RES0" />
+  <Mapping From="APP1.FB2" To="EcoRT_0.RES0" />
+  <Mapping From="APP1.FB3" To="EcoRT_0.RES0" />
+  <Mapping From="APP1.FB4" To="EcoRT_0.RES0" />
+  <Mapping From="APP1.FB7" To="EcoRT_0.RES0" />
+</System>

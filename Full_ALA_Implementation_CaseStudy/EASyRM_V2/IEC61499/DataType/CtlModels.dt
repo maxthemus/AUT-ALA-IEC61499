@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE DataType SYSTEM "../LibraryElement.dtd">
+<DataType Namespace="Main" Name="CtlModels" Comment="IEC61131-3, Table 14#5">
+  <Attribute Name="nxtDataType" Value="CJbEgK4hJZ+OVMCPag09+k0G/MZnYfwme0Gl/B4lr0bVvPw4cKa3j72fUQKXk2XAxPBvjuSeEkHtp3D/XZYMaqoqrnj7hb1AjWzfbIHWL6wNRN+ztk1GPMuoHUnUV0PyIQMdJ6w2weBBNy6h+x+ZMPlXDJNYnrXfh8riE9KyGcNkJQYcKScB5z5Z2slviNsjRvjdhv8ErLQ=" Context="10973594712497224464" />
+  <Identification Standard="1131-3" />
+  <VersionInfo Organization="Schneider Electric" Version="0.0" Author="Cheyan" Date="1/8/2024" Remarks="Template" />
+  <CompilerInfo />
+  <EnumeratedType>
+    <EnumeratedValue Name="item1" />
+    <EnumeratedValue Name="item2" />
+    <EnumeratedValue Name="item3" />
+  </EnumeratedType>
+</DataType>

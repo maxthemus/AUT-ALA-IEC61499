@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "mVhNjOUhVdpSf9Y27VhvTmp1oNYbcUKmqvrpN+cvyCYGozuy7V3QYfo6AF2gnePh+6xpQGj1IZBfAGBHL4rguQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Maxth\\OneDrive\\Desktop\\ALA_v2\\EASyRM_V2\\HMI\\HMI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Maxth\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Maxth\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

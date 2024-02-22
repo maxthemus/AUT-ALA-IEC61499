@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE DataType SYSTEM "../LibraryElement.dtd">
+<DataType Namespace="Main" Name="SAV" Comment="IEC61131-3, Table 14#5">
+  <Attribute Name="nxtDataType" Value="ZOG1cSCbfcbsYuYBrz+XyJSz6io8msJB/gnT/8b4foldDY4QobruYWY8+f3c9eli91haHrYjFi7Vq2buQ5wY+WxdAtWjZOjgL6UhThn+ty3WZ96iso1N/hkjBrZsGIjw" Context="5190274723344019855" />
+  <Identification Standard="1131-3" />
+  <VersionInfo Organization="Schneider Electric" Version="0.0" Author="Cheyan" Date="1/8/2024" Remarks="Template" />
+  <CompilerInfo />
+  <StructuredType>
+    <VarDeclaration Name="instMag" Type="AnalogueValue" Namespace="Main" />
+    <VarDeclaration Name="q" Type="Quality" Namespace="Main" />
+  </StructuredType>
+</DataType>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System Name="System" ProjectName="EASyRM_V2" ProjectGuid="{C3B61B48-6D98-4DDE-A982-6C89B1884C65}" BuildTime="2024-02-09 22:47:55Z" DeployTime="" StudioVersion="IEC 61499 IDE, Oracle v22.1 g3740 6e11010 Thu Jan 19 23:33:46 2023" SnapshotGuid="{2DDE6717-66C1-4ABF-8372-D9A7A693D8CB}">
+  <Device ID="9AE5C21C-1485-4AC3-A0DD-896934350A5B" Name="EcoRT_0" Type="Soft_dPAC" Namespace="SE.DPAC">
+    <Resource ID="83616794E7D939D3" Name="RES0" Type="EMB_RES_ECO" Namespace="Runtime.Management">
+      <FBNetwork>
+        <FB ID="E36155C569CDD589" Name="FB6" Type="Physical_Plant_SIMULATION" Namespace="Main" />
+        <FB ID="747232F5CFD5625E" Name="FB1" Type="Overcurrent_Protector" Namespace="Main" />
+        <FB Name="START" Type="E_RESTART" Namespace="IEC61499.Standard" />
+        <EventConnections>
+          <Connection Source="START.COLD" Destination="FB1.INIT" />
+        </EventConnections>
+        <DataConnections />
+        <AdapterConnections>
+          <Connection Source="FB1.Cutoff" Destination="FB6.F2_GOOSE" />
+          <Connection Source="FB6.F2_SV" Destination="FB1.Current_In" />
+        </AdapterConnections>
+      </FBNetwork>
+    </Resource>
+    <FBNetwork />
+  </Device>
+</System>

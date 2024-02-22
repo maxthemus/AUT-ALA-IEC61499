@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE DataType SYSTEM "../LibraryElement.dtd">
+<DataType Namespace="Main" Name="detailQual" Comment="IEC61131-3, Table 14#5">
+  <Attribute Name="nxtDataType" Value="Xek73KlhwgbS2tflgikPNVuxb23cXjysFyjqSNd7amNu/6OF8mveal+6e9ao+YziaWhQUdt602CCVbEazVP+tSuMD2DvtwQSymthxEIuX4jFkNdnAAp4SUU+zeYBFhxj/yXJc1UaeGqRyEeaf6CoJjbC67hEeMPtxZDXZwAKeElK8bxcC8QORMkQM8i2u3yCarWYrZOklUzR774Jl+hKboJVsRrNU/61IzFJ4ioZ1htl/jehx5Fht5HIR5p/oKgmL6UhThn+ty3WZ96iso1N/hkjBrZsGIjw" Context="9162678891213097162" />
+  <Identification Standard="1131-3" />
+  <VersionInfo Organization="Schneider Electric" Version="0.0" Author="Cheyan" Date="1/8/2024" Remarks="Template" />
+  <CompilerInfo />
+  <StructuredType>
+    <VarDeclaration Name="overflow" Type="BOOL" />
+    <VarDeclaration Name="outOfRange" Type="BOOL" />
+    <VarDeclaration Name="badReference" Type="BOOL" />
+    <VarDeclaration Name="oscillatory" Type="BOOL" />
+    <VarDeclaration Name="failure" Type="BOOL" />
+    <VarDeclaration Name="oldData" Type="BOOL" />
+    <VarDeclaration Name="inconsistent" Type="BOOL" />
+    <VarDeclaration Name="inaccurate" Type="BOOL" />
+  </StructuredType>
+</DataType>

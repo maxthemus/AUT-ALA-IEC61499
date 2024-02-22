@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeployFiles xmlns="http://tempuri.org/DeploySnapshot.xsd">
+  <Deployable>
+    <DeployInformation Type="Working">
+      <FileGroup Name="FileList">
+        <FileItem Name="Basics/Main#Feeder.bin" Library="IEC61499.exe" BuildSnapshot="{473166B2-8A1B-4A94-BB03-619864A22384}">
+          <Modified>2024-01-31T13:10:24</Modified>
+        </FileItem>
+        <FileItem Name="Adapters/Main#GOOSE.bin" Library="IEC61499.exe" BuildSnapshot="{473166B2-8A1B-4A94-BB03-619864A22384}">
+          <Modified>2024-01-31T13:10:24</Modified>
+        </FileItem>
+        <FileItem Name="Adapters/Main#SV.bin" Library="IEC61499.exe" BuildSnapshot="{473166B2-8A1B-4A94-BB03-619864A22384}">
+          <Modified>2024-01-31T13:10:24</Modified>
+        </FileItem>
+        <FileItem Name="Composites/Main#Physical_Plant_Simulation.bin" Library="IEC61499.exe" BuildSnapshot="{5921DD6F-F7AC-4B0F-AB8E-7C90996C85F3}">
+          <Modified>2024-02-06T14:39:56</Modified>
+        </FileItem>
+        <FileItem Name="DataTypes/Main#AnalogueValue.bin" Library="IEC61499.exe" BuildSnapshot="{473166B2-8A1B-4A94-BB03-619864A22384}">
+          <Modified>2024-01-31T13:10:24</Modified>
+        </FileItem>
+        <FileItem Name="DataTypes/Main#validity.bin" Library="IEC61499.exe" BuildSnapshot="{473166B2-8A1B-4A94-BB03-619864A22384}">
+          <Modified>2024-01-31T13:10:24</Modified>
+        </FileItem>
+        <FileItem Name="DataTypes/Main#detailQual.bin" Library="IEC61499.exe" BuildSnapshot="{473166B2-8A1B-4A94-BB03-619864A22384}">
+          <Modified>2024-01-31T13:10:24</Modified>
+        </FileItem>
+        <FileItem Name="DataTypes/Main#source.bin" Library="IEC61499.exe" BuildSnapshot="{473166B2-8A1B-4A94-BB03-619864A22384}">
+          <Modified>2024-01-31T13:10:24</Modified>
+        </FileItem>
+        <FileItem Name="DataTypes/Main#Quality.bin" Library="IEC61499.exe" BuildSnapshot="{473166B2-8A1B-4A94-BB03-619864A22384}">
+          <Modified>2024-01-31T13:10:24</Modified>
+        </FileItem>
+        <FileItem Name="DataTypes/Main#SAV.bin" Library="IEC61499.exe" BuildSnapshot="{473166B2-8A1B-4A94-BB03-619864A22384}">
+          <Modified>2024-01-31T13:10:24</Modified>
+        </FileItem>
+        <FileItem Name="Basics/Main#TCTR_Logic.bin" Library="IEC61499.exe" BuildSnapshot="{473166B2-8A1B-4A94-BB03-619864A22384}">
+          <Modified>2024-01-31T13:10:24</Modified>
+        </FileItem>
+        <FileItem Name="Composites/Main#Current_Transformer.bin" Library="IEC61499.exe" BuildSnapshot="{5921DD6F-F7AC-4B0F-AB8E-7C90996C85F3}">
+          <Modified>2024-02-06T14:39:56</Modified>
+        </FileItem>
+        <FileItem Name="Basics/Main#PIOC_Logic.bin" Library="IEC61499.exe" BuildSnapshot="{29772EDC-D2BB-4D70-AAAF-20B741D1B755}">
+          <Modified>2024-02-06T14:46:06</Modified>
+        </FileItem>
+        <FileItem Name="Composites/Main#Comparator.bin" Library="IEC61499.exe" BuildSnapshot="{29772EDC-D2BB-4D70-AAAF-20B741D1B755}">
+          <Modified>2024-02-06T14:46:06</Modified>
+        </FileItem>
+        <FileItem Name="DataTypes/Main#TimeAccuracy.bin" Library="IEC61499.exe" BuildSnapshot="{473166B2-8A1B-4A94-BB03-619864A22384}">
+          <Modified>2024-01-31T13:10:24</Modified>
+        </FileItem>
+        <FileItem Name="DataTypes/Main#TimeQuality.bin" Library="IEC61499.exe" BuildSnapshot="{473166B2-8A1B-4A94-BB03-619864A22384}">
+          <Modified>2024-01-31T13:10:24</Modified>
+        </FileItem>
+        <FileItem Name="DataTypes/Main#TimeStamp.bin" Library="IEC61499.exe" BuildSnapshot="{473166B2-8A1B-4A94-BB03-619864A22384}">
+          <Modified>2024-01-31T13:10:24</Modified>
+        </FileItem>
+        <FileItem Name="DataTypes/Main#SPS.bin" Library="IEC61499.exe" BuildSnapshot="{473166B2-8A1B-4A94-BB03-619864A22384}">
+          <Modified>2024-01-31T13:10:24</Modified>
+        </FileItem>
+        <FileItem Name="DataTypes/Main#INS.bin" Library="IEC61499.exe" BuildSnapshot="{473166B2-8A1B-4A94-BB03-619864A22384}">
+          <Modified>2024-01-31T13:10:24</Modified>
+        </FileItem>
+        <FileItem Name="DataTypes/Main#stVal.bin" Library="IEC61499.exe" BuildSnapshot="{473166B2-8A1B-4A94-BB03-619864A22384}">
+          <Modified>2024-01-31T13:10:24</Modified>
+        </FileItem>
+        <FileItem Name="DataTypes/Main#CtlModels.bin" Library="IEC61499.exe" BuildSnapshot="{473166B2-8A1B-4A94-BB03-619864A22384}">
+          <Modified>2024-01-31T13:10:24</Modified>
+        </FileItem>
+        <FileItem Name="DataTypes/Main#DPC.bin" Library="IEC61499.exe" BuildSnapshot="{473166B2-8A1B-4A94-BB03-619864A22384}">
+          <Modified>2024-01-31T13:10:24</Modified>
+        </FileItem>
+        <FileItem Name="DataTypes/Main#SPC.bin" Library="IEC61499.exe" BuildSnapshot="{473166B2-8A1B-4A94-BB03-619864A22384}">
+          <Modified>2024-01-31T13:10:24</Modified>
+        </FileItem>
+        <FileItem Name="Basics/Main#XCBR_Logic.bin" Library="IEC61499.exe" BuildSnapshot="{5921DD6F-F7AC-4B0F-AB8E-7C90996C85F3}">
+          <Modified>2024-02-06T14:41:12</Modified>
+        </FileItem>
+        <FileItem Name="Composites/Main#Circuit_Breaker.bin" Library="IEC61499.exe" BuildSnapshot="{5921DD6F-F7AC-4B0F-AB8E-7C90996C85F3}">
+          <Modified>2024-02-06T14:41:30</Modified>
+        </FileItem>
+        <FileItem Name="Composites/Main#Overcurrent_Protector.bin" Library="IEC61499.exe" BuildSnapshot="{5921DD6F-F7AC-4B0F-AB8E-7C90996C85F3}">
+          <Modified>2024-02-06T14:41:30</Modified>
+        </FileItem>
+      </FileGroup>
+      <FileGroup Name="DeployList">
+        <FileItem Name="Basics/Main#Feeder.bin" Library="IEC61499.exe" />
+        <FileItem Name="Adapters/Main#GOOSE.bin" Library="IEC61499.exe" />
+        <FileItem Name="Adapters/Main#SV.bin" Library="IEC61499.exe" />
+        <FileItem Name="Composites/Main#Physical_Plant_Simulation.bin" Library="IEC61499.exe" />
+        <FileItem Name="DataTypes/Main#AnalogueValue.bin" Library="IEC61499.exe" />
+        <FileItem Name="DataTypes/Main#validity.bin" Library="IEC61499.exe" />
+        <FileItem Name="DataTypes/Main#detailQual.bin" Library="IEC61499.exe" />
+        <FileItem Name="DataTypes/Main#source.bin" Library="IEC61499.exe" />
+        <FileItem Name="DataTypes/Main#Quality.bin" Library="IEC61499.exe" />
+        <FileItem Name="DataTypes/Main#SAV.bin" Library="IEC61499.exe" />
+        <FileItem Name="Basics/Main#TCTR_Logic.bin" Library="IEC61499.exe" />
+        <FileItem Name="Composites/Main#Current_Transformer.bin" Library="IEC61499.exe" />
+        <FileItem Name="Basics/Main#PIOC_Logic.bin" Library="IEC61499.exe" />
+        <FileItem Name="Composites/Main#Comparator.bin" Library="IEC61499.exe" />
+        <FileItem Name="DataTypes/Main#TimeAccuracy.bin" Library="IEC61499.exe" />
+        <FileItem Name="DataTypes/Main#TimeQuality.bin" Library="IEC61499.exe" />
+        <FileItem Name="DataTypes/Main#TimeStamp.bin" Library="IEC61499.exe" />
+        <FileItem Name="DataTypes/Main#SPS.bin" Library="IEC61499.exe" />
+        <FileItem Name="DataTypes/Main#INS.bin" Library="IEC61499.exe" />
+        <FileItem Name="DataTypes/Main#stVal.bin" Library="IEC61499.exe" />
+        <FileItem Name="DataTypes/Main#CtlModels.bin" Library="IEC61499.exe" />
+        <FileItem Name="DataTypes/Main#DPC.bin" Library="IEC61499.exe" />
+        <FileItem Name="DataTypes/Main#SPC.bin" Library="IEC61499.exe" />
+        <FileItem Name="Basics/Main#XCBR_Logic.bin" Library="IEC61499.exe" />
+        <FileItem Name="Composites/Main#Circuit_Breaker.bin" Library="IEC61499.exe" />
+        <FileItem Name="Composites/Main#Overcurrent_Protector.bin" Library="IEC61499.exe" />
+      </FileGroup>
+    </DeployInformation>
+  </Deployable>
+</DeployFiles>

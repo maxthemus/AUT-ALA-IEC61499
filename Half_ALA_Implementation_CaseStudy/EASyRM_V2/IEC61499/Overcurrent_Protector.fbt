@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FBType SYSTEM "../LibraryElement.dtd">
+<FBType GUID="baf99887-f91f-4ad1-bf5e-97a33f64d659" Name="Overcurrent_Protector" Comment="Extracted Composite Function Block Type" Namespace="Main">
+  <Attribute Name="Configuration.FB.IDCounter" Value="7" />
+  <Identification Standard="61499-2" />
+  <VersionInfo Author="Maxth" Date="2/9/2024" />
+  <InterfaceList>
+    <EventInputs>
+      <Event Name="INIT" />
+    </EventInputs>
+    <EventOutputs>
+      <Event Name="INITO" />
+    </EventOutputs>
+    <AdapterInputs>
+      <Adapter Name="Current_In" Type="LREAL_Event" Namespace="Main" />
+    </AdapterInputs>
+    <AdapterOutputs>
+      <Adapter Name="Cutoff" Type="BOOL_Event" Namespace="Main" />
+    </AdapterOutputs>
+  </InterfaceList>
+  <FBNetwork>
+    <FB ID="1" Name="FB1" Type="TCTR_Current_Transformer_SIMULATION" x="720" y="1120" Namespace="Main">
+      <Parameter Name="manual_currentMeasurement" Value="8" />
+    </FB>
+    <FB ID="2" Name="FB2" Type="PIOC_Instantaneous_Overcurrent" x="2160" y="1120" Namespace="Main">
+      <Parameter Name="overcurrent_threshold" Value="10.0" />
+    </FB>
+    <FB ID="3" Name="FB3" Type="PTRC_Protection_Trip_Conditioning" x="3500" y="1120" Namespace="Main" />
+    <FB ID="4" Name="FB4" Type="CSWI_Switch_Controller" x="4540" y="1120" Namespace="Main" />
+    <FB ID="5" Name="FB7" Type="XCBR_Circuit_Breaker_SIMULATION" x="5500" y="1080" Namespace="Main" />
+    <Input Name="INIT" x="100" y="892" Type="Event" />
+    <Input Name="Current_In" x="160" y="1732" Type="Adapter" />
+    <Output Name="Cutoff" x="6540" y="1632" Type="Adapter" />
+    <Output Name="INITO" x="6520" y="1232" Type="Event" />
+    <EventConnections>
+      <Connection Source="FB1.INITO" Destination="FB2.INIT" />
+      <Connection Source="FB1.AMPSV" Destination="FB2.SAMPLE" dx1="72.60425" />
+      <Connection Source="FB2.INITO" Destination="FB3.INIT" />
+      <Connection Source="FB2.OP" Destination="FB3.OPERATE" dx1="79" />
+      <Connection Source="FB3.INITO" Destination="FB4.INIT" />
+      <Connection Source="FB3.TR_TRIP_SIGNAL" Destination="FB4.TR" dx1="79.1875" />
+      <Connection Source="FB4.INITO" Destination="FB7.INIT" dx1="51.66699" />
+      <Connection Source="FB4.OPOPN" Destination="FB7.OPOPN" dx1="71.66699" />
+      <Connection Source="FB4.OPCLS" Destination="FB7.OPCLS" dx1="91.66699" />
+      <Connection Source="INIT" Destination="FB1.INIT" dx1="41.41669" />
+      <Connection Source="FB7.INITO" Destination="INITO" dx1="69.271" />
+    </EventConnections>
+    <DataConnections>
+      <Connection Source="FB1.AmpSV" Destination="FB2.AmpSV_current" />
+      <Connection Source="FB2.Op_is_overcurrent" Destination="FB3.Op_tripped" dx1="99" />
+      <Connection Source="FB3.Tr_trip_signal" Destination="FB4.signal" dx1="40" />
+      <Connection Source="FB4.OpOpn" Destination="FB7.OpOpn" dx1="111.667" />
+      <Connection Source="FB4.OpCls" Destination="FB7.OpCls" dx1="131.667" />
+    </DataConnections>
+    <AdapterConnections>
+      <Connection Source="Current_In" Destination="FB1.SV" dx1="45.00006" dx2="30" dy="-50" />
+      <Connection Source="FB7.GOOSE" Destination="Cutoff" dx1="49.271" />
+    </AdapterConnections>
+  </FBNetwork>
+</FBType>

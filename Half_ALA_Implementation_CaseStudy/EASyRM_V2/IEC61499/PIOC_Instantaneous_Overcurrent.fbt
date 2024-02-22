@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FBType SYSTEM "../LibraryElement.dtd">
+<FBType GUID="eaaa2abb-5007-4ce9-8cf4-571c68fa1ed2" Name="PIOC_Instantaneous_Overcurrent" Comment="Composite Function Block Type" Namespace="Main">
+  <Attribute Name="Configuration.FB.IDCounter" Value="4" />
+  <Identification Standard="61499-2" />
+  <VersionInfo Organization="Schneider Electric" Version="0.0" Author="Cheyan" Date="12/10/2023" Remarks="template" />
+  <InterfaceList>
+    <EventInputs>
+      <Event Name="INIT" Comment="Initialization Request">
+        <With Var="overcurrent_threshold" />
+      </Event>
+      <Event Name="REQ" Comment="Normal Execution Request" />
+      <Event Name="SAMPLE">
+        <With Var="AmpSV_current" />
+      </Event>
+    </EventInputs>
+    <EventOutputs>
+      <Event Name="INITO" Comment="Initialization Confirm" />
+      <Event Name="CNF" Comment="Execution Confirmation" />
+      <Event Name="DEBUG">
+        <With Var="Op_general_DEBUG" />
+      </Event>
+      <Event Name="OP">
+        <With Var="Op_is_overcurrent" />
+      </Event>
+    </EventOutputs>
+    <InputVars>
+      <VarDeclaration Name="overcurrent_threshold" Type="LREAL" />
+      <VarDeclaration Name="AmpSV_current" Type="SAV_LREAL_DINT" Namespace="Main" Comment="Input event qualifier" />
+    </InputVars>
+    <OutputVars>
+      <VarDeclaration Name="Op_general_DEBUG" Type="BOOL" />
+      <VarDeclaration Name="Op_is_overcurrent" Type="ACT_BOOL" Namespace="Main" />
+    </OutputVars>
+  </InterfaceList>
+  <FBNetwork>
+    <FB ID="4" UID="2" Name="FB1" Type="PIOC_Instantaneous_Overcurrent_Logic" x="1700" y="620" Namespace="Main" />
+    <Input Name="INIT" x="1160" y="512" Type="Event" />
+    <Input Name="REQ" x="1160" y="572" Type="Event" />
+    <Input Name="overcurrent_threshold" x="759.9999" y="1072" Type="Data" />
+    <Input Name="AmpSV_current" x="957.1041" y="1012" Type="Data" />
+    <Input Name="SAMPLE" x="1089.448" y="752" Type="Event" />
+    <Output Name="Op_is_overcurrent" x="2740.99" y="1012" Type="Data" />
+    <Output Name="OP" x="2905.177" y="752" Type="Event" />
+    <Output Name="DEBUG" x="2940.135" y="812" Type="Event" />
+    <Output Name="Op_general_DEBUG" x="2880" y="1072" Type="Data" />
+    <Output Name="INITO" x="2960" y="632" Type="Event" />
+    <Output Name="CNF" x="2980" y="692" Type="Event" />
+    <EventConnections>
+      <Connection Source="INIT" Destination="FB1.INIT" dx1="151.4166">
+        <AvoidsNodes>false</AvoidsNodes>
+      </Connection>
+      <Connection Source="REQ" Destination="FB1.REQ" dx1="49.54163" />
+      <Connection Source="FB1.INITO" Destination="INITO" />
+      <Connection Source="FB1.CNF" Destination="CNF" />
+      <Connection Source="FB1.DEBUG" Destination="DEBUG" />
+      <Connection Source="SAMPLE" Destination="FB1.SAMPLE" />
+      <Connection Source="FB1.OP" Destination="OP" />
+    </EventConnections>
+    <DataConnections>
+      <Connection Source="overcurrent_threshold" Destination="FB1.overcurrentThreshold" />
+      <Connection Source="FB1.debug_Op_general" Destination="Op_general_DEBUG" />
+      <Connection Source="AmpSV_current" Destination="FB1.AmpSV">
+        <Points>
+          <Points>
+            <X>480.260376</X>
+            <Y>260</Y>
+          </Points>
+          <Points>
+            <X>662.5</X>
+            <Y>260</Y>
+          </Points>
+          <Points>
+            <X>662.5</X>
+            <Y>137.5</Y>
+          </Points>
+          <Points>
+            <X>412.5</X>
+            <Y>137.5</Y>
+          </Points>
+          <Points>
+            <X>412.5</X>
+            <Y>162.5</Y>
+          </Points>
+          <Points>
+            <X>232.5</X>
+            <Y>162.5</Y>
+          </Points>
+          <Points>
+            <X>232.5</X>
+            <Y>260</Y>
+          </Points>
+          <Points>
+            <X>420</X>
+            <Y>260</Y>
+          </Points>
+        </Points>
+      </Connection>
+      <Connection Source="FB1.Op" Destination="Op_is_overcurrent" />
+    </DataConnections>
+  </FBNetwork>
+</FBType>

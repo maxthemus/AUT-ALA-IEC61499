@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<baseline xmlns:xsd="http://www.nxtControl.com/Snapshot" xmlns="http://tempuri.org/XMLSchema1.xsd">
+  <snapshot guid="{78B59D63-71BE-4398-8026-DE399040897E}" compiler="Default" created="2024-02-06T14:58:05" base="{00000000-0000-0000-0000-000000000000}">
+    <DeployInformation Type="Working">
+      <FileGroup Name="FileList" xmlns="http://tempuri.org/DeploySnapshot.xsd">
+        <FileItem Name="Main#validity.bin" Library="IEC61499.exe" BuildSnapshot="{473166B2-8A1B-4A94-BB03-619864A22384}" BaseSnapshot="{00000000-0000-0000-0000-000000000000}">
+          <Modified>2024-01-31T13:10:25</Modified>
+          <Hash>203E3958B82042DB3</Hash>
+        </FileItem>
+        <FileItem Name="Main#detailQual.bin" Library="IEC61499.exe" BuildSnapshot="{473166B2-8A1B-4A94-BB03-619864A22384}" BaseSnapshot="{00000000-0000-0000-0000-000000000000}">
+          <Modified>2024-01-31T13:10:25</Modified>
+          <Hash>6815029272C4BD55</Hash>
+        </FileItem>
+        <FileItem Name="Main#source.bin" Library="IEC61499.exe" BuildSnapshot="{473166B2-8A1B-4A94-BB03-619864A22384}" BaseSnapshot="{00000000-0000-0000-0000-000000000000}">
+          <Modified>2024-01-31T13:10:25</Modified>
+          <Hash>207B67C309B94288A</Hash>
+        </FileItem>
+        <FileItem Name="Main#Quality.bin" Library="IEC61499.exe" BuildSnapshot="{473166B2-8A1B-4A94-BB03-619864A22384}" BaseSnapshot="{00000000-0000-0000-0000-000000000000}">
+          <Modified>2024-01-31T13:10:25</Modified>
+          <Hash>43A014362736536B</Hash>
+        </FileItem>
+        <FileItem Name="Main#TimeAccuracy.bin" Library="IEC61499.exe" BuildSnapshot="{473166B2-8A1B-4A94-BB03-619864A22384}" BaseSnapshot="{00000000-0000-0000-0000-000000000000}">
+          <Modified>2024-01-31T13:10:25</Modified>
+          <Hash>388FDB311E941373</Hash>
+        </FileItem>
+        <FileItem Name="Main#TimeQuality.bin" Library="IEC61499.exe" BuildSnapshot="{473166B2-8A1B-4A94-BB03-619864A22384}" BaseSnapshot="{00000000-0000-0000-0000-000000000000}">
+          <Modified>2024-01-31T13:10:25</Modified>
+          <Hash>12122CB04F0057DFD</Hash>
+        </FileItem>
+        <FileItem Name="Main#TimeStamp.bin" Library="IEC61499.exe" BuildSnapshot="{473166B2-8A1B-4A94-BB03-619864A22384}" BaseSnapshot="{00000000-0000-0000-0000-000000000000}">
+          <Modified>2024-01-31T13:10:25</Modified>
+          <Hash>1793BDC3FF0D98086</Hash>
+        </FileItem>
+        <FileItem Name="Main#ACT.bin" Library="IEC61499.exe" BuildSnapshot="{473166B2-8A1B-4A94-BB03-619864A22384}" BaseSnapshot="{00000000-0000-0000-0000-000000000000}">
+          <Modified>2024-01-31T13:10:25</Modified>
+          <Hash>1733C38ACBDAA86C0</Hash>
+        </FileItem>
+        <FileItem Name="Main#stVal.bin" Library="IEC61499.exe" BuildSnapshot="{473166B2-8A1B-4A94-BB03-619864A22384}" BaseSnapshot="{00000000-0000-0000-0000-000000000000}">
+          <Modified>2024-01-31T13:10:25</Modified>
+          <Hash>1806AB92559B14CC0</Hash>
+        </FileItem>
+        <FileItem Name="Main#CtlModels.bin" Library="IEC61499.exe" BuildSnapshot="{473166B2-8A1B-4A94-BB03-619864A22384}" BaseSnapshot="{00000000-0000-0000-0000-000000000000}">
+          <Modified>2024-01-31T13:10:25</Modified>
+          <Hash>42D2C3BEAABBE055</Hash>
+        </FileItem>
+        <FileItem Name="Main#DPC.bin" Library="IEC61499.exe" BuildSnapshot="{473166B2-8A1B-4A94-BB03-619864A22384}" BaseSnapshot="{00000000-0000-0000-0000-000000000000}">
+          <Modified>2024-01-31T13:10:25</Modified>
+          <Hash>31326B94D0187468</Hash>
+        </FileItem>
+        <FileItem Name="Main#CSWI_Logic.bin" Library="IEC61499.exe" BuildSnapshot="{5921DD6F-F7AC-4B0F-AB8E-7C90996C85F3}" BaseSnapshot="{00000000-0000-0000-0000-000000000000}">
+          <Modified>2024-02-06T14:39:56</Modified>
+          <Hash>149257ABDD2361CE5</Hash>
+        </FileItem>
+        <FileItem Name="Main#CSWI.bin" Library="IEC61499.exe" BuildSnapshot="{473166B2-8A1B-4A94-BB03-619864A22384}" BaseSnapshot="{00000000-0000-0000-0000-000000000000}">
+          <Modified>2024-01-31T13:10:25</Modified>
+          <Hash>9361C99A97CB0028</Hash>
+        </FileItem>
+        <FileItem Name="Main#Feeder.bin" Library="IEC61499.exe" BuildSnapshot="{473166B2-8A1B-4A94-BB03-619864A22384}" BaseSnapshot="{00000000-0000-0000-0000-000000000000}">
+          <Modified>2024-01-31T13:10:25</Modified>
+          <Hash>2387BA7BD878C1492</Hash>
+        </FileItem>
+        <FileItem Name="Main#AnalogueValue.bin" Library="IEC61499.exe" BuildSnapshot="{473166B2-8A1B-4A94-BB03-619864A22384}" BaseSnapshot="{00000000-0000-0000-0000-000000000000}">
+          <Modified>2024-01-31T13:10:25</Modified>
+          <Hash>6912D89FD3DD64AE</Hash>
+        </FileItem>
+        <FileItem Name="Main#SAV.bin" Library="IEC61499.exe" BuildSnapshot="{473166B2-8A1B-4A94-BB03-619864A22384}" BaseSnapshot="{00000000-0000-0000-0000-000000000000}">
+          <Modified>2024-01-31T13:10:25</Modified>
+          <Hash>166974ADB2668F484</Hash>
+        </FileItem>
+        <FileItem Name="Main#PIOC_Logic.bin" Library="IEC61499.exe" BuildSnapshot="{29772EDC-D2BB-4D70-AAAF-20B741D1B755}" BaseSnapshot="{00000000-0000-0000-0000-000000000000}">
+          <Modified>2024-02-06T14:46:07</Modified>
+          <Hash>122CEE2D6AA3164FC</Hash>
+        </FileItem>
+        <FileItem Name="Main#PIOC.bin" Library="IEC61499.exe" BuildSnapshot="{473166B2-8A1B-4A94-BB03-619864A22384}" BaseSnapshot="{00000000-0000-0000-0000-000000000000}">
+          <Modified>2024-01-31T13:10:25</Modified>
+          <Hash>7269EDFE7A392678</Hash>
+        </FileItem>
+        <FileItem Name="Main#GOOSE.bin" Library="IEC61499.exe" BuildSnapshot="{473166B2-8A1B-4A94-BB03-619864A22384}" BaseSnapshot="{00000000-0000-0000-0000-000000000000}">
+          <Modified>2024-01-31T13:10:25</Modified>
+          <Hash>188911E26798E7E30</Hash>
+        </FileItem>
+        <FileItem Name="Main#SV.bin" Library="IEC61499.exe" BuildSnapshot="{473166B2-8A1B-4A94-BB03-619864A22384}" BaseSnapshot="{00000000-0000-0000-0000-000000000000}">
+          <Modified>2024-01-31T13:10:25</Modified>
+          <Hash>58B51F2CC9244432</Hash>
+        </FileItem>
+        <FileItem Name="Main#Plant.bin" Library="IEC61499.exe" BuildSnapshot="{473166B2-8A1B-4A94-BB03-619864A22384}" BaseSnapshot="{00000000-0000-0000-0000-000000000000}">
+          <Modified>2024-01-31T13:10:25</Modified>
+          <Hash>1189993317E1B93E0</Hash>
+        </FileItem>
+        <FileItem Name="Main#PTRC_Logic.bin" Library="IEC61499.exe" BuildSnapshot="{473166B2-8A1B-4A94-BB03-619864A22384}" BaseSnapshot="{00000000-0000-0000-0000-000000000000}">
+          <Modified>2024-01-31T13:10:25</Modified>
+          <Hash>843496B1A0C385CC</Hash>
+        </FileItem>
+        <FileItem Name="Main#PTRC.bin" Library="IEC61499.exe" BuildSnapshot="{473166B2-8A1B-4A94-BB03-619864A22384}" BaseSnapshot="{00000000-0000-0000-0000-000000000000}">
+          <Modified>2024-01-31T13:10:25</Modified>
+          <Hash>143C9A64BBDCC1461</Hash>
+        </FileItem>
+        <FileItem Name="Main#TCTR_Logic.bin" Library="IEC61499.exe" BuildSnapshot="{473166B2-8A1B-4A94-BB03-619864A22384}" BaseSnapshot="{00000000-0000-0000-0000-000000000000}">
+          <Modified>2024-01-31T13:10:25</Modified>
+          <Hash>179CD850EBD4359B1</Hash>
+        </FileItem>
+        <FileItem Name="Main#TCTR.bin" Library="IEC61499.exe" BuildSnapshot="{473166B2-8A1B-4A94-BB03-619864A22384}" BaseSnapshot="{00000000-0000-0000-0000-000000000000}">
+          <Modified>2024-01-31T13:10:25</Modified>
+          <Hash>205A5A30EA6132690</Hash>
+        </FileItem>
+        <FileItem Name="Main#SPS.bin" Library="IEC61499.exe" BuildSnapshot="{473166B2-8A1B-4A94-BB03-619864A22384}" BaseSnapshot="{00000000-0000-0000-0000-000000000000}">
+          <Modified>2024-01-31T13:10:25</Modified>
+          <Hash>143E67C5AA1D425FA</Hash>
+        </FileItem>
+        <FileItem Name="Main#INS.bin" Library="IEC61499.exe" BuildSnapshot="{473166B2-8A1B-4A94-BB03-619864A22384}" BaseSnapshot="{00000000-0000-0000-0000-000000000000}">
+          <Modified>2024-01-31T13:10:25</Modified>
+          <Hash>2373E4DE1CE70AEAD</Hash>
+        </FileItem>
+        <FileItem Name="Main#SPC.bin" Library="IEC61499.exe" BuildSnapshot="{473166B2-8A1B-4A94-BB03-619864A22384}" BaseSnapshot="{00000000-0000-0000-0000-000000000000}">
+          <Modified>2024-01-31T13:10:25</Modified>
+          <Hash>52B36D3BF4776153</Hash>
+        </FileItem>
+        <FileItem Name="Main#XCBR_Logic.bin" Library="IEC61499.exe" BuildSnapshot="{5921DD6F-F7AC-4B0F-AB8E-7C90996C85F3}" BaseSnapshot="{00000000-0000-0000-0000-000000000000}">
+          <Modified>2024-02-06T14:41:12</Modified>
+          <Hash>124361F54C4495702</Hash>
+        </FileItem>
+        <FileItem Name="Main#XCBR.bin" Library="IEC61499.exe" BuildSnapshot="{473166B2-8A1B-4A94-BB03-619864A22384}" BaseSnapshot="{00000000-0000-0000-0000-000000000000}">
+          <Modified>2024-01-31T13:10:25</Modified>
+          <Hash>118C480A967A98F4B</Hash>
+        </FileItem>
+        <FileItem Name="Main#overcurrent_protector.bin" Library="IEC61499.exe" BuildSnapshot="{189DD34E-623E-41F3-901E-6EEEC60302B6}" BaseSnapshot="{00000000-0000-0000-0000-000000000000}">
+          <Modified>2024-01-31T00:39:26</Modified>
+          <Hash>2081428BC98CF4026</Hash>
+        </FileItem>
+        <FileItem Name="Main#Physical_Plant_Simulation.bin" Library="IEC61499.exe" BuildSnapshot="{5921DD6F-F7AC-4B0F-AB8E-7C90996C85F3}" BaseSnapshot="{00000000-0000-0000-0000-000000000000}">
+          <Modified>2024-02-06T14:39:57</Modified>
+          <Hash>53C732E49984E3B0</Hash>
+        </FileItem>
+        <FileItem Name="Main#Circuit_Breaker.bin" Library="IEC61499.exe" BuildSnapshot="{5921DD6F-F7AC-4B0F-AB8E-7C90996C85F3}" BaseSnapshot="{00000000-0000-0000-0000-000000000000}">
+          <Modified>2024-02-06T14:41:31</Modified>
+          <Hash>201BC598AB1383DCB</Hash>
+        </FileItem>
+        <FileItem Name="Main#Comparator.bin" Library="IEC61499.exe" BuildSnapshot="{29772EDC-D2BB-4D70-AAAF-20B741D1B755}" BaseSnapshot="{00000000-0000-0000-0000-000000000000}">
+          <Modified>2024-02-06T14:46:07</Modified>
+          <Hash>212A4689BD8569302</Hash>
+        </FileItem>
+        <FileItem Name="Main#Current_Transformer.bin" Library="IEC61499.exe" BuildSnapshot="{5921DD6F-F7AC-4B0F-AB8E-7C90996C85F3}" BaseSnapshot="{00000000-0000-0000-0000-000000000000}">
+          <Modified>2024-02-06T14:39:57</Modified>
+          <Hash>1956181008083B848</Hash>
+        </FileItem>
+        <FileItem Name="Main#Event_Gate.bin" Library="IEC61499.exe" BuildSnapshot="{5921DD6F-F7AC-4B0F-AB8E-7C90996C85F3}" BaseSnapshot="{00000000-0000-0000-0000-000000000000}">
+          <Modified>2024-02-06T14:39:57</Modified>
+          <Hash>1210538920B0843A8</Hash>
+        </FileItem>
+        <FileItem Name="Main#Overcurrent_Protector.bin" Library="IEC61499.exe" BuildSnapshot="{5921DD6F-F7AC-4B0F-AB8E-7C90996C85F3}" BaseSnapshot="{00000000-0000-0000-0000-000000000000}">
+          <Modified>2024-02-06T14:41:31</Modified>
+          <Hash>4421FB3CB3FA5CE7</Hash>
+        </FileItem>
+        <FileItem Name="Main#Protection_Trip_Conditioning.bin" Library="IEC61499.exe" BuildSnapshot="{5921DD6F-F7AC-4B0F-AB8E-7C90996C85F3}" BaseSnapshot="{00000000-0000-0000-0000-000000000000}">
+          <Modified>2024-02-06T14:39:57</Modified>
+          <Hash>185C3161136F79BA8</Hash>
+        </FileItem>
+        <FileItem Name="Main#Switch_Controller.bin" Library="IEC61499.exe" BuildSnapshot="{5921DD6F-F7AC-4B0F-AB8E-7C90996C85F3}" BaseSnapshot="{00000000-0000-0000-0000-000000000000}">
+          <Modified>2024-02-06T14:39:57</Modified>
+          <Hash>180D622832FF6B63D</Hash>
+        </FileItem>
+        <LibraryItem Name="Runtime.Base" Version="22.1.0.17" />
+        <LibraryItem Name="SE.DPAC" Version="22.1.0.24" />
+        <LibraryItem Name="SE.Standard" Version="22.1.0.9" />
+        <DeviceItem ID="9AE5C21C-1485-4AC3-A0DD-896934350A5B" Hash="14D07C80ED5C22DD" />
+      </FileGroup>
+      <Device Name="EcoRT_0" ID="9AE5C21C-1485-4AC3-A0DD-896934350A5B" xmlns="http://tempuri.org/DeploySnapshot.xsd">
+        <FileItem Name="Basics/Main#Feeder.bin" />
+        <FileItem Name="Adapters/Main#GOOSE.bin" />
+        <FileItem Name="Adapters/Main#SV.bin" />
+        <FileItem Name="Composites/Main#Physical_Plant_Simulation.bin">
+          <Changed>true</Changed>
+        </FileItem>
+        <FileItem Name="DataTypes/Main#AnalogueValue.bin" />
+        <FileItem Name="DataTypes/Main#validity.bin" />
+        <FileItem Name="DataTypes/Main#detailQual.bin" />
+        <FileItem Name="DataTypes/Main#source.bin" />
+        <FileItem Name="DataTypes/Main#Quality.bin" />
+        <FileItem Name="DataTypes/Main#SAV.bin" />
+        <FileItem Name="Basics/Main#TCTR_Logic.bin" />
+        <FileItem Name="Composites/Main#Current_Transformer.bin">
+          <Changed>true</Changed>
+        </FileItem>
+        <FileItem Name="Basics/Main#PIOC_Logic.bin" />
+        <FileItem Name="Composites/Main#Comparator.bin" />
+        <FileItem Name="DataTypes/Main#TimeAccuracy.bin" />
+        <FileItem Name="DataTypes/Main#TimeQuality.bin" />
+        <FileItem Name="DataTypes/Main#TimeStamp.bin" />
+        <FileItem Name="DataTypes/Main#SPS.bin" />
+        <FileItem Name="DataTypes/Main#INS.bin" />
+        <FileItem Name="DataTypes/Main#stVal.bin" />
+        <FileItem Name="DataTypes/Main#CtlModels.bin" />
+        <FileItem Name="DataTypes/Main#DPC.bin" />
+        <FileItem Name="DataTypes/Main#SPC.bin" />
+        <FileItem Name="Basics/Main#XCBR_Logic.bin" />
+        <FileItem Name="Composites/Main#Circuit_Breaker.bin">
+          <Changed>true</Changed>
+        </FileItem>
+        <FileItem Name="Composites/Main#Overcurrent_Protector.bin">
+          <Changed>true</Changed>
+        </FileItem>
+      </Device>
+    </DeployInformation>
+  </snapshot>
+  <deployment>
+    <network_profile name="(Local Test)">
+      <device id="9AE5C21C-1485-4AC3-A0DD-896934350A5B">
+        <sref snapshot="{78B59D63-71BE-4398-8026-DE399040897E}" state="ACTIVE_MODIFIED" />
+      </device>
+    </network_profile>
+  </deployment>
+</baseline>

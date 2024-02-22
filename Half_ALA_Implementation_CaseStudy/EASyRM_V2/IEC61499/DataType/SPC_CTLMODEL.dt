@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE DataType SYSTEM "../LibraryElement.dtd">
+<DataType Namespace="Main" Name="SPC_CTLMODEL" Comment="IEC61131-3, Table 14#5">
+  <Attribute Name="nxtDataType" Value="UylDVgj4yyFp3fGyCOavW/kuNztsjOZEwZQ9Ck6MPeX3f9a09pxMlQ19d25XPF9/BgRd1+6DF/gocA8GhVf07AifoybxmGDkJ2qqfcE/unnJds7ZkdI9kg==" Context="5559734422515396171" />
+  <Identification Standard="1131-3" />
+  <VersionInfo Organization="Schneider Electric" Version="0.0" Author="Cheyan" Date="1/8/2024" Remarks="Template" />
+  <CompilerInfo />
+  <StructuredType>
+    <VarDeclaration Name="ctlModel" Type="CtlModels" Namespace="Main" />
+  </StructuredType>
+</DataType>

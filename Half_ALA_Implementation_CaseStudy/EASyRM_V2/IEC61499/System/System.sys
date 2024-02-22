@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE System SYSTEM "../LibraryElement.dtd">
+<System Name="System" Comment="System Configuration">
+  <Attribute Name="System.Device.FolderPath" Value="EcoRT_0" />
+  <Identification Standard="61499-1" />
+  <VersionInfo Organization="Schneider Electric" Version="0.0" Author="Cheyan" Date="1/9/2024" />
+  <Application ID="4AF3182AC695837E" Name="APP1">
+    <SubAppNetwork>
+      <FB ID="866112D0B22B8608" Name="FB6" Type="Physical_Plant_SIMULATION" x="420" y="1120" Namespace="Main" />
+      <FB ID="172E608A6D329AE9" Name="FB1" Type="Overcurrent_Protector" x="1700" y="1860" Namespace="Main" />
+      <AdapterConnections>
+        <Connection Source="FB1.Cutoff" Destination="FB6.F2_Cutoff" dx1="144.5833" dx2="30" dy="420">
+          <AvoidsNodes>false</AvoidsNodes>
+        </Connection>
+        <Connection Source="FB6.F2_current" Destination="FB1.Current_In" dx1="43.375" />
+      </AdapterConnections>
+      <Frame Name="FRAME1" X="1440" Y="900" Width="6180" Height="2280">
+        <Parameter Name="BackgroundColor" Value="AliceBlue" />
+        <Parameter Name="TextColor" Value="Black" />
+        <Parameter Name="Font" Value="Microsoft Sans Serif, 10pt" />
+        <Parameter Name="TextAlignment" Value="TopLeft" />
+        <Parameter Name="MoveStyle" Value="AnyContained" />
+        <Parameter Name="NxtLayerIdentifier" Value="" />
+      </Frame>
+      <Frame Name="FRAME2" X="320" Y="880" Width="1000" Height="1500">
+        <Parameter Name="BackgroundColor" Value="AliceBlue" />
+        <Parameter Name="TextColor" Value="Black" />
+        <Parameter Name="Font" Value="Microsoft Sans Serif, 10pt" />
+        <Parameter Name="TextAlignment" Value="TopLeft" />
+        <Parameter Name="MoveStyle" Value="AnyContained" />
+        <Parameter Name="NxtLayerIdentifier" Value="" />
+      </Frame>
+      <Frame Name="FRAME3" X="1580" Y="1600" Width="5980" Height="1500">
+        <Parameter Name="BackgroundColor" Value="AliceBlue" />
+        <Parameter Name="TextColor" Value="Black" />
+        <Parameter Name="Font" Value="Microsoft Sans Serif, 10pt" />
+        <Parameter Name="TextAlignment" Value="TopLeft" />
+        <Parameter Name="MoveStyle" Value="AnyContained" />
+        <Parameter Name="NxtLayerIdentifier" Value="" />
+      </Frame>
+      <Frame Name="Plant" X="340" Y="900" Width="740" Height="120.7292" IsComment="true">
+        <Parameter Name="BackgroundColor" Value="LemonChiffon" />
+        <Parameter Name="TextColor" Value="Black" />
+        <Parameter Name="Font" Value="Microsoft Sans Serif, 10pt" />
+        <Parameter Name="TextAlignment" Value="TopCenter" />
+        <Parameter Name="MoveStyle" Value="None" />
+        <Parameter Name="Text" Value="Plant (Power System)" />
+        <Parameter Name="NxtLayerIdentifier" Value="" />
+      </Frame>
+      <Frame Name="Control" X="1480" Y="940" Width="1540" Height="120.7292" IsComment="true">
+        <Parameter Name="BackgroundColor" Value="LemonChiffon" />
+        <Parameter Name="TextColor" Value="Black" />
+        <Parameter Name="Font" Value="Microsoft Sans Serif, 10pt" />
+        <Parameter Name="TextAlignment" Value="TopCenter" />
+        <Parameter Name="MoveStyle" Value="None" />
+        <Parameter Name="Text" Value="Control (IEC 61499)" />
+        <Parameter Name="NxtLayerIdentifier" Value="" />
+      </Frame>
+      <Frame Name="COMMENT1" X="1760" Y="1640" Width="1040" Height="120.7292" IsComment="true">
+        <Parameter Name="BackgroundColor" Value="LemonChiffon" />
+        <Parameter Name="TextColor" Value="Black" />
+        <Parameter Name="Font" Value="Microsoft Sans Serif, 10pt" />
+        <Parameter Name="TextAlignment" Value="TopCenter" />
+        <Parameter Name="MoveStyle" Value="None" />
+        <Parameter Name="Text" Value="Feeder 2" />
+        <Parameter Name="NxtLayerIdentifier" Value="" />
+      </Frame>
+    </SubAppNetwork>
+  </Application>
+  <Device ID="9AE5C21C-1485-4AC3-A0DD-896934350A5B" Name="EcoRT_0" Type="Soft_dPAC" x="700" y="700" Namespace="SE.DPAC">
+    <Resource ID="83616794E7D939D3" Name="RES0" Type="EMB_RES_ECO" x="800" y="800" Namespace="Runtime.Management">
+      <FBNetwork>
+        <FB ID="E36155C569CDD589" Name="FB6" Type="Physical_Plant_SIMULATION" x="420" y="1120" Namespace="Main" />
+        <FB ID="747232F5CFD5625E" Name="FB1" Type="Overcurrent_Protector" x="1780" y="1580" Namespace="Main" />
+        <EventConnections>
+          <Connection Source="START.COLD" Destination="FB1.INIT" dx1="918.6042">
+            <AvoidsNodes>false</AvoidsNodes>
+          </Connection>
+        </EventConnections>
+        <AdapterConnections>
+          <Connection Source="FB1.Cutoff" Destination="FB6.F2_Cutoff" dx1="64.58325" dx2="30" dy="700">
+            <AvoidsNodes>false</AvoidsNodes>
+          </Connection>
+          <Connection Source="FB6.F2_current" Destination="FB1.Current_In" dx1="43.375" />
+        </AdapterConnections>
+      </FBNetwork>
+    </Resource>
+    <FBNetwork />
+  </Device>
+  <Mapping From="APP1.FB6" To="EcoRT_0.RES0" />
+  <Mapping From="APP1.FB1" To="EcoRT_0.RES0" />
+</System>

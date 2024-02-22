@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE DataType SYSTEM "../LibraryElement.dtd">
+<DataType Namespace="Main" Name="SPS_BOOL" Comment="IEC61131-3, Table 14#5">
+  <Attribute Name="nxtDataType" Value="9gA4evvp0K20hxdCgULQYkV6QmDNh3dwMc8Ym4KvG+kuAJ0VWwsPMcE01ZsquGuVqZAGwyjk+Pz/7Ur1FoSLmjuJQJnqKPem17tDavdvsGG6DhN/811gPwZegzo+YN9HE8GC5JrPj89E8RyObJA/iMWQ12cACnhJ1pctbom+kjmWIgMIr5gHpdsh7tVoZWMTRvBOhWhLyLIQDIo8tB1BUys1QUlkfiGc" Context="12968722462495119240" />
+  <Identification Standard="1131-3" />
+  <VersionInfo Organization="Schneider Electric" Version="0.0" Author="Cheyan" Date="1/8/2024" Remarks="Template" />
+  <CompilerInfo />
+  <StructuredType>
+    <VarDeclaration Name="stVal" Type="BOOL" />
+    <VarDeclaration Name="q" Type="Quality" Namespace="Main" />
+    <VarDeclaration Name="t" Type="TimeStamp" />
+  </StructuredType>
+</DataType>

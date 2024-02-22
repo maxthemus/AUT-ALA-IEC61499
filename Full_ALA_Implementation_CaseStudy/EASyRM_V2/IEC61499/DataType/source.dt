@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE DataType SYSTEM "../LibraryElement.dtd">
+<DataType Namespace="Main" Name="source" Comment="IEC61131-3, Table 14#5">
+  <Attribute Name="nxtDataType" Value="p1MX6tImGfRGisjIz/Bb0Mcm6lYG2l98Aoeyk/36Lw1UnDbkGzeKcJs8tmta5EK7GSMGtmwYiPA=" Context="3088203659340602165" />
+  <Identification Standard="1131-3" />
+  <VersionInfo Organization="Schneider Electric" Version="0.0" Author="Cheyan" Date="1/8/2024" Remarks="Template" />
+  <CompilerInfo />
+  <EnumeratedType>
+    <EnumeratedValue Name="process" />
+    <EnumeratedValue Name="substituted" />
+    <EnumeratedValue Name="process" />
+  </EnumeratedType>
+</DataType>

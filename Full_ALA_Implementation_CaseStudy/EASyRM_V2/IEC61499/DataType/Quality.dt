@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE DataType SYSTEM "../LibraryElement.dtd">
+<DataType Namespace="Main" Name="Quality" Comment="IEC61131-3, Table 14#5">
+  <Attribute Name="nxtDataType" Value="KGq6wfCiXsBeHlxye7CIu608a+nl0pPORI0dtNztoWRCF3/wLcc/3fUcieogfuL5MoZOCexFZKjLlqDRxpnKKa/P2zGHmA99mbE0H1MxjlYb9Gog09kpguoYBM5y7X//PNaJMBYTnESNqlHlZuKJzMWQ12cACnhJoVfCmRMo4DhpT+lALlHIn2Y42hllnSHlO+Cvie4vyUd3ROGtjsMnq/3IL42w1oq++pyC2odAP2w=" Context="12791903046421719021" />
+  <Identification Standard="1131-3" />
+  <VersionInfo Organization="Schneider Electric" Version="0.0" Author="Cheyan" Date="1/8/2024" Remarks="Template" />
+  <CompilerInfo />
+  <StructuredType>
+    <VarDeclaration Name="validity" Type="validity" Namespace="Main" />
+    <VarDeclaration Name="detailQual" Type="detailQual" Namespace="Main" />
+    <VarDeclaration Name="source" Type="source" Namespace="Main" />
+    <VarDeclaration Name="test" Type="BOOL" />
+    <VarDeclaration Name="operatorBlocked" Type="BOOL" />
+  </StructuredType>
+</DataType>

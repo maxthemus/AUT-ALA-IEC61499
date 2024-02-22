@@ -1,0 +1,38 @@
+{
+  "snapshot": {
+    "guid": "78b59d63-71be-4398-8026-de399040897e",
+    "hash": "6C1AF2B67625BBB26542CD9FA574F85CA3429D85EE7575688DB56D6852078B89",
+    "app": {
+      "hash": "6C1AF2B67625BBB26542CD9FA574F85CA3429D85EE7575688DB56D6852078B89",
+      "items": [
+        "Main#Feeder.bin",
+        "Main#GOOSE.bin",
+        "Main#SV.bin",
+        "Main#Physical_Plant_Simulation.bin",
+        "Main#AnalogueValue.bin",
+        "Main#validity.bin",
+        "Main#detailQual.bin",
+        "Main#source.bin",
+        "Main#Quality.bin",
+        "Main#SAV.bin",
+        "Main#TCTR_Logic.bin",
+        "Main#Current_Transformer.bin",
+        "Main#PIOC_Logic.bin",
+        "Main#Comparator.bin",
+        "Main#TimeAccuracy.bin",
+        "Main#TimeQuality.bin",
+        "Main#TimeStamp.bin",
+        "Main#SPS.bin",
+        "Main#INS.bin",
+        "Main#stVal.bin",
+        "Main#CtlModels.bin",
+        "Main#DPC.bin",
+        "Main#SPC.bin",
+        "Main#XCBR_Logic.bin",
+        "Main#Circuit_Breaker.bin",
+        "Main#Overcurrent_Protector.bin",
+        "Device.bin"
+      ]
+    }
+  }
+}

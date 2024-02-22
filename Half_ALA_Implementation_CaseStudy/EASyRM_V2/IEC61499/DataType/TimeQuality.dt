@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE DataType SYSTEM "../LibraryElement.dtd">
+<DataType Namespace="Main" Name="TimeQuality" Comment="IEC61131-3, Table 14#5">
+  <Attribute Name="nxtDataType" Value="QdpEwqSPB7ofXswuXlSUf+xi5gGvP5fI9S3g9sPnd5F/ItQewYVETWVF32ZEpfDEbDXUqC6iYY3SUieZ6pgBGZ+JXQthypNoMwoEA3Z5oaKBFdqY+nG0rItTygy9uzM/EtK7RcrH5oXVGB9k67FawbPOH41NASKea4lJfaVuH7LwGY+SjfQuiYuEeGCHZUhWL6UhThn+ty3WZ96iso1N/hkjBrZsGIjw" Context="209211394699633199" />
+  <Identification Standard="1131-3" />
+  <VersionInfo Organization="Schneider Electric" Version="0.0" Author="Cheyan" Date="1/8/2024" Remarks="Template" />
+  <CompilerInfo />
+  <StructuredType>
+    <VarDeclaration Name="LeapSecondsKnown" Type="BOOL" />
+    <VarDeclaration Name="ClockFailure" Type="BOOL" />
+    <VarDeclaration Name="ClockNotSynchronized" Type="BOOL" />
+    <VarDeclaration Name="TimeAccuracy" Type="TimeAccuracy" Namespace="Main" />
+  </StructuredType>
+</DataType>

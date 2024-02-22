@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE System SYSTEM "../LibraryElement.dtd">
+<System Name="System">
+  <Device ID="9AE5C21C-1485-4AC3-A0DD-896934350A5B" Name="EcoRT_0" Type="Soft_dPAC" x="700" y="700" Namespace="SE.DPAC">
+    <Resource ID="83616794E7D939D3" Name="RES0" Type="EMB_RES_ECO" x="800" y="800" Namespace="Runtime.Management">
+      <FBNetwork>
+        <FB ID="E36155C569CDD589" Name="FB6" Type="Physical_Plant_Simulation" x="520" y="820" Namespace="Main" />
+        <FB ID="64335972C96F197C" Name="Feeder_2_overcurrent_protector" Type="Overcurrent_Protector" x="1900" y="1440" Namespace="Main" />
+        <EventConnections>
+          <Connection Source="START.COLD" Destination="Feeder_2_overcurrent_protector.INIT" dx1="978.6042" />
+        </EventConnections>
+        <AdapterConnections>
+          <Connection Source="FB6.feeder_2_current" Destination="Feeder_2_overcurrent_protector.current" dx1="43.22925" />
+          <Connection Source="Feeder_2_overcurrent_protector.cutoff" Destination="FB6.feeder_2_trip" dx1="40.771" dx2="30" dy="250" />
+        </AdapterConnections>
+      </FBNetwork>
+    </Resource>
+    <FBNetwork />
+  </Device>
+</System>

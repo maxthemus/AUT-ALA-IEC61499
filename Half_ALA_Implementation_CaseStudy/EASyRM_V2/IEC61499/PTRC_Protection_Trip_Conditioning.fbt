@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FBType SYSTEM "../LibraryElement.dtd">
+<FBType GUID="3f1f32c0-40af-4701-8477-90fa1a976009" Name="PTRC_Protection_Trip_Conditioning" Comment="Composite Function Block Type" Namespace="Main">
+  <Attribute Name="Configuration.FB.IDCounter" Value="2" />
+  <Identification Standard="61499-2" />
+  <VersionInfo Organization="Schneider Electric" Version="0.0" Author="Cheyan" Date="12/10/2023" Remarks="template" />
+  <InterfaceList>
+    <EventInputs>
+      <Event Name="INIT" Comment="Initialization Request" />
+      <Event Name="REQ" Comment="Normal Execution Request" />
+      <Event Name="OPERATE">
+        <With Var="Op_tripped" />
+      </Event>
+    </EventInputs>
+    <EventOutputs>
+      <Event Name="INITO" Comment="Initialization Confirm" />
+      <Event Name="CNF" Comment="Execution Confirmation" />
+      <Event Name="DEBUG">
+        <With Var="Tr_general_DEBUG" />
+      </Event>
+      <Event Name="TR_TRIP_SIGNAL">
+        <With Var="Tr_trip_signal" />
+      </Event>
+    </EventOutputs>
+    <InputVars>
+      <VarDeclaration Name="Op_tripped" Type="ACT_BOOL" Namespace="Main" Comment="Input event qualifier" />
+    </InputVars>
+    <OutputVars>
+      <VarDeclaration Name="Tr_general_DEBUG" Type="BOOL" />
+      <VarDeclaration Name="Tr_trip_signal" Type="ACT_BOOL" Namespace="Main" Comment="Output event qualifier" />
+    </OutputVars>
+  </InterfaceList>
+  <FBNetwork>
+    <FB ID="2" UID="1" Name="FB1" Type="PTRC_Protection_Trip_Conditioning_Logic" x="1140" y="740" Namespace="Main" />
+    <Input Name="INIT" x="600" y="632" Type="Event" />
+    <Input Name="REQ" x="600" y="692" Type="Event" />
+    <Input Name="Op_tripped" x="580.9896" y="1132" Type="Data" />
+    <Input Name="OPERATE" x="634.0521" y="892" Type="Event" />
+    <Output Name="Tr_trip_signal" x="2009.313" y="1132" Type="Data" />
+    <Output Name="TR_TRIP_SIGNAL" x="2087.563" y="872" Type="Event" />
+    <Output Name="DEBUG" x="2100.135" y="932" Type="Event" />
+    <Output Name="Tr_general_DEBUG" x="2120" y="1192" Type="Data" />
+    <Output Name="INITO" x="2100" y="752" Type="Event" />
+    <Output Name="CNF" x="2100" y="812" Type="Event" />
+    <EventConnections>
+      <Connection Source="FB1.INITO" Destination="INITO" />
+      <Connection Source="FB1.CNF" Destination="CNF" />
+      <Connection Source="INIT" Destination="FB1.INIT" dx1="131.4167">
+        <AvoidsNodes>false</AvoidsNodes>
+      </Connection>
+      <Connection Source="REQ" Destination="FB1.REQ" dx1="49.54169" />
+      <Connection Source="FB1.DEBUG" Destination="DEBUG" />
+      <Connection Source="OPERATE" Destination="FB1.OPERATE" dx1="47.02606" />
+      <Connection Source="FB1.TR" Destination="TR_TRIP_SIGNAL" />
+    </EventConnections>
+    <DataConnections>
+      <Connection Source="FB1.debug_Tr_general" Destination="Tr_general_DEBUG" />
+      <Connection Source="Op_tripped" Destination="FB1.Op">
+        <Points>
+          <Points>
+            <X>328.841125</X>
+            <Y>290</Y>
+          </Points>
+          <Points>
+            <X>280</X>
+            <Y>290</Y>
+          </Points>
+        </Points>
+      </Connection>
+      <Connection Source="FB1.Tr" Destination="Tr_trip_signal">
+        <Points>
+          <Points>
+            <X>504.151</X>
+            <Y>290</Y>
+          </Points>
+          <Points>
+            <X>502.328247</X>
+            <Y>290</Y>
+          </Points>
+        </Points>
+      </Connection>
+    </DataConnections>
+  </FBNetwork>
+</FBType>

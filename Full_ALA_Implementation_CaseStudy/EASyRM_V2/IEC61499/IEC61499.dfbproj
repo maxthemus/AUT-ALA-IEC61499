@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{C3B61B48-6D98-4DDE-A982-6C89B1884C65}</ProjectGuid>
+    <ProjectTypeGuids>{EAD1E85F-CEF5-4861-AFF8-597F2DDE70FC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">Windows</Platform>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Main</RootNamespace>
+    <AssemblyName>IEC61499</AssemblyName>
+    <NxtVersion>22.1.0.0</NxtVersion>
+    <CheckConnectionsStrictly>TRUE</CheckConnectionsStrictly>
+    <CreateHMIAny>false</CreateHMIAny>
+    <HMIProject>HMI</HMIProject>
+    <CATInstancesHaveIds>true</CATInstancesHaveIds>
+    <ProjectType>IEC61499</ProjectType>
+    <CheckGenericInstances>False</CheckGenericInstances>
+    <ConvertStringValues>False</ConvertStringValues>
+    <HardwareConfigurationMigrationVersion>1</HardwareConfigurationMigrationVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'Windows' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Default\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <IntermediateOutputPath>obj\Default\</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Default\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <IntermediateOutputPath>obj\Default\</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Windows' ">
+    <Version>1.0</Version>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Runtime.Base">
+      <Version>22.1.0.17</Version>
+    </Reference>
+    <Reference Include="SE.DPAC">
+      <Version>22.1.0.24</Version>
+    </Reference>
+    <Reference Include="SE.Standard">
+      <Version>22.1.0.9</Version>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Comparator.doc.xml">
+      <DependentUpon>Comparator.fbt</DependentUpon>
+    </None>
+    <None Include="Configuration\Certificates\Certificates.xml" />
+    <None Include="IEC61499.iecproj" />
+    <none Include="Languages\neutral\Dictionary.Resources.xml" />
+    <None Include="Project.doc.xml" />
+    <None Include="System\snapshot.xml">
+      <DependentUpon>System.sys</DependentUpon>
+    </None>
+    <None Include="System\System.cfg">
+      <DependentUpon>System.sys</DependentUpon>
+      <IEC61499Type>System</IEC61499Type>
+    </None>
+    <None Include="System\System.Device.Properties.xml">
+      <DependentUpon>System.sys</DependentUpon>
+      <IEC61499Type>System</IEC61499Type>
+    </None>
+    <None Include="System\System.doc.xml">
+      <DependentUpon>System.sys</DependentUpon>
+    </None>
+    <None Include="System\System.opcuaclient.xml">
+      <DependentUpon>System.sys</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BOOL_EVENT.adp">
+      <IEC61499Type>Adapter</IEC61499Type>
+    </Compile>
+    <Compile Include="Circuit_Breaker.fbt">
+      <IEC61499Type>Composite</IEC61499Type>
+    </Compile>
+    <Compile Include="Comparator.fbt">
+      <IEC61499Type>Composite</IEC61499Type>
+    </Compile>
+    <Compile Include="Current_Transformer.fbt">
+      <IEC61499Type>Composite</IEC61499Type>
+    </Compile>
+    <Compile Include="DataType\ACT.dt">
+      <IEC61499Type>DataType</IEC61499Type>
+    </Compile>
+    <Compile Include="DataType\AnalogueValue.dt">
+      <IEC61499Type>DataType</IEC61499Type>
+    </Compile>
+    <Compile Include="DataType\CtlModels.dt">
+      <IEC61499Type>DataType</IEC61499Type>
+    </Compile>
+    <Compile Include="DataType\detailQual.dt">
+      <IEC61499Type>DataType</IEC61499Type>
+    </Compile>
+    <Compile Include="DataType\DPC.dt">
+      <IEC61499Type>DataType</IEC61499Type>
+    </Compile>
+    <Compile Include="DataType\INS.dt">
+      <IEC61499Type>DataType</IEC61499Type>
+    </Compile>
+    <Compile Include="DataType\Quality.dt">
+      <IEC61499Type>DataType</IEC61499Type>
+    </Compile>
+    <Compile Include="DataType\SAV.dt">
+      <IEC61499Type>DataType</IEC61499Type>
+    </Compile>
+    <Compile Include="DataType\source.dt">
+      <IEC61499Type>DataType</IEC61499Type>
+    </Compile>
+    <Compile Include="DataType\SPC.dt">
+      <IEC61499Type>DataType</IEC61499Type>
+    </Compile>
+    <Compile Include="DataType\SPS.dt">
+      <IEC61499Type>DataType</IEC61499Type>
+    </Compile>
+    <Compile Include="DataType\stVal.dt">
+      <IEC61499Type>DataType</IEC61499Type>
+    </Compile>
+    <Compile Include="DataType\TimeAccuracy.dt">
+      <IEC61499Type>DataType</IEC61499Type>
+    </Compile>
+    <Compile Include="DataType\TimeQuality.dt">
+      <IEC61499Type>DataType</IEC61499Type>
+    </Compile>
+    <Compile Include="DataType\TimeStamp.dt">
+      <IEC61499Type>DataType</IEC61499Type>
+    </Compile>
+    <Compile Include="DataType\validity.dt">
+      <IEC61499Type>DataType</IEC61499Type>
+    </Compile>
+    <Compile Include="Feeder.fbt">
+      <IEC61499Type>Basic</IEC61499Type>
+    </Compile>
+    <Compile Include="LREAL_EVENT.adp">
+      <IEC61499Type>Adapter</IEC61499Type>
+    </Compile>
+    <Compile Include="Overcurrent_Protector.fbt">
+      <IEC61499Type>Composite</IEC61499Type>
+    </Compile>
+    <Compile Include="Physical_Plant_SIMULATION.fbt">
+      <IEC61499Type>Composite</IEC61499Type>
+    </Compile>
+    <Compile Include="PIOC_Logic.fbt">
+      <IEC61499Type>Basic</IEC61499Type>
+    </Compile>
+    <Compile Include="System\System.sys">
+      <IEC61499Type>System</IEC61499Type>
+    </Compile>
+    <Compile Include="TCTR_Logic.fbt">
+      <IEC61499Type>Basic</IEC61499Type>
+    </Compile>
+    <Compile Include="XCBR_Logic.fbt">
+      <IEC61499Type>Basic</IEC61499Type>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Configuration" />
+    <Folder Include="Configuration\Certificates" />
+    <Folder Include="License" />
+    <Folder Include="Log" />
+    <Folder Include="SnapshotCompiles" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="System\System.opcua.xml">
+      <DependentUpon>System.sys</DependentUpon>
+      <Plugin>OPCUAConfigurator</Plugin>
+      <IEC61499Type>CAT_OPCUA</IEC61499Type>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(SharpDevelopBinPath)\NxtControl.Build.61499.Targets" />
+</Project>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System Name="System" ProjectName="EASyRM_V2" ProjectGuid="{C3B61B48-6D98-4DDE-A982-6C89B1884C65}" BuildTime="2024-02-07 07:51:21Z" DeployTime="" StudioVersion="IEC 61499 IDE, Oracle v22.1 g3740 6e11010 Thu Jan 19 23:33:46 2023" SnapshotGuid="{B6EC21E0-853B-4FD3-A948-089EF1F842BA}">
+  <Device ID="9AE5C21C-1485-4AC3-A0DD-896934350A5B" Name="EcoRT_0" Type="Soft_dPAC" Namespace="SE.DPAC">
+    <Resource ID="83616794E7D939D3" Name="RES0" Type="EMB_RES_ECO" Namespace="Runtime.Management">
+      <FBNetwork>
+        <FB ID="E36155C569CDD589" Name="FB6" Type="Plant" Namespace="Main" />
+        <FB ID="3898C373703DF9C3" Name="FB1" Type="TCTR" Namespace="Main">
+          <Parameter Name="manual_currentMeasurement" Value="8" />
+        </FB>
+        <FB ID="18368B3EA011949E" Name="FB2" Type="PIOC" Namespace="Main">
+          <Parameter Name="overcurrentThreshold" Value="10.0" />
+        </FB>
+        <FB ID="360042365F2E1396" Name="FB3" Type="PTRC" Namespace="Main" />
+        <FB ID="EDBA130F1748F407" Name="FB4" Type="CSWI" Namespace="Main" />
+        <FB ID="7F0EC5822A67FA17" Name="FB7" Type="XCBR" Namespace="Main" />
+        <FB Name="START" Type="E_RESTART" Namespace="IEC61499.Standard" />
+        <EventConnections>
+          <Connection Source="FB1.INITO" Destination="FB2.INIT" />
+          <Connection Source="FB1.AMPSV" Destination="FB2.SAMPLE" />
+          <Connection Source="FB2.INITO" Destination="FB3.INIT" />
+          <Connection Source="FB2.OP" Destination="FB3.OPERATE" />
+          <Connection Source="FB3.INITO" Destination="FB4.INIT" />
+          <Connection Source="FB3.TR" Destination="FB4.TR" />
+          <Connection Source="FB4.INITO" Destination="FB7.INIT" />
+          <Connection Source="FB4.OPOPN" Destination="FB7.OPOPN" />
+          <Connection Source="FB4.OPCLS" Destination="FB7.OPCLS" />
+          <Connection Source="START.COLD" Destination="FB1.INIT" />
+        </EventConnections>
+        <DataConnections>
+          <Connection Source="FB1.AmpSV" Destination="FB2.AmpSV" />
+          <Connection Source="FB2.Op" Destination="FB3.Op" />
+          <Connection Source="FB3.Tr" Destination="FB4.Tr" />
+          <Connection Source="FB4.OpOpn" Destination="FB7.OpOpn" />
+          <Connection Source="FB4.OpCls" Destination="FB7.OpCls" />
+        </DataConnections>
+        <AdapterConnections>
+          <Connection Source="FB6.F2_SV" Destination="FB1.SV" />
+          <Connection Source="FB7.GOOSE" Destination="FB6.F2_GOOSE" />
+        </AdapterConnections>
+      </FBNetwork>
+    </Resource>
+    <FBNetwork />
+  </Device>
+</System>
